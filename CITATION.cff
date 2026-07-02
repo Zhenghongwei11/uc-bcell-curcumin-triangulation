@@ -1,9 +1,10 @@
 cff-version: 1.2.0
-message: "If you use this reproducibility package, please cite the archived Zenodo release once available."
+message: "If you use this reproducibility package, please cite the archived Zenodo version DOI."
 title: "UC B-cell curcumin public-data triangulation reproducibility package"
 version: "1.0.0"
 date-released: "2026-07-02"
 repository-code: "https://github.com/Zhenghongwei11/uc-bcell-curcumin-triangulation"
+doi: "10.5281/zenodo.21121529"
 authors:
   - family-names: "Zheng"
     given-names: "Hongwei"
