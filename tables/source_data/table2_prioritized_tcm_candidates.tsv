@@ -1,0 +1,16 @@
+display_role	recommended_role	bridge_score	ingredient_id	ingredient_name	evidence_count	reference_count	clinical_trial_count	meta_analysis_count	b_cell_evidence_count	myeloid_dc_evidence_count	lincs_exact_id_covered	n_disease_context_unique_targets	n_bulk_up_target_hits	n_b_cell_expressed_targets	n_b_cell_disease_increased_targets	n_mdc_disease_increased_targets	target_count_bias_flag	low_specificity_flag
+Lead B-cell-axis candidate	primary_lead_for_b_cell_axis	121.0	HBIN021985	Curcumin	13	4	5	4	2	1	yes	22.0	3.0	12.0	11.0	8.0	no	no
+Secondary myeloid-axis candidate	secondary_lead_for_myeloid_axis	74.35	HBIN017892	Berberine*	10	6	1	3	0	2	yes	10.0	2.0	6.0	5.0	2.0	no	no
+Secondary myeloid-axis candidate	secondary_lead_for_myeloid_axis	59.0	HBIN041495	Quercetin	2	2	0	0	0	1	yes	1.0	0.0	0.0	0.0	0.0	no	no
+Lower-consensus candidate	backup_tcm_candidate	57.0	HBIN046831	Trans-resveratrol	6	2	1	3	0	0	yes	7.0	1.0	4.0	4.0	4.0	yes	no
+Lower-consensus candidate	backup_tcm_candidate	49.8	HBIN016606	Archin	4	4	0	0	0	0	yes	18.0	6.0	7.0	5.0	4.0	no	no
+Lower-consensus candidate	backup_tcm_candidate	49.0	HBIN034657	Melatonin	5	2	1	2	0	0	yes	1.0	0.0	1.0	1.0	0.0	no	no
+Secondary myeloid-axis candidate	secondary_lead_for_myeloid_axis	48.65	HBIN048372	Wogonin	3	3	0	0	0	1	no	4.0	1.0	1.0	1.0	1.0	no	no
+Lower-consensus candidate	backup_tcm_candidate	45.5	HBIN017893	Berberine	3	3	0	0	0	0	yes	8.0	1.0	4.0	4.0	4.0	no	no
+Lower-consensus candidate	backup_tcm_candidate	41.5	HBIN019690	Capsaicin	2	2	0	0	0	0	yes	8.0	0.0	3.0	3.0	1.0	no	no
+Secondary myeloid-axis candidate	secondary_lead_for_myeloid_axis	41.5	HBIN020921	Cis-resveratrol	2	1	1	0	0	1	no	4.0	1.0	1.0	1.0	1.0	no	no
+Secondary myeloid-axis candidate	secondary_lead_for_myeloid_axis	38.5	HBIN045672	Taxifolin	3	3	0	0	0	1	yes	7.0	1.0	4.0	4.0	3.0	no	no
+Secondary myeloid-axis candidate	secondary_lead_for_myeloid_axis	38.45	HBIN029531	Honokiol	2	2	0	0	0	1	yes	6.0	2.0	2.0	2.0	2.0	no	no
+Lower-consensus candidate	backup_tcm_candidate	36.7	HBIN040403	Polydatin	2	2	0	0	0	0	yes	5.0	2.0	4.0	4.0	2.0	no	no
+Secondary myeloid-axis candidate	secondary_lead_for_myeloid_axis	35.35	HBIN038606	Paeoniflorin	3	3	0	0	0	1	no	1.0	0.0	0.0	0.0	0.0	no	no
+Secondary myeloid-axis candidate	secondary_lead_for_myeloid_axis	32.75	HBIN042199	Rhein	3	3	0	0	0	1	no	4.0	1.0	3.0	3.0	3.0	no	no

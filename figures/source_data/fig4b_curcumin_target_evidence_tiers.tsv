@@ -1,0 +1,23 @@
+gene_symbol	evidence_tier	bulk_module_role	b_delta_log1p_cpm_diseased_minus_healthy	b_p_log1p_cpm_mannwhitney	mdc_delta_log1p_cpm_diseased_minus_healthy	pubmed_ids	evidence_level	recommended_figure_use	display_category	has_b_cell_contrast
+IL1B	A_module_aligned_b_cell_increased	bulk_up_top150	0.00113324	1.0	0.516526	36196887;36353208	user_provided_fulltext_body_match	cytokine_context_candidate	Cytokine context	True
+CCL2	B_module_aligned	bulk_up_top150				36196887	user_provided_fulltext_body_match	cytokine_context_candidate	Cytokine context	False
+IL33	B_module_aligned	bulk_up_top150				36196887	user_provided_fulltext_body_match	cytokine_context_candidate	Cytokine context	False
+BLNK	C_b_cell_mechanism_increased	not_bulk_top150	0.281591	0.0424242	0.0465185	36353208	open_fulltext_body_match	main_figure_candidate	B-cell mechanism	True
+SYK	C_b_cell_mechanism_increased	not_bulk_top150	0.2135	0.0424242	-0.156981	36353208	open_fulltext_body_match	main_figure_candidate	B-cell mechanism	True
+SH3KBP1	C_b_cell_mechanism_increased	not_bulk_top150	0.0850511	0.315152	0.107259	36353208			Supplementary context	True
+BCL6	C_b_cell_mechanism_increased	not_bulk_top150	0.0721226	0.0179007	-0.312126	36353208	open_fulltext_body_match	main_figure_candidate	B-cell mechanism	True
+TNF	D_b_cell_increased	not_bulk_top150	0.247649	0.109091	0.0843929	36196887;36353208	user_provided_fulltext_body_match	cytokine_context_candidate	Cytokine context	True
+JAK1	D_b_cell_increased	not_bulk_top150	0.242715	0.163636	0.0716316	33597887	open_fulltext_body_match	supplementary_candidate	B-cell increased	True
+PIAS1	D_b_cell_increased	not_bulk_top150	0.0824401	0.230303	-0.366305	33597887	open_fulltext_body_match	supplementary_candidate	B-cell increased	True
+IL7	D_b_cell_increased	not_bulk_top150	0.0748855	0.0727273	0.0289036	33597887	open_fulltext_body_match	supplementary_candidate	B-cell increased	True
+STAT5A	D_b_cell_increased	not_bulk_top150	0.0486891	0.230303	0.0126604	33597887	open_fulltext_body_match	supplementary_candidate	B-cell increased	True
+IL15	D_b_cell_increased	not_bulk_top150	0.0324155	0.412121	0.0333446	33597887	open_fulltext_body_match	supplementary_candidate	B-cell increased	True
+IL10	F_context_target_only	not_bulk_top150				36196887;36353208			Supplementary context	False
+IL12A	F_context_target_only	not_bulk_top150				36353208			Supplementary context	False
+IL13	F_context_target_only	not_bulk_top150				36196887			Supplementary context	False
+IL22	F_context_target_only	not_bulk_top150				33597887			Supplementary context	False
+IL4	F_context_target_only	not_bulk_top150				36196887			Supplementary context	False
+IL6	F_context_target_only	not_bulk_top150				36196887;36353208			Supplementary context	False
+INS	F_context_target_only	not_bulk_top150				35234309			Supplementary context	False
+LOC102723407	F_context_target_only	not_bulk_top150				36196887			Supplementary context	False
+IFNG	F_context_target_only	not_bulk_top150	-0.0221544	0.787879	-0.0316286	36196887			Supplementary context	True

@@ -1,0 +1,6 @@
+evidence_class	can_claim	cannot_claim
+Disease association	UC/IBD mucosal disease signature	Treatment response or causal disease driver
+Cell-state localization	Rectal B-cell enrichment of disease-axis signal	Curcumin acts through B cells in patients
+Target bridge	Curcumin prioritized by disease-context targets	Validated direct compound-target engagement
+Full-text support	BCL6/BLNK/SYK as main B-cell mechanism candidates	CCL2/IL33/IL1B/TNF as B-cell-intrinsic targets
+Boundary resources	ETCM2/LINCS constrain interpretation	ETCM2 or LINCS validates the mechanism

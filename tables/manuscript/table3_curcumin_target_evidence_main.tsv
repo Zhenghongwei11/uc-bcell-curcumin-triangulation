@@ -1,0 +1,8 @@
+Gene	Evidence role	Bulk signature role	HERB relation direction	Supporting PMIDs	Rectal B delta	Rectal B P value	Open Targets contexts	Full-text evidence
+BCL6	B-cell mechanism	Not in top bulk module	down	36353208	0.07212	0.0179	CD; IBD; UC	open full text
+BLNK	B-cell mechanism	Not in top bulk module	up	36353208	0.2816	0.0424	IBD	open full text
+SYK	B-cell mechanism	Not in top bulk module	down	36353208	0.2135	0.0424	CD; IBD; UC	open full text
+CCL2	Cytokine context	UC/IBD up-module	down	36196887	NA	NA	CD; IBD; UC	restricted full text
+IL33	Cytokine context	UC/IBD up-module	down	36196887	NA	NA	CD; IBD; UC	restricted full text
+IL1B	Cytokine context	UC/IBD up-module	down	36196887;36353208	0.001133	1	CD; IBD; UC	open full text; restricted full text
+TNF	Cytokine context	Not in top bulk module	down	36196887;36353208	0.2476	0.109	CD; IBD; UC	open full text; restricted full text

@@ -1,0 +1,8 @@
+ingredient_name	n_accepted_mapped_gene_symbols_exact_high	n_overlap_with_herb_m9_disease_context_targets	n_overlap_with_bulk_aligned_targets	n_overlap_with_open_targets_genetic_supported	accepted_mapped_gene_symbols_exact_high	overlap_with_herb_m9_disease_context_targets
+Taxifolin	36	1	0	1	ABCG2;ADORA3;ALPL;BACE1;CA1;CA12;CA2;CA3;CA4;CA5A;CA5B;CA7;CA9;CBR1;CRHBP;CTDSP1;CYP19A1;CYP1A1;CYP1B1;CYP2C9;DPP4;ELANE;FGFR1;HSD17B1;HSP90AB1;KDR;KLK2;MAPK10;MAPK14;MCL1;MET;PSIP1;PSMB5;SHBG;SLCO2B1;TAS2R31	MAPK14
+Berberine	8	0	0	0	ACHE;CYP1B1;CYP3A4;EP300;RXRA;SAE1;SENP8;UBE2I	
+Cryptotanshinone	6	0	0	0	ACHE;CES2;ELAVL1;HIF1A;PTPN11;PTPN6	
+Curcumin	5	0	0	0	BACE1;GSK3B;HDAC1;HDAC2;HDAC8	
+Bilobalide	2	0	0	0	GLRA2;PTAFR	
+Geniposide	1	0	0	0	CTDSP1	
+Isoarnebin 4	1	0	0	0	EGFR	

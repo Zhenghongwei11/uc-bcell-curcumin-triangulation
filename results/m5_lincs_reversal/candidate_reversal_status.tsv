@@ -1,0 +1,16 @@
+priority_score	ingredient_id	ingredient_name	ingredient_pubchem_id	ingredient_inchikey	candidate_pert_id	candidate_pert_iname	candidate_lincs_sources	hit_status	best_db_version	best_rank	best_score	best_sig_id	best_cell_id	best_pert_desc
+55.0	HBIN021985	Curcumin	969516	VFLDPWHFBUODDF-FCXRPNKRSA-N	BRD-K07572174	curcumin	GSE70138;GSE92742	no_top_result_hit						
+41.0	HBIN017892	Berberime	2353	YBHILYKTIRIUTE-UHFFFAOYSA-N	BRD-K14796088	berberine	GSE70138	no_top_result_hit						
+27.0	HBIN046831	Trans-resveratrol	445154	LUKBXSAWLPMMSZ-OWOJBTEDSA-N	BRD-K80738081	resveratrol	GSE70138;GSE92742	no_top_result_hit						
+22.0	HBIN016606	Archin	3220	RHMXXJGYXNZAPX-UHFFFAOYSA-N	BRD-K58685305	emodin	GSE92742	no_top_result_hit						
+21.0	HBIN045672	Taxifolin	439533	CXQWRCVTCMQVQX-LSDHHAIUSA-N	BRD-K94649603	taxifolin	GSE92742	no_top_result_hit						
+20.0	HBIN034657	Melatonin	896	DRLFMBDRBRZALE-UHFFFAOYSA-N	BRD-K97530723	melatonin	GSE70138;GSE92742	no_top_result_hit						
+18.0	HBIN017893	Berberine	2353	YBHILYKTIRIUTE-UHFFFAOYSA-N	BRD-K14796088	berberine	GSE70138	no_top_result_hit						
+17.0	HBIN029531	Honokiol	72303	FVYXIJYOAGAUQK-UHFFFAOYSA-N	BRD-K98493452	honokiol	GSE70138;GSE92742	no_top_result_hit						
+17.0	HBIN040403	Polydatin	5281718	HSTZMXCBWJGKHG-CUYWLFDKSA-N	BRD-K43236057	polydatin	GSE92742	no_top_result_hit						
+17.0	HBIN041495	Quercetin	5280343	REFJWTPEDVJJIY-UHFFFAOYSA-N	BRD-K97399794	quercetin	GSE70138;GSE92742	no_top_result_hit						
+16.0	HBIN048442	Xanthohumol	639665	ORXQGKIUCDPEAJ-YRNVUSSQSA-N	BRD-K77390737	xanthohumol	GSE92742	no_top_result_hit						
+15.0	HBIN044493	Spermidine	1102	ATHGHQPFGPMSJY-UHFFFAOYSA-N	BRD-K40438880	spermidine	GSE92742	no_top_result_hit						
+14.0	HBIN019690	Capsaicin	1548943	YKPUWZUDDOIDPM-SOFGYWHQSA-N	BRD-K50590187	capsaicin	GSE70138;GSE92742	no_top_result_hit						
+13.0	HBIN025006	Ellagic acid	5281855	AFSDNFLWKVMVRB-UHFFFAOYSA-N	BRD-K30466858	ellagic-acid	GSE70138;GSE92742	no_top_result_hit						
+13.0	HBIN041217	Pterostilbene	5281727	VLEUZFDZJKSGMX-ONEGZZNKSA-N	BRD-K92870997	pterostilbene	GSE92742	no_top_result_hit						

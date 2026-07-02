@@ -1,0 +1,16 @@
+ingredient_name	priority_score	candidate_pert_iname	candidate_lincs_sources	hit_status	best_rank	best_score
+Curcumin	55.0	curcumin	GSE70138;GSE92742	no_top_result_hit		
+Berberine*	41.0	berberine	GSE70138	no_top_result_hit		
+Trans-resveratrol	27.0	resveratrol	GSE70138;GSE92742	no_top_result_hit		
+Archin	22.0	emodin	GSE92742	no_top_result_hit		
+Taxifolin	21.0	taxifolin	GSE92742	no_top_result_hit		
+Melatonin	20.0	melatonin	GSE70138;GSE92742	no_top_result_hit		
+Berberine	18.0	berberine	GSE70138	no_top_result_hit		
+Honokiol	17.0	honokiol	GSE70138;GSE92742	no_top_result_hit		
+Polydatin	17.0	polydatin	GSE92742	no_top_result_hit		
+Quercetin	17.0	quercetin	GSE70138;GSE92742	no_top_result_hit		
+Xanthohumol	16.0	xanthohumol	GSE92742	no_top_result_hit		
+Spermidine	15.0	spermidine	GSE92742	no_top_result_hit		
+Capsaicin	14.0	capsaicin	GSE70138;GSE92742	no_top_result_hit		
+Ellagic acid	13.0	ellagic-acid	GSE70138;GSE92742	no_top_result_hit		
+Pterostilbene	13.0	pterostilbene	GSE92742	no_top_result_hit		

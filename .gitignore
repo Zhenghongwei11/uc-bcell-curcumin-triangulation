@@ -1,0 +1,14 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+*.pem
+id_rsa*
+id_ed25519*
+data/raw/
+data/private/
+release_staging/
+
+figures/output/*.tiff

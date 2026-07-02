@@ -1,0 +1,11 @@
+celltype	disease_assignment	n_patients	n_pseudobulk_samples	n_cells
+B	diseased	7	7	3350
+B	healthy	4	4	1425
+M/DC	diseased	7	7	201
+M/DC	healthy	3	3	54
+NK	diseased	7	7	261
+NK	healthy	4	4	52
+T	diseased	7	7	4237
+T	healthy	4	4	1853
+unknown	diseased	7	7	10593
+unknown	healthy	8	8	10128

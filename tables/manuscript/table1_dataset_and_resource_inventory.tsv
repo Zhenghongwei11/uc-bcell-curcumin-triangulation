@@ -1,0 +1,10 @@
+Resource	Data or evidence type	Samples or records	Role in study	Primary boundary
+GSE75214	Bulk transcriptomics microarray	194	Bulk mucosal disease-signature discovery evidence group	GSE75214 and GSE59071 are not treated as independent validation because they share a platform/evidence group.
+GSE59071	Bulk transcriptomics microarray	116	Non-independent bulk sensitivity evidence	Used as sensitivity within the same GPL6244 evidence group rather than as an independent cohort.
+GSE87466	Bulk transcriptomics microarray	108	Independent active UC mucosal validation evidence group	Processed microarray analysis; detailed treatment covariates remain limited.
+GSE125527	Single-cell RNA-seq; scTCR-seq; scBCR-seq	103	Primary scRNA pseudobulk cell-state localization resource	Patient count is modest after tissue/cell-type stratification; claims remain associative.
+HERB 2.0	TCM compound-target and disease-context knowledgebase	database-scale; 44,595 ingredients and 15,515 targets reported by HERB 2.0	Primary TCM disease-context target source	Database relations are evidence annotations, not experimental validation in this study.
+ETCM2	TCM compound and target-name resource	database-scale; 38,298 ingredients and 1,040 targets reported by ETCM2	Supplementary cross-resource boundary check	Target names require gene-symbol mapping and did not support the curcumin-B-cell target bridge.
+Open Targets	Disease-target association resource	21/22 curcumin disease-context targets supported in queried disease contexts	Orthogonal target disease-relevance check	Supports target-disease plausibility, not compound action.
+PubMed/PMC and full-text audit	Bibliographic and full-text evidence audit	3 high-value PMIDs; 25 edge-level title checks; 14 full-text target rows	Reference identity and target-context verification	Restricted full text was used only for local evidence inspection and is not redistributed.
+L1000CDS2	Perturbational signature reversal query	15 exact-ID candidate checks; 100 top results parsed	Negative boundary-setting perturbation layer	No exact-ID top-result hit does not rule out activity in untested contexts or raw LINCS matrices.

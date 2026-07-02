@@ -1,0 +1,19 @@
+metric	value	notes
+query_url	https://maayanlab.cloud/L1000CDS2/query2	
+db_versions	cpcd-gse70138-v1.0;cpcd-gse70138-lm-v1.0	
+up_genes_submitted	150	results/m4_geo_uc_ibd_signature/lincs_query_up_genes.txt
+down_genes_submitted	150	results/m4_geo_uc_ibd_signature/lincs_query_down_genes.txt
+run_utc	2026-06-29T01:26:56+00:00	
+run_epoch_seconds	1782696416	
+http_status.cpcd-gse70138-v1.0	200	
+query_status.cpcd-gse70138-v1.0	success	
+top_results_parsed.cpcd-gse70138-v1.0	50	results/m5_lincs_reversal/l1000cds2_response.cpcd-gse70138-v1.0.json
+http_status.cpcd-gse70138-lm-v1.0	200	
+query_status.cpcd-gse70138-lm-v1.0	success	
+top_results_parsed.cpcd-gse70138-lm-v1.0	50	results/m5_lincs_reversal/l1000cds2_response.cpcd-gse70138-lm-v1.0.json
+query_status	success	cpcd-gse70138-v1.0:success; cpcd-gse70138-lm-v1.0:success
+top_results_parsed	100	results/m5_lincs_reversal/l1000cds2_top_results.tsv
+covered_candidate_hit_rows	0	results/m5_lincs_reversal/covered_candidate_reversal.tsv
+covered_candidate_tests	15	results/m5_lincs_reversal/candidate_reversal_status.tsv
+covered_candidate_ingredient_hits	0	
+covered_candidate_pert_id_hits	0	

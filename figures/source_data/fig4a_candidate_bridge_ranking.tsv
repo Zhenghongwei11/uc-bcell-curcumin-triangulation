@@ -1,0 +1,26 @@
+ingredient_id	ingredient_name	bridge_score	n_disease_context_unique_targets	n_b_cell_expressed_targets	n_b_cell_disease_increased_targets	n_mdc_disease_increased_targets
+HBIN021985	Curcumin	63.2	22	12	11	8
+HBIN016606	Archin	46.0	18	7	5	4
+HBIN018512	Bilobalide	34.8	12	7	6	6
+HBIN017892	Berberine*	33.5	10	6	5	2
+HBIN027450	Geniposide	31.8	11	6	6	4
+HBIN030442	Isoarnebin 4	29.8	9	6	5	3
+HBIN021795	Cryptotanshinone	29.5	11	6	3	4
+HBIN040403	Polydatin	27.0	5	4	4	2
+HBIN017893	Berberine	22.0	8	4	4	4
+HBIN045672	Taxifolin	22.0	7	4	4	3
+HBIN046831	Trans-resveratrol	22.0	7	4	4	4
+HBIN029531	Honokiol	21.5	6	2	2	2
+HBIN015751	Alpinetin	21.2	6	5	5	3
+HBIN017136	Asperuloside	19.2	7	5	4	2
+HBIN042199	Rhein	17.8	4	3	3	3
+HBIN019690	Capsaicin	12.8	8	3	3	1
+HBIN048372	Wogonin	9.25	4	1	1	1
+HBIN018800	Brahmic acid	7.25	3	1	1	0
+HBIN020921	Cis-resveratrol	6.25	4	1	1	1
+HBIN044493	Spermidine	5.75	2	2	1	1
+HBIN034657	Melatonin	4.25	1	1	1	0
+HBIN041217	Pterostilbene	2.25	1	1	0	1
+HBIN034558	Matrine	0.0	1	0	0	0
+HBIN038606	Paeoniflorin	0.0	1	0	0	0
+HBIN041495	Quercetin	0.0	1	0	0	0
