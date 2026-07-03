@@ -54,4 +54,6 @@ GitHub repository: https://github.com/Zhenghongwei11/uc-bcell-curcumin-triangula
 
 This repository is released through GitHub and archived by Zenodo. Cite the Zenodo version DOI associated with the exact GitHub release used for reproduction.
 
+Zenodo version DOI for v1.0.1: https://doi.org/10.5281/zenodo.21148932
+
 Zenodo concept DOI: https://doi.org/10.5281/zenodo.21121528
