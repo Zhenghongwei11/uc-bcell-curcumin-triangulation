@@ -1,0 +1,10 @@
+gsm	sample_id	assigned_condition	geo_status	geo_disease	interpretation_note
+GSM5525955	UC3IN_GRCh38	UC_inflamed	Inflamed	Ulcerative colitis	UC inflamed by GEO status, disease, description, and file name.
+GSM5525956	UC5IN_Grch38	UC_inflamed	Inflamed	Ulcerative colitis	UC inflamed by GEO status, disease, description, and file name.
+GSM5525957	UC6IN_Grch38	UC_inflamed	Inflamed	Ulcerative colitis	UC inflamed by GEO status, disease, description, and file name.
+GSM5525958	UC7colon_Grch38	UC_inflamed	Healthy control	Ulcerative colitis	Assigned to UC inflamed because GEO disease, description, overall design, and file name support UC; GEO status field is internally discordant.
+GSM5525959	UC8colon_Grch38	healthy_control	non inflamed	Healthy control	Assigned to healthy/noninflamed by GEO disease, status, and description despite UC-like file name.
+GSM5525960	HC1_COLON_Grch38	healthy_control	non inflamed	Healthy control	Healthy/noninflamed by GEO disease, status, description, and file name.
+GSM5525961	HC2_COLON_Grch38	healthy_control	non inflamed	Healthy control	Healthy/noninflamed by GEO disease, status, description, and file name.
+GSM5525962	HC3_COLON_Grch38	healthy_control	non inflamed	Healthy control	Healthy/noninflamed by GEO disease, status, description, and file name.
+GSM5525963	UC9IN_Grch38	UC_inflamed	Inflamed	Ulcerative colitis	UC inflamed by GEO status, disease, description, and file name.

@@ -1,0 +1,2 @@
+analysis	n_candidates	curcumin_standard_overlap_rank	curcumin_disease_cell_aware_rank	curcumin_standard_overlap_hits	curcumin_b_cell_increased_targets	rank_spearman_rho	rank_spearman_p	interpretation
+standard_target_overlap_baseline_vs_disease_cell_aware_ranking	25	2	1	3	11	0.901538	7.75759e-10	Disease-cell-aware ranking preserves Curcumin as lead while exposing how a standard overlap baseline is driven by generic inflammatory overlap.

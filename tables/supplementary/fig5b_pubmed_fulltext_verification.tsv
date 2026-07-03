@@ -1,0 +1,4 @@
+pmid	publication_year	journal	all_herb_titles_match_pubmed	abstract_available	herb_edges	title_matches	target_terms_in_record	fulltext_body_matches	main_figure_candidates	cytokine_context_candidates	supplementary_candidates	article_short
+33597887	2020	Frontiers in pharmacology	yes	yes	6	6	5	5	0	0	5	Memory T-cell colitis
+36196887	2023	Phytotherapy research : PTR	yes	yes	10	10	9	4	0	4	0	Breg/TLR-MyD88 colitis
+36353208	2022	World journal of gastroenterology	yes	yes	9	9	9	5	3	0	2	Bcl-6/Syk/BLNK colitis

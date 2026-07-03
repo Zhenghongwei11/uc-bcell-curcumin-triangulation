@@ -33,9 +33,19 @@ def write_curated_tsv(df: pd.DataFrame, relpath: str) -> None:
     write_tsv(df, relpath)
 
 
+def standardize_candidate_names(names: pd.Series) -> list[str]:
+    standardized = names.astype(str).replace({"Berberime": "Berberine"})
+    seen: dict[str, int] = {}
+    out: list[str] = []
+    for name in standardized:
+        seen[name] = seen.get(name, 0) + 1
+        out.append(name if seen[name] == 1 else f"{name} (record {seen[name]})")
+    return out
+
+
 def build_manuscript_table_2(table: pd.DataFrame) -> pd.DataFrame:
     table = table.copy()
-    table["ingredient_name"] = table["ingredient_name"].replace({"Berberime": "Berberine*"})
+    table["ingredient_name"] = standardize_candidate_names(table["ingredient_name"])
     cols = [
         "display_role",
         "ingredient_name",
@@ -58,7 +68,7 @@ def build_manuscript_table_2(table: pd.DataFrame) -> pd.DataFrame:
         columns={
             "display_role": "candidate_role",
             "ingredient_name": "candidate",
-            "bridge_score": "bridge_score",
+            "bridge_score": "candidate_priority_score",
             "evidence_count": "HERB_evidence_records",
             "reference_count": "HERB_references",
             "clinical_trial_count": "HERB_clinical_trial_records",
@@ -96,7 +106,7 @@ def build_manuscript_table_3(table: pd.DataFrame) -> pd.DataFrame:
 
     def map_fulltext_level(value: str) -> str:
         if pd.isna(value) or str(value).strip() == "":
-            return "No full-text body match in high-value audit"
+            return "No full-text body match in high-value verification"
         parts = str(value).split(";")
         return "; ".join(fulltext_level_map.get(part, part) for part in parts)
 
@@ -212,7 +222,7 @@ def build_table_1() -> pd.DataFrame:
             "type": "TCM compound and target-name resource",
             "sample_or_record_count": f"{len(etcm_files)} local manifest files",
             "tissue_or_scope": "Ingredient details and target-name annotations",
-            "manuscript_role": "Supplementary cross-resource boundary check",
+            "manuscript_role": "Supplementary cross-resource check",
             "primary_limitation": "Target names require gene-symbol mapping and did not support the Curcumin-B-cell target bridge.",
             "source_url_or_record": "http://www.tcmip.cn/ETCM2/front/",
         },
@@ -226,8 +236,8 @@ def build_table_1() -> pd.DataFrame:
             "source_url_or_record": "https://platform.opentargets.org/",
         },
         {
-            "resource": "PubMed/PMC and full-text audit",
-            "type": "Bibliographic and full-text evidence audit",
+            "resource": "PubMed/PMC and full-text verification",
+            "type": "Bibliographic and full-text evidence verification",
             "sample_or_record_count": "3 high-value PMIDs; 14 target-level full-text rows",
             "tissue_or_scope": "Curcumin colitis target evidence",
             "manuscript_role": "Reference identity and target-context verification",
@@ -270,7 +280,7 @@ def build_table_2() -> pd.DataFrame:
         "backup_tcm_candidate": "Lower-consensus candidate",
     }
     merged["display_role"] = merged["recommended_role"].map(role_map).fillna(merged["recommended_role"])
-    merged["ingredient_name"] = merged["ingredient_name"].replace({"Berberime": "Berberine*"})
+    merged["ingredient_name"] = standardize_candidate_names(merged["ingredient_name"])
     cols = [
         "display_role",
         "recommended_role",
@@ -384,7 +394,7 @@ def build_table_3() -> pd.DataFrame:
 
 
 def write_legend_doc() -> None:
-    out_path = DOCS_DIR / "DRAFT_FIGURE_LEGENDS_AND_STAT_NOTES.md"
+    out_path = DOCS_DIR / "MANUSCRIPT_FIGURE_LEGENDS_AND_STAT_NOTES.md"
     if out_path.exists():
         print(f"Preserved curated {out_path.relative_to(ROOT)}")
         return
@@ -396,15 +406,15 @@ These legends are manuscript-facing drafts. They avoid claiming therapeutic effi
 
 ## Figure 1. Disease-first public-data triangulation and evidence boundaries
 
-(a) Evidence-gating strategy used to move from public UC/IBD mucosal disease signatures to rectal single-cell localization, TCM candidate prioritization, orthogonal target support, and explicit boundary checks. (b) Candidate-role convergence showing that Curcumin is the single primary B-cell-axis candidate rather than one of many equivalent target-overlap hits. (c) Claim-boundary map separating supported wording from claims not supported by the current public-data evidence.
+	(a) Disease-first synthesis used to move from public UC/IBD mucosal disease signatures to rectal single-cell localization, TCM candidate prioritization, orthogonal target support, and explicit interpretive limits. (b) Candidate-role convergence showing that Curcumin is the single primary B-cell-axis candidate rather than one of many equivalent target-overlap hits. (c) Claim map separating supported wording from claims not supported by the current public-data evidence.
 
-Statistical notes: Figure 1 summarizes results from the downstream quantitative analyses and evidence audits. The figure defines the manuscript logic and claim hierarchy; it does not add an independent efficacy test.
+Statistical notes: Figure 1 summarizes results from the downstream quantitative analyses and evidence verification. The figure defines the manuscript logic and claim hierarchy; it does not add an independent efficacy test.
 
 Source data: `figures/source_data/fig1a_evidence_gate_summary.tsv`, `figures/source_data/fig1b_candidate_role_summary.tsv`, and `figures/source_data/fig1c_claim_boundary_summary.tsv`.
 
 ## Figure 2. Replicated UC/IBD mucosal disease signature
 
-(a) GEO cohort audit showing the discovery/sensitivity evidence group and the independent active UC validation group. GSE75214 and GSE59071 are retained within the same GPL6244 evidence group rather than treated as independent validation. (b) Gene-level disease-versus-control volcano plots for the discovery and independent validation groups. Points indicate genes; red and blue mark genes passing FDR < 0.05 with absolute log2 fold change at least 1. (c) Consensus mucosal signature genes ranked by mean log2 fold change across the two independent evidence groups.
+(a) GEO cohort inventory showing the discovery/sensitivity evidence group and the independent active UC validation group. GSE75214 and GSE59071 are retained within the same GPL6244 evidence group rather than treated as independent validation. (b) Gene-level disease-versus-control volcano plots for the discovery and independent validation groups. Points indicate genes; red and blue mark genes passing FDR < 0.05 with absolute log2 fold change at least 1. (c) Consensus mucosal signature genes ranked by mean log2 fold change across the two independent evidence groups.
 
 Statistical notes: bulk transcriptomic contrasts were computed from processed GEO matrices. Gene-level P values and FDR values are reported in the corresponding source-data files. The downstream consensus signature is used as a disease-first anchor and should not be interpreted as a treatment mechanism.
 
@@ -420,17 +430,17 @@ Source data: `figures/source_data/fig3a_celltype_disease_axis.tsv`, `figures/sou
 
 ## Figure 4. Curcumin target evidence bridges the disease signature to the rectal B-cell axis
 
-(a) Candidate target-to-cell bridge ranking from disease-context HERB evidence and rectal scRNA localization. Curcumin is the leading B-cell-axis candidate. (b) Curcumin target evidence layers separating B-cell mechanism candidates, cytokine-context targets, and supplementary full-text-supported targets. (c) Rectal B-cell and M/DC pseudobulk expression deltas for selected Curcumin-linked targets.
+(a) Candidate cell-state linkage ranking from disease-context HERB evidence and rectal scRNA localization. Curcumin is the leading B-cell-axis candidate. (b) Curcumin target evidence layers separating B-cell mechanism candidates, cytokine-context targets, and supplementary full-text-supported targets. (c) Rectal B-cell and M/DC pseudobulk expression deltas for selected Curcumin-linked targets.
 
-Statistical notes: bridge scores are prioritization scores and do not measure therapeutic efficacy. BCL6, BLNK, and SYK are presented as full-text-supported B-cell mechanism candidates from PMID 36353208. CCL2, IL33, IL1B, and TNF are presented as cytokine-context targets supported by PMID 36196887 and should not be described as direct B-cell-intrinsic target modulation.
+Statistical notes: cell-state linkage scores are prioritization scores and do not measure therapeutic efficacy. BCL6, BLNK, and SYK are presented as full-text-supported B-cell mechanism candidates from PMID 36353208. CCL2, IL33, IL1B, and TNF are presented as cytokine-context targets supported by PMID 36196887 and should not be described as direct B-cell-intrinsic target modulation.
 
 Source data: `figures/source_data/fig4a_candidate_bridge_ranking.tsv`, `figures/source_data/fig4b_curcumin_target_evidence_tiers.tsv`, and `figures/source_data/fig4c_curcumin_target_cell_contrast.tsv`.
 
 ## Figure 5. Orthogonal evidence supports target plausibility while defining boundary conditions
 
-(a) Open Targets support for Curcumin disease-context targets, including genetic and clinical evidence subsets. (b) PubMed and full-text audit matrix for high-value Curcumin references. (c) ETCM2 mapped target overlap audit, showing that Curcumin has mapped ETCM2 genes but no accepted overlap with the HERB disease-context target set. (d) L1000CDS2 exact-ID candidate screen, showing no top-result hit among covered candidate perturbagens.
+(a) Open Targets support for Curcumin disease-context targets, including genetic and clinical evidence subsets. (b) PubMed and full-text verification matrix for high-value Curcumin references. (c) ETCM2 mapped target overlap check, showing that Curcumin has mapped ETCM2 genes but no accepted overlap with the HERB disease-context target set. (d) L1000CDS2 exact-ID candidate screen, showing no top-result hit among covered candidate perturbagens.
 
-Statistical notes: Open Targets scores support target-disease plausibility and do not establish compound action. PubMed/PMC and full-text audits verify bibliographic and target-context evidence. ETCM2 and LINCS are boundary-setting layers; the ETCM2 non-overlap and L1000CDS2 non-hit should not be interpreted as proof that Curcumin lacks biological activity.
+Statistical notes: Open Targets scores support target-disease plausibility and do not establish compound action. PubMed/PMC and full-text verification supports bibliographic and target-context traceability. ETCM2 and LINCS define resource-specific limits; the ETCM2 non-overlap and L1000CDS2 non-hit should not be interpreted as proof that Curcumin lacks biological activity.
 
 Source data: `figures/source_data/fig5a_open_targets_curcumin_support.tsv`, `figures/source_data/fig5b_pubmed_fulltext_verification.tsv`, `figures/source_data/fig5c_etcm2_overlap_boundary.tsv`, `figures/source_data/fig5d_lincs_candidate_reversal_status.tsv`, and `figures/source_data/fig5d_lincs_query_summary.tsv`.
 """

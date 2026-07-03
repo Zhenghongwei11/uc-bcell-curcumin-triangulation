@@ -1,0 +1,4 @@
+accession	role	evidence_group	case_samples	control_samples	excluded_samples	gene_rows
+GSE75214	discovery_or_replication	GPL6244_active_uc_colon	74	11	109	20003
+GSE59071	non_independent_sensitivity	GPL6244_active_uc_colon	74	11	31	20003
+GSE87466	uc_active_validation	GPL13158_uc_colon	87	21	0	21597

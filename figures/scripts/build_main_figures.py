@@ -59,7 +59,32 @@ def read_tsv(relpath: str) -> pd.DataFrame:
 
 
 def display_ingredient_name(name: str) -> str:
-    return "Berberine*" if name == "Berberime" else name
+    return "Berberine" if name == "Berberime" else name
+
+
+def make_unique_labels(labels: pd.Series) -> list[str]:
+    seen: dict[str, int] = {}
+    out: list[str] = []
+    for label in labels.astype(str):
+        seen[label] = seen.get(label, 0) + 1
+        out.append(label if seen[label] == 1 else f"{label} (record {seen[label]})")
+    return out
+
+
+def add_bh_fdr(df: pd.DataFrame, p_col: str, out_col: str) -> pd.DataFrame:
+    df = df.copy()
+    pvals = pd.to_numeric(df[p_col], errors="coerce")
+    valid = pvals.notna()
+    adjusted = pd.Series(np.nan, index=df.index, dtype=float)
+    if valid.any():
+        ordered = pvals[valid].sort_values()
+        m = len(ordered)
+        running = 1.0
+        for rank, idx in reversed(list(enumerate(ordered.index, start=1))):
+            running = min(running, float(pvals.loc[idx]) * m / rank)
+            adjusted.loc[idx] = min(running, 1.0)
+    df[out_col] = adjusted
+    return df
 
 
 def save_source(df: pd.DataFrame, name: str) -> None:
@@ -100,6 +125,14 @@ def p_label(p_value: float | int | None) -> str:
     if p_value < 0.001:
         return "P<0.001"
     return f"P={p_value:.3g}"
+
+
+def q_label(q_value: float | int | None) -> str:
+    if q_value is None or pd.isna(q_value):
+        return "q=NA"
+    if q_value < 0.001:
+        return "q<0.001"
+    return f"q={q_value:.3g}"
 
 
 def capped_neglog10(series: pd.Series, cap: float = 50.0) -> pd.Series:
@@ -196,9 +229,9 @@ def build_figure_1() -> None:
                 "boundary": "Association, not compound action",
             },
             {
-                "layer": "Candidate bridge",
+                "layer": "Candidate linkage",
                 "source_layer": "HERB disease-context targets",
-                "key_result": f"Curcumin bridge={cur_m9['bridge_score']:.1f}; targets={int(cur_m9['n_disease_context_unique_targets'])}",
+                "key_result": f"Curcumin linkage={cur_m9['bridge_score']:.1f}; targets={int(cur_m9['n_disease_context_unique_targets'])}",
                 "allowed_claim": "Curcumin prioritized as B-cell-axis candidate",
                 "boundary": "Prioritization, not efficacy",
             },
@@ -210,7 +243,7 @@ def build_figure_1() -> None:
                 "boundary": "Does not prove compound-target engagement",
             },
             {
-                "layer": "Boundary checks",
+                "layer": "Resource limits",
                 "source_layer": "ETCM2 and L1000CDS2",
                 "key_result": f"ETCM2 overlap={int(cur_etcm['n_overlap_with_herb_m9_disease_context_targets'])}; LINCS hits={lincs_hits}/{len(lincs)}",
                 "allowed_claim": "Weak or negative layers reported",
@@ -290,11 +323,11 @@ def build_figure_1() -> None:
     gate_bodies = [
         "2 GEO groups\nUC/IBD signature",
         f"B-cell delta {b_row['delta_axis_diseased_minus_healthy']:.3f}\nnull P={b_null['empirical_p_two_sided']:.4g}",
-        f"Curcumin bridge {cur_m9['bridge_score']:.1f}\n22 disease targets",
+        f"Curcumin linkage {cur_m9['bridge_score']:.1f}\n22 disease targets",
         f"Open Targets {int(cur_ot['n_open_targets_supported_genes'])}/{int(cur_ot['n_disease_context_targets'])}\nPubMed {int((m12['title_match'] == 'yes').sum())}/{len(m12)}",
         f"ETCM2 overlap {int(cur_etcm['n_overlap_with_herb_m9_disease_context_targets'])}\nLINCS {lincs_hits}/{len(lincs)}",
     ]
-    footers = ["association", "localization", "prioritization", "plausibility", "boundary"]
+    footers = ["association", "localization", "prioritization", "plausibility", "limits"]
     titles = ["Disease", "Cell state", "TCM candidate", "Support", "Limits"]
     x0 = 0.02
     w = 0.17
@@ -321,7 +354,7 @@ def build_figure_1() -> None:
     ax.text(
         0.02,
         0.08,
-        "Interpretation is tiered: association -> localization -> prioritization -> plausibility -> explicit boundary checks.",
+        "Interpretation is tiered: association -> localization -> prioritization -> plausibility -> evidentiary limits.",
         fontsize=5.6,
         ha="left",
         va="center",
@@ -363,7 +396,7 @@ def build_figure_1() -> None:
 
     ax = axes["C"]
     panel_label(ax, "c")
-    ax.set_title("Claim boundaries", loc="left", fontsize=8, pad=16)
+    ax.set_title("Claim map", loc="left", fontsize=8, pad=16)
     ax.set_axis_off()
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
@@ -371,9 +404,9 @@ def build_figure_1() -> None:
         [
             ("Disease", "UC/IBD mucosal\nsignature", "treatment\nresponse"),
             ("Cell state", "rectal B-cell\nlocalization", "patient compound\naction"),
-            ("Target bridge", "Curcumin\nprioritization", "validated target\nengagement"),
+            ("Target linkage", "Curcumin\nprioritization", "validated target\nengagement"),
             ("Full text", "BCL6/BLNK/SYK\nmechanism", "cytokines as\nB-cell-intrinsic"),
-            ("Boundary", "ETCM2/LINCS\nconstraints", "validation by\nnon-hit layers"),
+            ("Resource limits", "ETCM2/LINCS\nconstraints", "validation by\nnon-hit layers"),
         ],
         columns=["evidence_class", "can_claim", "cannot_claim"],
     )
@@ -527,14 +560,20 @@ def build_figure_3() -> None:
     null = read_tsv("results/m6_scrna_cell_state/gse125527_disease_contrast_patient_label_null.tsv")
     pseudo = read_tsv("results/m6_scrna_cell_state/gse125527_pseudobulk_module_summary.tsv")
 
-    contrast = contrast.sort_values("delta_axis_diseased_minus_healthy", ascending=True)
+    contrast = add_bh_fdr(contrast, "p_axis_mannwhitney", "q_axis_bh_fdr")
+    null = add_bh_fdr(null, "empirical_p_two_sided", "q_empirical_bh_fdr")
+    unclassified_qc = contrast[contrast["celltype"].eq("unknown")].copy()
+    contrast = contrast[~contrast["celltype"].eq("unknown")].sort_values("delta_axis_diseased_minus_healthy", ascending=True)
+    null = null[~null["celltype"].eq("unknown")].copy()
     save_source(contrast, "fig3a_celltype_disease_axis.tsv")
     save_source(null, "fig3b_patient_label_null.tsv")
+    save_source(unclassified_qc, "fig3_unclassified_cell_qc.tsv")
 
     counts = (
         pseudo.groupby(["celltype", "disease_assignment"], as_index=False)
         .agg(n_patients=("patient_assignment", "nunique"), n_pseudobulk_samples=("patient_assignment", "size"), n_cells=("n_cells", "sum"))
     )
+    counts_plot = counts[~counts["celltype"].eq("unknown")].copy()
     save_source(counts, "fig3c_pseudobulk_counts.tsv")
 
     fig = plt.figure(figsize=(7.1, 5.7), constrained_layout=True)
@@ -557,7 +596,7 @@ def build_figure_3() -> None:
         ax.text(
             row["delta_axis_diseased_minus_healthy"] + 0.018,
             row["celltype"],
-            p_label(row["p_axis_mannwhitney"]),
+            f"{p_label(row['p_axis_mannwhitney'])}\n{q_label(row['q_axis_bh_fdr'])}",
             va="center",
             fontsize=5.8,
             color=PALETTE["boundary"],
@@ -582,22 +621,23 @@ def build_figure_3() -> None:
     ax.set_yticklabels(null_plot["celltype"])
     for i, row in null_plot.reset_index(drop=True).iterrows():
         ax.text(
-            row["observed_delta_axis_diseased_minus_healthy"] + 0.018,
+            0.73,
             i,
-            f"emp. {p_label(row['empirical_p_two_sided'])}",
+            f"emp. {q_label(row['q_empirical_bh_fdr'])}",
             va="center",
+            ha="right",
             fontsize=5.8,
             color=PALETTE["boundary"],
         )
     ax.set_xlabel("Observed delta vs patient-label null 95% interval")
     ax.set_title("Patient-label null support", loc="left", fontsize=8, pad=6)
-    ax.set_xlim(-0.55, 0.78)
+    ax.set_xlim(-0.55, 0.82)
     clean_axis(ax)
 
     ax = axes["C"]
     panel_label(ax, "c")
-    pivot_cells = counts.pivot(index="celltype", columns="disease_assignment", values="n_cells").fillna(0)
-    pivot_patients = counts.pivot(index="celltype", columns="disease_assignment", values="n_patients").fillna(0)
+    pivot_cells = counts_plot.pivot(index="celltype", columns="disease_assignment", values="n_cells").fillna(0)
+    pivot_patients = counts_plot.pivot(index="celltype", columns="disease_assignment", values="n_patients").fillna(0)
     order = contrast.sort_values("delta_axis_diseased_minus_healthy", ascending=False)["celltype"].tolist()
     x = np.arange(len(order))
     width = 0.36
@@ -711,19 +751,23 @@ def build_figure_4() -> None:
     ax = axes["A"]
     panel_label(ax, "a")
     top = bridge_source.nlargest(10, "bridge_score").sort_values("bridge_score", ascending=True)
+    y = np.arange(len(top))
+    y_labels = make_unique_labels(top["ingredient_name"])
     colors = [PALETTE["curcumin"] if name == "Curcumin" else "#B8BEC5" for name in top["ingredient_name"]]
-    ax.barh(top["ingredient_name"], top["bridge_score"], color=colors, height=0.65)
-    for _, row in top.iterrows():
+    ax.barh(y, top["bridge_score"], color=colors, height=0.65)
+    ax.set_yticks(y)
+    ax.set_yticklabels(y_labels)
+    for i, (_, row) in enumerate(top.iterrows()):
         if row["ingredient_name"] == "Curcumin":
             ax.text(
                 row["bridge_score"] + 1.2,
-                row["ingredient_name"],
+                i,
                 "22 disease-context targets\n12 expressed in rectal B cells",
                 va="center",
                 fontsize=5.8,
                 color=PALETTE["boundary"],
             )
-    ax.set_xlabel("Target-to-cell bridge score")
+    ax.set_xlabel("Cell-state linkage score")
     ax.set_title("Candidate bridge ranking", loc="left", fontsize=8, pad=6)
     ax.set_xlim(0, top["bridge_score"].max() * 1.55)
     clean_axis(ax)
@@ -937,6 +981,7 @@ def build_figure_5() -> None:
         ]
     ].copy()
     lincs_source["ingredient_name"] = lincs_source["ingredient_name"].map(display_ingredient_name)
+    lincs_source = lincs_source.rename(columns={"priority_score": "initial_lincs_screen_score"})
     save_source(lincs_source, "fig5d_lincs_candidate_reversal_status.tsv")
     save_source(lincs_summary, "fig5d_lincs_query_summary.tsv")
 
@@ -1041,16 +1086,20 @@ def build_figure_5() -> None:
     ax.set_yticks(y)
     ax.set_yticklabels(etcm_plot["ingredient_name"], fontsize=6)
     ax.set_xlabel("ETCM2 mapped target genes")
-    ax.set_title("ETCM2 overlap boundary", loc="left", fontsize=8, pad=6)
+    ax.set_title("ETCM2 cross-resource concordance", loc="left", fontsize=8, pad=6)
     ax.legend(loc="lower right", fontsize=5.8)
     ax.set_xlim(0, etcm_plot["n_accepted_mapped_gene_symbols_exact_high"].max() * 1.45)
     clean_axis(ax)
 
     ax = axes["D"]
     panel_label(ax, "d")
-    lincs_plot = lincs_source.sort_values("priority_score", ascending=True).tail(12)
+    lincs_plot = lincs_source.sort_values("initial_lincs_screen_score", ascending=True).tail(12)
+    y = np.arange(len(lincs_plot))
+    y_labels = make_unique_labels(lincs_plot["ingredient_name"])
     colors = [PALETTE["curcumin"] if name == "Curcumin" else "#B8BEC5" for name in lincs_plot["ingredient_name"]]
-    ax.barh(lincs_plot["ingredient_name"], lincs_plot["priority_score"], color=colors, height=0.62)
+    ax.barh(y, lincs_plot["initial_lincs_screen_score"], color=colors, height=0.62)
+    ax.set_yticks(y)
+    ax.set_yticklabels(y_labels)
     n_tests = len(lincs_source)
     n_hits = int((lincs_source["hit_status"] != "no_top_result_hit").sum())
     ax.text(
@@ -1063,9 +1112,9 @@ def build_figure_5() -> None:
         fontsize=6.2,
         color=PALETTE["boundary"],
     )
-    ax.set_xlabel("Candidate priority score")
-    ax.set_title("L1000CDS2 candidate screen", loc="left", fontsize=8, pad=6)
-    ax.set_xlim(0, lincs_plot["priority_score"].max() * 1.18)
+    ax.set_xlabel("Initial LINCS-screen score")
+    ax.set_title("L1000CDS2 exact-ID coverage", loc="left", fontsize=8, pad=6)
+    ax.set_xlim(0, lincs_plot["initial_lincs_screen_score"].max() * 1.18)
     clean_axis(ax)
 
     save_figure(fig, "fig5_evidence_boundaries")

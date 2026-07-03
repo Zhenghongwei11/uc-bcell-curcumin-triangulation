@@ -29,9 +29,16 @@ expected = [
     'tables/manuscript/table1_dataset_and_resource_inventory.tsv',
     'tables/manuscript/table2_prioritized_tcm_candidates.tsv',
     'tables/manuscript/table3_curcumin_target_evidence.tsv',
+    'tables/supplementary/Table_S1_full_curcumin_target_evidence.tsv',
+    'tables/supplementary/gse182270_bcell_group_comparison.tsv',
+    'tables/supplementary/standard_overlap_baseline_candidate_ranking.tsv',
+    'tables/supplementary/scrna_signature_sensitivity_bcell_summary.tsv',
 ]
 missing = [p for p in expected if not Path(p).exists()]
 if missing:
     raise SystemExit('Missing expected outputs: ' + ', '.join(missing))
-print('Reproduction completed. Figures and tables were regenerated.')
+supplementary = sorted(Path('tables/supplementary').glob('*.tsv'))
+if len(supplementary) < 30:
+    raise SystemExit(f'Expected supplementary TSV tables, found only {len(supplementary)}')
+print(f'Reproduction completed. Main figures, main tables, and {len(supplementary)} supplementary TSV tables are available.')
 PY

@@ -1,0 +1,26 @@
+standard_overlap_rank	disease_cell_aware_rank	rank_shift_overlap_minus_disease_cell	ingredient_id	ingredient_name	n_disease_context_targets	standard_overlap_hits	standard_overlap_up_hits	standard_overlap_genes	disease_cell_aware_score	b_cell_increased_targets	mdc_increased_targets
+1	2	-1	HBIN016606	Archin	18	7	6	CCL2;CXCL5;IL1A;IL1B;NOS2;PPARG;PTGS2	46	5	4
+2	1	1	HBIN021985	Curcumin	22	3	3	CCL2;IL1B;IL33	63.2	11	8
+3	12	-9	HBIN029531	Honokiol	6	3	2	IL1B;NOS2;PPARG	21.5	2	2
+4	3	1	HBIN018512	Bilobalide	12	2	2	IL1B;ITGAX	34.8	6	6
+5	7	-2	HBIN021795	Cryptotanshinone	11	2	2	NOS2;PTGS2	29.5	3	4
+6	5	1	HBIN027450	Geniposide	11	2	2	CCL2;IL1B	31.8	6	4
+7	4	3	HBIN017892	Berberine	10	2	2	IL1B;PTGS2	33.5	5	2
+8	6	2	HBIN030442	Isoarnebin 4	9	2	2	IL1B;NOS2	29.8	5	3
+9	8	1	HBIN040403	Polydatin	5	2	2	ICAM1;SELP	27	4	2
+10	17	-7	HBIN048372	Wogonin	4	2	1	NOS2;PPARG	9.25	1	1
+11	9	2	HBIN017893	Berberine	8	1	1	OSMR	22	4	4
+12	10	2	HBIN045672	Taxifolin	7	1	1	IL1B	22	4	3
+13	11	2	HBIN046831	Trans-resveratrol	7	1	1	IL1B	22	4	4
+14	19	-5	HBIN020921	Cis-resveratrol	4	1	1	CXCL10	6.25	1	1
+15	15	0	HBIN042199	Rhein	4	1	1	IL1B	17.8	3	3
+16	18	-2	HBIN018800	Brahmic acid	3	1	0	PPARG	7.25	1	0
+17	16	1	HBIN019690	Capsaicin	8	0	0		12.8	3	1
+18	14	4	HBIN017136	Asperuloside	7	0	0		19.2	4	2
+19	13	6	HBIN015751	Alpinetin	6	0	0		21.2	5	3
+20	20	0	HBIN044493	Spermidine	2	0	0		5.75	1	1
+21	23	-2	HBIN034558	Matrine	1	0	0		0	0	0
+22	21	1	HBIN034657	Melatonin	1	0	0		4.25	1	0
+23	24	-1	HBIN038606	Paeoniflorin	1	0	0		0	0	0
+24	22	2	HBIN041217	Pterostilbene	1	0	0		2.25	0	1
+25	25	0	HBIN041495	Quercetin	1	0	0		0	0	0

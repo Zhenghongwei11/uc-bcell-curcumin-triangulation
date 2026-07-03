@@ -1,0 +1,2 @@
+tissue_assignment	celltype	n_diseased_samples	n_healthy_samples	diseased_cells	healthy_cells	mean_axis_diseased	mean_axis_healthy	delta_axis_diseased_minus_healthy	p_axis_mannwhitney	mean_up_diseased	mean_up_healthy	delta_up_diseased_minus_healthy	p_up_mannwhitney	mean_down_diseased	mean_down_healthy	delta_down_diseased_minus_healthy	p_down_mannwhitney	q_axis_bh_fdr
+R	unknown	7	8	10593	10128	3.90848	3.95084	-0.0423548	0.53582	4.57454	4.67205	-0.0975071	0.151981	0.666063	0.721213	-0.0551497	0.694328	0.669775
