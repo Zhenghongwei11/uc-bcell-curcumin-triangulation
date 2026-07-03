@@ -1,0 +1,5 @@
+metric	value	notes
+top_n_requested	150	
+max_fdr	0.05	
+up_genes_exported	150	results/m4_geo_uc_ibd_signature/lincs_query_up_genes.txt
+down_genes_exported	150	results/m4_geo_uc_ibd_signature/lincs_query_down_genes.txt

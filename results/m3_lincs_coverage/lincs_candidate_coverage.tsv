@@ -1,0 +1,185 @@
+priority_class	priority_score	ingredient_id	ingredient_name	pubchem_id	inchikey	match_status	match_method	lincs_source	pert_id	pert_iname	pert_type	gse92742_signature_count	gse92742_cell_count	gse92742_cells
+priority_for_lincs_mapping	55.0	HBIN021985	Curcumin	969516	VFLDPWHFBUODDF-FCXRPNKRSA-N	covered	inchikey_exact	GSE92742	BRD-K07572174	curcumin	trt_cp	0	0	
+priority_for_lincs_mapping	55.0	HBIN021985	Curcumin	969516	VFLDPWHFBUODDF-FCXRPNKRSA-N	covered	inchikey_exact	GSE70138	BRD-K07572174	curcumin	trt_cp	0	0	
+priority_for_lincs_mapping	41.0	HBIN017892	Berberime	2353	YBHILYKTIRIUTE-UHFFFAOYSA-N	covered	inchikey_exact	GSE70138	BRD-K14796088	berberine	trt_cp	0	0	
+priority_for_lincs_mapping	27.0	HBIN046831	Trans-resveratrol	445154	LUKBXSAWLPMMSZ-OWOJBTEDSA-N	covered	inchikey_exact	GSE92742	BRD-K80738081	resveratrol	trt_cp	0	0	
+priority_for_lincs_mapping	27.0	HBIN046831	Trans-resveratrol	445154	LUKBXSAWLPMMSZ-OWOJBTEDSA-N	covered	inchikey_exact	GSE70138	BRD-K80738081	resveratrol	trt_cp	0	0	
+priority_for_lincs_mapping	22.0	HBIN016606	Archin	3220	RHMXXJGYXNZAPX-UHFFFAOYSA-N	covered	inchikey_exact	GSE92742	BRD-K58685305	emodin	trt_cp	0	0	
+priority_for_lincs_mapping	21.0	HBIN045672	Taxifolin	439533	CXQWRCVTCMQVQX-LSDHHAIUSA-N	covered	inchikey_exact	GSE92742	BRD-K94649603	taxifolin	trt_cp	0	0	
+priority_for_lincs_mapping	20.0	HBIN034657	Melatonin	896	DRLFMBDRBRZALE-UHFFFAOYSA-N	covered	inchikey_exact	GSE92742	BRD-K97530723	melatonin	trt_cp	0	0	
+priority_for_lincs_mapping	20.0	HBIN034657	Melatonin	896	DRLFMBDRBRZALE-UHFFFAOYSA-N	covered	inchikey_exact	GSE70138	BRD-K97530723	melatonin	trt_cp	0	0	
+priority_for_lincs_mapping	19.0	HBIN017136	Asperuloside	84298	IBIPGYWNOBGEMH-DILZHRMZSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+priority_for_lincs_mapping	18.0	HBIN017893	Berberine	2353	YBHILYKTIRIUTE-UHFFFAOYSA-N	covered	inchikey_exact	GSE70138	BRD-K14796088	berberine	trt_cp	0	0	
+priority_for_lincs_mapping	18.0	HBIN020921	Cis-resveratrol	1548910	LUKBXSAWLPMMSZ-UPHRSURJSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+priority_for_lincs_mapping	18.0	HBIN021795	Cryptotanshinone	160254	GVKKJJOMQCNPGB-JTQLQIEISA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+priority_for_lincs_mapping	18.0	HBIN042199	Rhein	10168	FCDLCPWAQCPTKC-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+priority_for_lincs_mapping	17.0	HBIN018512	Bilobalide	73581	MOLPUWBMSBJXER-YDGSQGCISA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+priority_for_lincs_mapping	17.0	HBIN029531	Honokiol	72303	FVYXIJYOAGAUQK-UHFFFAOYSA-N	covered	inchikey_exact	GSE92742	BRD-K98493452	honokiol	trt_cp	0	0	
+priority_for_lincs_mapping	17.0	HBIN029531	Honokiol	72303	FVYXIJYOAGAUQK-UHFFFAOYSA-N	covered	inchikey_exact	GSE70138	BRD-K98493452	honokiol	trt_cp	0	0	
+priority_for_lincs_mapping	17.0	HBIN030442	Isoarnebin 4	479503	NEZONWMXZKDMKF-SNVBAGLBSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+priority_for_lincs_mapping	17.0	HBIN034558	Matrine	91466	ZSBXGIUJOOQZMP-JLNYLFASSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+priority_for_lincs_mapping	17.0	HBIN038606	Paeoniflorin	442534	YKRGDOXKVOZESV-WRJNSLSBSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+priority_for_lincs_mapping	17.0	HBIN040403	Polydatin	5281718	HSTZMXCBWJGKHG-CUYWLFDKSA-N	covered	inchikey_exact	GSE92742	BRD-K43236057	polydatin	trt_cp	0	0	
+priority_for_lincs_mapping	17.0	HBIN041495	Quercetin	5280343	REFJWTPEDVJJIY-UHFFFAOYSA-N	covered	inchikey_exact	GSE92742	BRD-K97399794	quercetin	trt_cp	0	0	
+priority_for_lincs_mapping	17.0	HBIN041495	Quercetin	5280343	REFJWTPEDVJJIY-UHFFFAOYSA-N	covered	inchikey_exact	GSE70138	BRD-K97399794	quercetin	trt_cp	0	0	
+priority_for_lincs_mapping	17.0	HBIN048372	Wogonin	5281703	XLTFNNCXVBYBSX-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+priority_for_lincs_mapping	16.0	HBIN048442	Xanthohumol	639665	ORXQGKIUCDPEAJ-YRNVUSSQSA-N	covered	inchikey_exact	GSE92742	BRD-K77390737	xanthohumol	trt_cp	0	0	
+priority_for_lincs_mapping	15.0	HBIN044493	Spermidine	1102	ATHGHQPFGPMSJY-UHFFFAOYSA-N	covered	inchikey_exact	GSE92742	BRD-K40438880	spermidine	trt_cp	0	0	
+priority_for_lincs_mapping	14.0	HBIN018800	Brahmic acid	73412	PRAUVHZJPXOEIF-AOLYGAPISA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+priority_for_lincs_mapping	14.0	HBIN019690	Capsaicin	1548943	YKPUWZUDDOIDPM-SOFGYWHQSA-N	covered	inchikey_exact	GSE92742	BRD-K50590187	capsaicin	trt_cp	0	0	
+priority_for_lincs_mapping	14.0	HBIN019690	Capsaicin	1548943	YKPUWZUDDOIDPM-SOFGYWHQSA-N	covered	inchikey_exact	GSE70138	BRD-K50590187	capsaicin	trt_cp	0	0	
+priority_for_lincs_mapping	14.0	HBIN027450	Geniposide	107848	IBFYXTRXDNAPMM-BVTMAQQCSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+priority_for_lincs_mapping	13.0	HBIN015751	Alpinetin	154279	QQQCWVDPMPFUGF-ZDUSSCGKSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+priority_for_lincs_mapping	13.0	HBIN025006	Ellagic acid	5281855	AFSDNFLWKVMVRB-UHFFFAOYSA-N	covered	inchikey_exact	GSE92742	BRD-K30466858	ellagic-acid	trt_cp	0	0	
+priority_for_lincs_mapping	13.0	HBIN025006	Ellagic acid	5281855	AFSDNFLWKVMVRB-UHFFFAOYSA-N	covered	inchikey_exact	GSE70138	BRD-K30466858	ellagic-acid	trt_cp	0	0	
+priority_for_lincs_mapping	13.0	HBIN041217	Pterostilbene	5281727	VLEUZFDZJKSGMX-ONEGZZNKSA-N	covered	inchikey_exact	GSE92742	BRD-K92870997	pterostilbene	trt_cp	0	0	
+secondary_literature_supported	15.0	HBIN032453	Kynurenine	846	YGPSJZOEDVAXAB-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+background_or_control	14.0	HBIN030105	Indigo	10215	QQILFGKZUJYXGS-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+background_or_control	14.0	HBIN047654	Uvadex	4114	QXKHYNVANLEOEG-UHFFFAOYSA-N	covered	inchikey_exact	GSE92742	BRD-K63430059	methoxsalen	trt_cp	0	0	
+background_or_control	14.0	HBIN047654	Uvadex	4114	QXKHYNVANLEOEG-UHFFFAOYSA-N	covered	inchikey_exact	GSE70138	BRD-K63430059	methoxsalen	trt_cp	0	0	
+secondary_literature_supported	13.0	HBIN030187	Inosine	135398641	UGQMRVRMYYASKQ-KQYNXXCUSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	13.0	HBIN036380	Naringin	442428	DFPMSGMNTNDNHN-ZPHOTFPESA-N	covered	inchikey_exact	GSE92742	BRD-K02953697	naringin	trt_cp	0	0	
+secondary_literature_supported	13.0	HBIN039698	P-hydroxyphenethyl-beta-d-glucoside	159278	ILRCGYURZSFMEG-RKQHYHRCSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	13.0	HBIN045135	Sulforathane	5350	SUVMJBTUFCVSAD-UHFFFAOYSA-N	covered	inchikey_exact	GSE92742	BRD-A58955223	sulforaphane	trt_cp	0	0	
+secondary_literature_supported	13.0	HBIN045135	Sulforathane	5350	SUVMJBTUFCVSAD-UHFFFAOYSA-N	covered	inchikey_exact	GSE70138	BRD-A58955223	sulforaphane	trt_cp	0	0	
+background_or_control	13.0	HBIN047572	Urc	1175	LEHOTFFKMJEONL-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	13.0	HBIN048376	Wogonoside	3084961	LNOHXHDWGCMVCO-NTKSAMNMSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+deprioritize_low_tcm_specificity_or_conventional	12.0	HBIN019558	Cannabidiol	644019	QHMBSVQNZZTUGM-ZWKOTPCHSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+background_or_control	12.0	HBIN020141	Cerebroside	5280335	WWUZIQQURGPMPG-KRWOKUGFSA-N	covered	inchikey_exact	GSE92742	BRD-K62959606	sphingosine	trt_cp	0	0	
+background_or_control	12.0	HBIN028057	Glutamine	5961	ZDXPYRJPNDTMRX-VKHMYHEASA-N	covered	inchikey_exact	GSE92742	BRD-K83896451	glutamine	trt_cp	0	0	
+background_or_control	12.0	HBIN032819	Ldp	681	VYFYYTLLBUKUHU-UHFFFAOYSA-N	covered	inchikey_exact	GSE92742	BRD-K43887077	dopamine	trt_cp	0	0	
+background_or_control	12.0	HBIN032819	Ldp	681	VYFYYTLLBUKUHU-UHFFFAOYSA-N	covered	inchikey_exact	GSE70138	BRD-K43887077	dopamine	trt_cp	0	0	
+secondary_literature_supported	11.0	HBIN026550	Flavone	10680	VHBFFQKBGNRLFZ-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+background_or_control	11.0	HBIN032538	Lactose	6134	GUBGYTABKSRVRQ-DCSYEGIMSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+background_or_control	11.0	HBIN042735	Saccharose	5988	CZMRCDWAGMRECN-UGDNZRGBSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	10.0	HBIN016074	Anemoside b	11636713	OUHBKBTZUPLIIA-OTEDBJMHSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	10.0	HBIN017178	Astaxanthin	5281224	MQZIGYBFDRPAKN-UWFIBFSHSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	10.0	HBIN017212	Astragalin	5282102	JPUKWEQWGBDDQB-QSOFNFLRSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	10.0	HBIN017508	Baicalein	5281605	FXNFHKRTJBSTCS-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	10.0	HBIN019495	Campherol	5280863	IYRMWMYZSQPJKC-UHFFFAOYSA-N	covered	inchikey_exact	GSE92742	BRD-K12807006	kaempferol	trt_cp	0	0	
+secondary_literature_supported	10.0	HBIN021714	Crocin	5281233	SEBIKDIMAPSUBY-RTJKDTQDSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	10.0	HBIN021964	Curculigoside	158845	SJJRKHVKAXVFJQ-QKYBYQKWSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	10.0	HBIN022795	Daurisoline	51106	BURJAQFYNVMZDV-FIRIVFDPSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	10.0	HBIN023000	Dehydrocostus lactone	73174	NETSQGRTUNRXEO-XUXIUFHCSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	10.0	HBIN024134	Dioscin	119245	VNONINPVFQTJOC-ZGXDEBHDSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	10.0	HBIN029163	Heriguard	1794427	CWVRJTMFETXNAD-JUHZACGLSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	10.0	HBIN031581	Juglone	3806	KQPYUDDGWXQXHS-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	10.0	HBIN032355	Kumujian b	5320161	PGFKZUOYIFDMQJ-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	10.0	HBIN032371	Kurarinone	11982640	LTTQKYMNTNISSZ-MWTRTKDXSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	10.0	HBIN033803	Luteolin	5280445	IQPNAANSBPBGFQ-UHFFFAOYSA-N	covered	inchikey_exact	GSE92742	BRD-K05236810	luteolin	trt_cp	0	0	
+secondary_literature_supported	10.0	HBIN033803	Luteolin	5280445	IQPNAANSBPBGFQ-UHFFFAOYSA-N	covered	inchikey_exact	GSE70138	BRD-K05236810	luteolin	trt_cp	0	0	
+secondary_literature_supported	10.0	HBIN037568	Nuciferine	10146	ORJVQPIHKOARKV-OAHLLOKOSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	10.0	HBIN037642	Obacunone	119041	MAYJEFRPIKEYBL-OASIGRBWSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	10.0	HBIN038919	Patchouli alcohol	10955174	GGHMUJBZYLPWFD-CUZKYEQNSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	10.0	HBIN039240	Perillyl alcohol	10819	NDTYTMIUWGWIMO-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	10.0	HBIN039439	Phellodendrine	3081405	RBBVPNQTBKHOEQ-KKSFZXQISA-O	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	10.0	HBIN040107	Piplartine	637858	VABYUUZNAVQNPG-BQYQJAHWSA-N	covered	inchikey_exact	GSE92742	BRD-K24132293	piperlongumine	trt_cp	0	0	
+secondary_literature_supported	10.0	HBIN042438	Rosmarinic acid	5281792	DOUMFZQKYFQNTF-WUTVXBCWSA-N	covered	inchikey_exact	GSE92742	BRD-K20313525	rosmarinic-acid	trt_cp	0	0	
+secondary_literature_supported	10.0	HBIN044062	Sinapic acid	637775	PCMORTLOPMLEFB-ONEGZZNKSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	10.0	HBIN045566	Tatarine	1123	XOAAWQZATWQOTB-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	10.0	HBIN046423	Tiliroside	5320686	DVGGLGXQSFURLP-VWMSDXGPSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	10.0	HBIN047173	Triptolide	107985	DFBIRQPKNDILPW-CIVMWXNOSA-N	covered	inchikey_exact	GSE92742	BRD-K39484304	triptolide	trt_cp	0	0	
+secondary_literature_supported	10.0	HBIN047613	Ursolic acid	64945	WCGUUGGRBIKTOS-GPOJBZKASA-N	covered	inchikey_exact	GSE92742	BRD-K68185022	ursolic-acid	trt_cp	0	0	
+secondary_literature_supported	9.0	HBIN007410	3,4-dihydroxyphenethyl alcohol	82755	JUUBCHWRXWPFFH-UHFFFAOYSA-N	covered	inchikey_exact	GSE92742	BRD-K04809113	hydroxytyrosol	trt_cp	0	0	
+secondary_literature_supported	9.0	HBIN015866	Ammidin	10212	OLOOJGVNMBJLLR-UHFFFAOYSA-N	covered	inchikey_exact	GSE92742	BRD-K07117950	imperatorin	trt_cp	0	0	
+secondary_literature_supported	9.0	HBIN016600	Arbutin	440936	BJRNKVDFDLYUGJ-RMPHRYRLSA-N	covered	inchikey_exact	GSE92742	BRD-K08037784	arbutin	trt_cp	0	0	
+secondary_literature_supported	9.0	HBIN016600	Arbutin	440936	BJRNKVDFDLYUGJ-RMPHRYRLSA-N	covered	inchikey_exact	GSE70138	BRD-K08037784	arbutin	trt_cp	0	0	
+secondary_literature_supported	9.0	HBIN018208	Betanin	6540685	CTMLKIKAUFEMLE-FTNGGYTGSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	9.0	HBIN019458	Cambogin	11135781	KXTNVBQRLRYVCO-LPSZMIQCSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	9.0	HBIN019759	Carnosol	442009	XUSYGBPHQBWGAD-PJSUUKDQSA-N	covered	inchikey_exact	GSE92742	BRD-K67265981	carnosol	trt_cp	0	0	
+secondary_literature_supported	9.0	HBIN019909	Catalpol	91520	LHDWRKICQLTVDL-PZYDOOQISA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	9.0	HBIN021561	Corylin	5316097	PWAACAMQKVIVPZ-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	9.0	HBIN024184	Diosmetin	5281612	MBNGWHIJMBWFHU-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	9.0	HBIN026264	Evodiamine	442088	TXDUTHBFYKGSAH-SFHVURJKSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	9.0	HBIN028034	Glucoraphanin	9548634	GMMLNKINDDUDCF-RFOBZYEESA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	9.0	HBIN030108	Indirubin	10177	JNLNPCNGMHKCKO-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	9.0	HBIN033198	Ligustilide	5319022	IQVQXVFMNOFTMU-FLIBITNWSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	9.0	HBIN034421	Mannose	18950	WQZGKKKJIJFFOK-QTVWNMPRSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	9.0	HBIN038387	Osthol	10228	MBRLOUHOWLUMFF-UHFFFAOYSA-N	covered	inchikey_exact	GSE92742	BRD-K78294846	osthol	trt_cp	0	0	
+secondary_literature_supported	9.0	HBIN038488	Oxymatrine	114850	XVPBINOPNYFXID-LHDUFFHYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	9.0	HBIN040271	Plumericin	5281545	VFXXNAVZODKBIW-JKXVGBJFSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+background_or_control	9.0	HBIN040827	Propanoic acid	1032	XBDQKXXYIPTUBI-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	9.0	HBIN042657	Rutaecarpine	65752	ACVGWSKVRYFWRP-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	9.0	HBIN042670	Rutin	5280805	IKGXIBQEEMLURG-NVPNHPEKSA-N	covered	inchikey_exact	GSE92742	BRD-K20482099	rutin	trt_cp	0	0	
+secondary_literature_supported	9.0	HBIN043028	Sanguinarine	5154	INVGWHRKADIJHF-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	9.0	HBIN043798	Sesamin	72307	PEYUIKBAABKQKQ-AFHBHXEDSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+deprioritize_low_tcm_specificity_or_conventional	9.0	HBIN048048	Vitamin d	12895043	FCKJYANJHNLEEP-OIMXRAFZSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	9.0	HBIN048412	Wuweizisu c	443027	HTBWBWWADZJXID-TXEJJXNPSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	8.0	HBIN020281	Chenodeoxycholic acid	10133	RUDATBOHQWOJDD-BSWAIDMHSA-N	covered	inchikey_exact	GSE92742	BRD-K18135438	chenodeoxycholic-acid	trt_cp	0	0	
+background_or_control	8.0	HBIN030233	Inulin	44630352	GJJZLLGOZQMFSQ-ZDNJPGIUSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+background_or_control	7.0	HBIN028191	Glycyrrhizin	14982	LPLVUJXQOOQHMX-QWBHMCJMSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+background_or_control	7.0	HBIN043546	Se	6326970	BUGBHKTXTAQXES-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+background_or_control	7.0	HBIN047610	Ursodeoxycholic acid	31401	RUDATBOHQWOJDD-UZVSRGJWSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	6.0	HBIN003500	20-(s)-ginsenoside-rg3	9918693	RWXIFXNRCLMQCD-JBVRGBGGSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	6.0	HBIN014230	Abk	5280896	JLIDBLDQVAYHNE-YKALOCIXSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	6.0	HBIN015074	Albiflorin	24868421	QQUHMASGPODSIW-ICECTASOSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	6.0	HBIN015902	Ampeloptin	161557	KJXSIXMJHKAJOD-LSDHHAIUSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	6.0	HBIN016019	Andrographolide	5318517	BOJKULTULYSRAS-OTESTREVSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+background_or_control	6.0	HBIN016275	Anthocyanin	145858	NWKFECICNXDNOQ-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	6.0	HBIN016609	Arctigenin	64981	NQWVSMVXKMHKTF-JKSUJKDBSA-N	covered	inchikey_exact	GSE92742	BRD-K53523901	arctigenin	trt_cp	0	0	
+secondary_literature_supported	6.0	HBIN017927	Berlambine	11066	ZHYQCBCBTQWPLC-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+background_or_control	6.0	HBIN018507	Bile acid	439520	BHQCQFFYRZLCQQ-UMZBRFQRSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	6.0	HBIN018620	Bisdemethoxycurcumin	5315472	PREBVFJICNPEKM-YDWXAUTNSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	6.0	HBIN019550	Cannabichromene	30219	UVOLYTDXHDXWJU-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	6.0	HBIN021403	Convallatoxin	441852	HULMNSIAKWANQO-JQKSAQOKSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	6.0	HBIN023356	Deoxycholic acid	222528	KXGVEGMKQFWNSR-LLQZFEROSA-N	covered	inchikey_exact	GSE92742	BRD-K41170226	deoxycholic-acid	trt_cp	0	0	
+secondary_literature_supported	6.0	HBIN023356	Deoxycholic acid	222528	KXGVEGMKQFWNSR-LLQZFEROSA-N	covered	inchikey_exact	GSE70138	BRD-K41170226	deoxycholic-acid	trt_cp	0	0	
+secondary_literature_supported	6.0	HBIN025026	Embelin	3218	IRSFLDGTOHBADP-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	6.0	HBIN025796	Esculetin	5281416	ILEDWLMCKZNDJK-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	6.0	HBIN027003	Galangin	5281616	VCCRNZQBSJXYJD-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+background_or_control	6.0	HBIN027456	Genistein	5280961	TZBJGXHYKVUXJN-UHFFFAOYSA-N	covered	inchikey_exact	GSE92742	BRD-K43797669	genistein	trt_cp	0	0	
+background_or_control	6.0	HBIN027456	Genistein	5280961	TZBJGXHYKVUXJN-UHFFFAOYSA-N	covered	inchikey_exact	GSE70138	BRD-K43797669	genistein	trt_cp	0	0	
+secondary_literature_supported	6.0	HBIN027739	Ginsenoside rd	11679800	RLDVZILFNVRJTL-IWFVLDDISA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	6.0	HBIN029922	Icariin	5318997	TZJALUIVHRYQQB-XLRXWWTNSA-N	covered	inchikey_exact	GSE92742	BRD-K65639003	icariin	trt_cp	0	0	
+secondary_literature_supported	6.0	HBIN030757	Isogambogenicacid	101389903	RCWNBHCZYXWDOV-SDNKGDDVSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+deprioritize_low_tcm_specificity_or_conventional	6.0	HBIN032689	L-ascorbic acid	54670067	CIWBSHSKHKDKBQ-JLAZNSOCSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	6.0	HBIN034656	Melanin	6325610	XUMBMVFBXHLACL-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	6.0	HBIN037940	Oleanolic acid	10494	MIJYXULNPSFWEK-GTOFXWBISA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	6.0	HBIN040152	Pit	124333	MMPTYEXNPWSTOR-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	6.0	HBIN041663	Quercetin,3-o-rutinoside	5280805	IKGXIBQEEMLURG-NVPNHPEKSA-N	covered	inchikey_exact	GSE92742	BRD-K20482099	rutin	trt_cp	0	0	
+secondary_literature_supported	6.0	HBIN043437	Scoparone	8417	GUAFOGOEJLSQBT-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	6.0	HBIN044111	Sinomenine	5459308	INYYVPJSBIVGPH-QHRIQVFBSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+secondary_literature_supported	6.0	HBIN047656	Uvaol	92802	XUARCIYIVXVTAE-ZAPOICBTSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+background_or_control	6.0	HBIN047879	Vetol	8369	XPCTZQVDEJYUGT-UHFFFAOYSA-N	covered	inchikey_exact	GSE92742	BRD-K40619305	larixinic-acid	trt_cp	0	0	
+deprioritize_low_tcm_specificity_or_conventional	4.0	HBIN019351	Calcium	5460341	OYPRJOBELJOOCE-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+background_or_control	4.0	HBIN029056	Heparin	25244225	OHJKXVLJWUPWQG-IUYNYSEKSA-J	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+background_or_control	4.0	HBIN032674	L(+ )-arginine	6322	ODKSFYDXXFIFQN-BYPYZUCNSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+background_or_control	4.0	HBIN034212	Magnesium sulfate	24083	CSNNHWWHGAXBCP-UHFFFAOYSA-L	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+deprioritize_low_tcm_specificity_or_conventional	4.0	HBIN044721	Starch	439341	GUBGYTABKSRVRQ-ASMJPISFSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+background_or_control	4.0	HBIN047763	Vasopressin	53477739	BJFIDCADFRDPIO-ZCCHBGLBSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+deprioritize_low_tcm_specificity_or_conventional	4.0	HBIN048044	Vitamin b5	6613	GHOKWGTUZJEAQD-ZETCQYMHSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+background_or_control	3.0	HBIN037286	(-)-noradrenaline	439260	SFLSHLFXELFNJZ-QMMMGPOBSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+background_or_control	3.0	HBIN014467	Acetylcholine	187	OIPILFWXSMYKGL-UHFFFAOYSA-N	covered	inchikey_exact	GSE92742	BRD-K82381502	acetylcholine	trt_cp	0	0	
+background_or_control	3.0	HBIN014742	Adrenaline	5816	UCTWMZQNUQWSLP-VIFPVBQESA-N	covered	inchikey_exact	GSE70138	BRD-K63126190	epinephrine	trt_cp	0	0	
+background_or_control	3.0	HBIN018129	Beta-glucan	439262	FYGDTMLNYKFZSV-URKRLVJHSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+background_or_control	3.0	HBIN018632	Bismuth	5359367	JCXGWMGPZLAOME-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+background_or_control	3.0	HBIN018634	Bismuth subsalicylate	16682734	QBWLKDFBINPHFT-UHFFFAOYSA-L	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+background_or_control	3.0	HBIN026006	Etoposide	36462	VJJPUSNTGOMMGY-MRVIYFEKSA-N	covered	inchikey_exact	GSE92742	BRD-K37798499	etoposide	trt_cp	0	0	
+background_or_control	3.0	HBIN026006	Etoposide	36462	VJJPUSNTGOMMGY-MRVIYFEKSA-N	covered	inchikey_exact	GSE70138	BRD-K37798499	etoposide	trt_cp	0	0	
+background_or_control	3.0	HBIN029438	Histamine	774	NTYJJOPFIAHURM-UHFFFAOYSA-N	covered	inchikey_exact	GSE70138	BRD-K01674964	histamine	trt_cp	0	0	
+background_or_control	3.0	HBIN029981	Ifp	753	PEDCQBHIVMGVHV-UHFFFAOYSA-N	covered	inchikey_exact	GSE92742	BRD-K73866522	glycerol	trt_cp	0	0	
+background_or_control	3.0	HBIN033433	L-lysine	5962	KDXKERNSBIXSRK-YFKPBYRVSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+background_or_control	3.0	HBIN033793	Lutein	5281243	KBPHJBAIARWVSC-RGZFRNHPSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+background_or_control	3.0	HBIN035482	Mg	5462224	FYYHWMGAXLPEAU-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+background_or_control	3.0	HBIN035536	Milrinone	4197	PZRHRDRVRGEVNW-UHFFFAOYSA-N	covered	inchikey_exact	GSE92742	BRD-K67080878	milrinone	trt_cp	0	0	
+background_or_control	3.0	HBIN035536	Milrinone	4197	PZRHRDRVRGEVNW-UHFFFAOYSA-N	covered	inchikey_exact	GSE70138	BRD-K67080878	milrinone	trt_cp	0	0	
+background_or_control	3.0	HBIN036913	Nifedipine	4485	HYIMSNHJOBLJNT-UHFFFAOYSA-N	covered	inchikey_exact	GSE92742	BRD-K96354014	nifedipine	trt_cp	0	0	
+background_or_control	3.0	HBIN044244	Sodium	5360545	KEAYESYHFKHZAL-UHFFFAOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+deprioritize_low_tcm_specificity_or_conventional	3.0	HBIN048047	Vitamin c	54670067	CIWBSHSKHKDKBQ-JLAZNSOCSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+background_or_control	3.0	HBIN048861	Zeaxanthin	5280899	JKQXZKUSFCKOGQ-QAYBQHTQSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+background_or_control	3.0	HBIN048862	Zeaxanthine	5280899	JKQXZKUSFCKOGQ-QAYBQHTQSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+deprioritize_low_tcm_specificity_or_conventional	2.0	HBIN048049	Vitamin d2	5280793	MECHNRXZTMCUDQ-RKHKHRCZSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+deprioritize_low_tcm_specificity_or_conventional	2.0	HBIN048145	Vitamin e	14985	GVJHHUAWPYXKBD-IEOSBIPESA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+hold_missing_identifier	1.0	HBIN016387	Antithrombin	NA	NA	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+deprioritize_low_tcm_specificity_or_conventional	0.0	HBIN010825	4-pregnene-17α,20β,21-triol-3,11-dione	5754	JYGXADMDTFJGBT-VWUMJDOOSA-N	covered	pubchem_exact	GSE92742	BRD-K93568044	hydrocortisone	trt_cp	0	0	
+deprioritize_low_tcm_specificity_or_conventional	0.0	HBIN019307	Caffeine	2519	RYYVLZVUVIJVGH-UHFFFAOYSA-N	covered	inchikey_exact	GSE92742	BRD-K02404261	caffeine	trt_cp	0	0	
+deprioritize_low_tcm_specificity_or_conventional	0.0	HBIN019307	Caffeine	2519	RYYVLZVUVIJVGH-UHFFFAOYSA-N	covered	inchikey_exact	GSE70138	BRD-K02404261	caffeine	trt_cp	0	0	
+deprioritize_low_tcm_specificity_or_conventional	0.0	HBIN023203	Delta-d	5280795	QYSXJUFSXHHAJI-YRZJJWOYSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+deprioritize_low_tcm_specificity_or_conventional	-1.0	HBIN048066	Vitamin-g	493570	AUNGANRZJHBGPY-SCRDCRAPSA-N	covered	inchikey_exact	GSE92742	BRD-K92760278	riboflavin	trt_cp	0	0	
+deprioritize_low_tcm_specificity_or_conventional	-2.0	HBIN048040	Vitamin b12	5311498	FDJOLVPMNUYSCM-WZHZPDAFSA-L	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+deprioritize_low_tcm_specificity_or_conventional	-3.0	HBIN038043	Oleovitamin a	445354	FPIPGXGPPPQFEQ-OVSJKPMPSA-N	covered	inchikey_exact	GSE92742	BRD-K22429181	retinol	trt_cp	0	0	
+deprioritize_low_tcm_specificity_or_conventional	-5.0	HBIN019684	Caproate	4398339	FUZZWVXGSFPDMH-UHFFFAOYSA-M	not_covered_by_exact_id	no_exact_identifier_match					0	0	
+deprioritize_low_tcm_specificity_or_conventional	-5.0	HBIN030127	Indomethacin	3715	CGIGDMFJXJATDK-UHFFFAOYSA-N	covered	inchikey_exact	GSE92742	BRD-K57222227	indometacin	trt_cp	0	0	
+deprioritize_low_tcm_specificity_or_conventional	-5.0	HBIN030127	Indomethacin	3715	CGIGDMFJXJATDK-UHFFFAOYSA-N	covered	inchikey_exact	GSE70138	BRD-K57222227	indometacin	trt_cp	0	0	
+deprioritize_low_tcm_specificity_or_conventional	-5.0	HBIN040799	Progesterone	5994	RJKFOVLPORLFTN-LEKSSAKUSA-N	covered	inchikey_exact	GSE92742	BRD-K64994968	progesterone	trt_cp	0	0	
+deprioritize_low_tcm_specificity_or_conventional	-5.0	HBIN045705	Taxol	36314	RCINICONZNJXQF-MZXODVADSA-N	not_covered_by_exact_id	no_exact_identifier_match					0	0	

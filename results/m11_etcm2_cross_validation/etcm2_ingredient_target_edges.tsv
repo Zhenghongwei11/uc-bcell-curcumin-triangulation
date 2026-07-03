@@ -1,0 +1,65 @@
+ingredient_id	ingredient_name	etcm_detail_id	etcm_ingredient_name	edge_source	etcm_target_name	gene_symbol	similar_score	activity	reference_labels	reference_links
+HBIN021985	Curcumin	curcumin	curcumin	basic_network_target_node	Beta-secretase 1					
+HBIN021985	Curcumin	curcumin	curcumin	basic_network_target_node	beta-Secretase (BACE-1)					
+HBIN021985	Curcumin	curcumin	curcumin	basic_network_target_node	Glycogen synthase kinase-3 beta					
+HBIN021985	Curcumin	curcumin	curcumin	basic_network_target_node	Histone deacetylase 1					
+HBIN021985	Curcumin	curcumin	curcumin	basic_network_target_node	Histone deacetylase 2					
+HBIN021985	Curcumin	curcumin	curcumin	basic_network_target_node	Histone deacetylase 8					
+HBIN018512	Bilobalide	Bilobalide	Bilobalide	basic_network_target_node	Glycine receptor subunit alpha-2					
+HBIN018512	Bilobalide	Bilobalide	Bilobalide	basic_network_target_node	Platelet-activating factor receptor					
+HBIN021795	Cryptotanshinone	Cryptotanshinone	Cryptotanshinone	basic_network_target_node	Acetylcholinesterase					
+HBIN021795	Cryptotanshinone	Cryptotanshinone	Cryptotanshinone	basic_network_target_node	Cocaine esterase					
+HBIN021795	Cryptotanshinone	Cryptotanshinone	Cryptotanshinone	basic_network_target_node	ELAV-like protein 1					
+HBIN021795	Cryptotanshinone	Cryptotanshinone	Cryptotanshinone	basic_network_target_node	Hypoxia-inducible factor 1-alpha					
+HBIN021795	Cryptotanshinone	Cryptotanshinone	Cryptotanshinone	basic_network_target_node	Tyrosine-protein phosphatase non-receptor type 11					
+HBIN021795	Cryptotanshinone	Cryptotanshinone	Cryptotanshinone	basic_network_target_node	Tyrosine-protein phosphatase non-receptor type 6					
+HBIN027450	Geniposide	Geniposide	Geniposide	basic_network_target_node	Carboxy-terminal domain RNA polymerase II polypeptide A small phosphatase 1					
+HBIN030442	Isoarnebin 4	Isoarnebin 4	Isoarnebin 4	basic_network_target_node	Epidermal growth factor receptor					
+HBIN017893	Berberine	Berberine	Berberine	basic_network_target_node	Acetylcholinesterase					
+HBIN017893	Berberine	Berberine	Berberine	basic_network_target_node	Cholinesterase					
+HBIN017893	Berberine	Berberine	Berberine	basic_network_target_node	Cytochrome P450 1B1					
+HBIN017893	Berberine	Berberine	Berberine	basic_network_target_node	Cytochrome P450 3A4					
+HBIN017893	Berberine	Berberine	Berberine	basic_network_target_node	Histone acetyltransferase p300					
+HBIN017893	Berberine	Berberine	Berberine	basic_network_target_node	Retinoic acid receptor RXR-alpha					
+HBIN017893	Berberine	Berberine	Berberine	basic_network_target_node	Sentrin-specific protease 8					
+HBIN017893	Berberine	Berberine	Berberine	basic_network_target_node	SUMO-activating enzyme subunit 1					
+HBIN017893	Berberine	Berberine	Berberine	basic_network_target_node	SUMO-conjugating enzyme UBC9					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Adenosine receptor A3					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Alkaline phosphatase, tissue-nonspecific isozyme					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Aromatase cytochrome P450					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Aromatase					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Beta-secretase 1					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	beta-Secretase (BACE-1)					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Broad substrate specificity ATP-binding cassette transporter ABCG2					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Carbonic anhydrase 12					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Carbonic anhydrase 1					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Carbonic anhydrase 2					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Carbonic anhydrase 3					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Carbonic anhydrase 4					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Carbonic anhydrase 5A, mitochondrial					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Carbonic anhydrase 5B, mitochondrial					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Carbonic anhydrase 7					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Carbonic anhydrase 9					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Carbonyl reductase [NADPH] 1					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Carboxy-terminal domain RNA polymerase II polypeptide A small phosphatase 1					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Corticotropin-releasing factor-binding protein					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Cytochrome P450 1A1					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Cytochrome P450 1A					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Cytochrome P450 1B1					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Cytochrome P450 2C9					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Dipeptidyl peptidase 4					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Estradiol 17-beta-dehydrogenase 1					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Fibroblast growth factor receptor 1					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Heat shock protein HSP 90-beta					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Hepatocyte growth factor receptor					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Induced myeloid leukemia cell differentiation protein Mcl-1					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Kallikrein-2					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Mitogen-activated protein kinase 10					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Mitogen-activated protein kinase 14					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Neutrophil elastase					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	PC4 and SFRS1-interacting protein					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Proteasome subunit beta type-5					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Sex hormone-binding globulin					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Solute carrier organic anion transporter family member 2B1					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Taste receptor type 2 member 31					
+HBIN045672	Taxifolin	(-)-taxifolin	(-)-taxifolin	basic_network_target_node	Vascular endothelial growth factor receptor 2					

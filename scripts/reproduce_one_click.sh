@@ -17,6 +17,7 @@ fi
 PYTHON_BIN="${PYTHON_BIN:-python}"
 PUBLIC_REPRO_BUILD=1 "$PYTHON_BIN" scripts/build_manuscript_tables_and_legends.py
 "$PYTHON_BIN" figures/scripts/build_main_figures.py
+"$PYTHON_BIN" figures/scripts/build_supplementary_figures.py
 
 "$PYTHON_BIN" - <<'PY'
 from pathlib import Path
@@ -26,6 +27,7 @@ expected = [
     'figures/output/fig3_scrna_bcell_localization.png',
     'figures/output/fig4_curcumin_target_bridge.png',
     'figures/output/fig5_evidence_boundaries.png',
+    'figures/output/supplementary_figure_s1_robustness_replication.png',
     'tables/manuscript/table1_dataset_and_resource_inventory.tsv',
     'tables/manuscript/table2_prioritized_tcm_candidates.tsv',
     'tables/manuscript/table3_curcumin_target_evidence.tsv',

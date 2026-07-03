@@ -1,0 +1,5 @@
+metric	value	notes
+coverage_rows	184	Multiple rows per ingredient possible when present in both GSE92742 and GSE70138
+unique_candidate_status_pairs	166	
+priority_candidates	27	
+priority_candidates_covered	15	Exact InChIKey or PubChem match

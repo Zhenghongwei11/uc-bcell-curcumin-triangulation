@@ -1,0 +1,31 @@
+ingredient_id	ingredient_name	m9_rank	m10_rank	query_type	query_id	status	raw_path	n_rows	message
+				browse_ingredient	page=1;pageSize=500	downloaded	data/raw/etcm2/browse/ingredient_page1_size500.json	500	
+				browse_ingredient	page=2;pageSize=500	downloaded	data/raw/etcm2/browse/ingredient_page2_size500.json	500	
+				browse_ingredient	page=3;pageSize=500	downloaded	data/raw/etcm2/browse/ingredient_page3_size500.json	500	
+HBIN021985	Curcumin	1	1	ingredient_search	Curcumin	cached	data/raw/etcm2/ingredient_search/Curcumin.json	21	
+HBIN021985	Curcumin	1	1	ingredient_detail	curcumin	cached	data/raw/etcm2/ingredient_details/curcumin.json		
+HBIN016606	Archin	2	2	ingredient_search	Archin	cached	data/raw/etcm2/ingredient_search/Archin.json	7	
+HBIN016606	Archin	2	2	ingredient_detail	Archin	failed			unexpected payload code: {'code': 2, 'msg': 'No Data for Archin!'}
+HBIN016606	Archin	2	2	ingredient_detail	archin	failed			unexpected payload code: {'code': 2, 'msg': 'No Data for archin!'}
+HBIN018512	Bilobalide	3	5	ingredient_search	Bilobalide	cached	data/raw/etcm2/ingredient_search/Bilobalide.json	1	
+HBIN018512	Bilobalide	3	5	ingredient_detail	Bilobalide	cached	data/raw/etcm2/ingredient_details/Bilobalide.json		
+HBIN021795	Cryptotanshinone	7	3	ingredient_search	Cryptotanshinone	cached	data/raw/etcm2/ingredient_search/Cryptotanshinone.json	12	
+HBIN021795	Cryptotanshinone	7	3	ingredient_detail	Cryptotanshinone	cached	data/raw/etcm2/ingredient_details/Cryptotanshinone.json		
+HBIN017892	Berberime	4	12	ingredient_search	Berberime	cached	data/raw/etcm2/ingredient_search/Berberime.json	25	
+HBIN017892	Berberime	4	12	ingredient_detail	Berberime	failed			unexpected payload code: {'code': 2, 'msg': 'No Data for Berberime!'}
+HBIN017892	Berberime	4	12	ingredient_detail	berberime	failed			unexpected payload code: {'code': 2, 'msg': 'No Data for berberime!'}
+HBIN015751	Alpinetin	13	4	ingredient_search	Alpinetin	cached	data/raw/etcm2/ingredient_search/Alpinetin.json	1	
+HBIN015751	Alpinetin	13	4	ingredient_detail	Alpinetin	failed			unexpected payload code: {'code': 2, 'msg': 'No Data for Alpinetin!'}
+HBIN015751	Alpinetin	13	4	ingredient_detail	alpinetin	failed			unexpected payload code: {'code': 2, 'msg': 'No Data for alpinetin!'}
+HBIN027450	Geniposide	5	6	ingredient_search	Geniposide	cached	data/raw/etcm2/ingredient_search/Geniposide.json	13	
+HBIN027450	Geniposide	5	6	ingredient_detail	Geniposide	cached	data/raw/etcm2/ingredient_details/Geniposide.json		
+HBIN030442	Isoarnebin 4	6	10	ingredient_search	Isoarnebin 4	cached	data/raw/etcm2/ingredient_search/Isoarnebin_4.json	3	
+HBIN030442	Isoarnebin 4	6	10	ingredient_detail	Isoarnebin 4	cached	data/raw/etcm2/ingredient_details/Isoarnebin_4.json		
+HBIN017893	Berberine	9	7	ingredient_search	Berberine	cached	data/raw/etcm2/ingredient_search/Berberine.json	19	
+HBIN017893	Berberine	9	7	ingredient_detail	Berberine	cached	data/raw/etcm2/ingredient_details/Berberine.json		
+HBIN040403	Polydatin	8	9	ingredient_search	Polydatin	cached	data/raw/etcm2/ingredient_search/Polydatin.json	2	
+HBIN040403	Polydatin	8	9	ingredient_detail	polydatin	cached	data/raw/etcm2/ingredient_details/polydatin.json		
+HBIN017136	Asperuloside	14	8	ingredient_search	Asperuloside	cached	data/raw/etcm2/ingredient_search/Asperuloside.json	9	
+HBIN017136	Asperuloside	14	8	ingredient_detail	asperuloside	cached	data/raw/etcm2/ingredient_details/asperuloside.json		
+HBIN045672	Taxifolin	10	11	ingredient_search	Taxifolin	cached	data/raw/etcm2/ingredient_search/Taxifolin.json	15	
+HBIN045672	Taxifolin	10	11	ingredient_detail	(-)-taxifolin	cached	data/raw/etcm2/ingredient_details/-_-taxifolin.json		

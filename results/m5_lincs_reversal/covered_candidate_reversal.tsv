@@ -1,0 +1,1 @@
+db_version	rank	score	pert_id	pert_desc	sig_id	cell_id	pert_dose	pert_dose_unit	pert_time	pert_time_unit	pubchem_id	drugbank_id	match_method	priority_score	ingredient_id	ingredient_name	ingredient_pubchem_id	ingredient_inchikey	candidate_lincs_source	candidate_pert_id	candidate_pert_iname

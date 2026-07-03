@@ -1,0 +1,26 @@
+target_set_specificity_rank	ingredient_id	ingredient_name	disease_context_targets	manuscript_bridge_score	target_set_specificity_score_without_direction_alignment	bulk_up_hits	b_cell_expressed	b_cell_increased	mdc_expressed
+1	HBIN021985	Curcumin	22	63.2	54.25	3	12	11	11
+2	HBIN016606	Archin	18	46.0	37	6	7	5	6
+3	HBIN018512	Bilobalide	12	34.8	31.75	2	7	6	7
+4	HBIN027450	Geniposide	11	31.8	28.75	2	6	6	5
+5	HBIN017892	Berberine	10	33.5	27.5	2	6	5	6
+6	HBIN030442	Isoarnebin 4	9	29.8	26.75	2	6	5	5
+7	HBIN021795	Cryptotanshinone	11	29.5	23.5	2	6	3	6
+8	HBIN015751	Alpinetin	6	21.2	21.25	0	5	5	5
+9	HBIN040403	Polydatin	5	27.0	21	2	4	4	4
+10	HBIN017136	Asperuloside	7	19.2	19.25	0	5	4	5
+11	HBIN017893	Berberine	8	22.0	19	1	4	4	4
+12	HBIN045672	Taxifolin	7	22.0	19	1	4	4	4
+13	HBIN046831	Trans-resveratrol	7	22.0	19	1	4	4	4
+14	HBIN042199	Rhein	4	17.8	14.75	1	3	3	3
+15	HBIN019690	Capsaicin	8	12.8	12.75	0	3	3	3
+16	HBIN029531	Honokiol	6	21.5	12.5	2	2	2	2
+17	HBIN020921	Cis-resveratrol	4	6.25	6.25	1	1	1	1
+18	HBIN048372	Wogonin	4	9.25	6.25	1	1	1	1
+19	HBIN044493	Spermidine	2	5.75	5.75	0	2	1	1
+20	HBIN018800	Brahmic acid	3	7.25	4.25	0	1	1	1
+21	HBIN034657	Melatonin	1	4.25	4.25	0	1	1	1
+22	HBIN041217	Pterostilbene	1	2.25	2.25	0	1	0	1
+23	HBIN034558	Matrine	1	0.0	0	0	0	0	0
+24	HBIN038606	Paeoniflorin	1	0.0	0	0	0	0	0
+25	HBIN041495	Quercetin	1	0.0	0	0	0	0	0

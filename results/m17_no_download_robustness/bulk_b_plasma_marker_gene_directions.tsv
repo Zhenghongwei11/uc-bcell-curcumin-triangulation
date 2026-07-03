@@ -1,0 +1,70 @@
+accession	marker_group	gene_symbol	present	log2fc	fdr	direction	fdr_lt_0_05
+GSE75214	B-cell marker	MS4A1	yes	1.86725	0.00531923	up	yes
+GSE75214	B-cell marker	CD19	yes	0.683418	1.01335e-06	up	yes
+GSE75214	B-cell marker	CD79A	yes	2.20112	6.80565e-05	up	yes
+GSE75214	B-cell marker	CD79B	yes	0.656066	2.22708e-05	up	yes
+GSE75214	B-cell marker	CD74	yes	1.76576	0.000516564	up	yes
+GSE75214	B-cell marker	BANK1	yes	1.59145	0.000378604	up	yes
+GSE75214	B-cell marker	BLK	yes	0.280664	0.00930274	up	yes
+GSE75214	B-cell marker	PAX5	yes	0.730172	2.40642e-05	up	yes
+GSE75214	B-cell marker	BCL6	yes	1.49301	2.14858e-13	up	yes
+GSE75214	B-cell marker	BLNK	yes	0.270549	0.0069433	up	yes
+GSE75214	B-cell marker	SYK	yes	0.240009	0.00323351	up	yes
+GSE75214	B-cell marker	TNFRSF13C	yes	0.141974	0.0428092	up	yes
+GSE75214	Plasma-cell marker	MZB1	yes	1.85166	1.65137e-10	up	yes
+GSE75214	Plasma-cell marker	XBP1	yes	1.40132	1.956e-09	up	yes
+GSE75214	Plasma-cell marker	JCHAIN	yes	0.708622	0.0657829	up	no
+GSE75214	Plasma-cell marker	SDC1	yes	0.283049	1.58856e-05	up	yes
+GSE75214	Plasma-cell marker	PRDM1	yes	1.92196	4.04778e-16	up	yes
+GSE75214	Plasma-cell marker	TNFRSF17	yes	1.25239	8.96024e-06	up	yes
+GSE75214	Plasma-cell marker	IGHG1	no				
+GSE75214	Plasma-cell marker	IGHG3	no				
+GSE75214	Plasma-cell marker	IGHA1	yes	1.53732	0.000229066	up	yes
+GSE75214	Plasma-cell marker	IGKC	yes	2.44582	3.90763e-06	up	yes
+GSE75214	Plasma-cell marker	DERL3	yes	1.25872	1.66353e-15	up	yes
+GSE59071	B-cell marker	MS4A1	yes	1.86725	0.00531923	up	yes
+GSE59071	B-cell marker	CD19	yes	0.683418	1.01335e-06	up	yes
+GSE59071	B-cell marker	CD79A	yes	2.20112	6.80565e-05	up	yes
+GSE59071	B-cell marker	CD79B	yes	0.656066	2.22708e-05	up	yes
+GSE59071	B-cell marker	CD74	yes	1.76576	0.000516564	up	yes
+GSE59071	B-cell marker	BANK1	yes	1.59145	0.000378604	up	yes
+GSE59071	B-cell marker	BLK	yes	0.280664	0.00930274	up	yes
+GSE59071	B-cell marker	PAX5	yes	0.730172	2.40642e-05	up	yes
+GSE59071	B-cell marker	BCL6	yes	1.49301	2.14858e-13	up	yes
+GSE59071	B-cell marker	BLNK	yes	0.270549	0.0069433	up	yes
+GSE59071	B-cell marker	SYK	yes	0.240009	0.00323351	up	yes
+GSE59071	B-cell marker	TNFRSF13C	yes	0.141974	0.0428092	up	yes
+GSE59071	Plasma-cell marker	MZB1	yes	1.85166	1.65137e-10	up	yes
+GSE59071	Plasma-cell marker	XBP1	yes	1.40132	1.956e-09	up	yes
+GSE59071	Plasma-cell marker	JCHAIN	yes	0.708622	0.0657829	up	no
+GSE59071	Plasma-cell marker	SDC1	yes	0.283049	1.58856e-05	up	yes
+GSE59071	Plasma-cell marker	PRDM1	yes	1.92196	4.04778e-16	up	yes
+GSE59071	Plasma-cell marker	TNFRSF17	yes	1.25239	8.96024e-06	up	yes
+GSE59071	Plasma-cell marker	IGHG1	no				
+GSE59071	Plasma-cell marker	IGHG3	no				
+GSE59071	Plasma-cell marker	IGHA1	yes	1.53732	0.000229066	up	yes
+GSE59071	Plasma-cell marker	IGKC	yes	2.44582	3.90763e-06	up	yes
+GSE59071	Plasma-cell marker	DERL3	yes	1.25872	1.66353e-15	up	yes
+GSE87466	B-cell marker	MS4A1	yes	1.9289	1.66283e-05	up	yes
+GSE87466	B-cell marker	CD19	yes	1.59063	2.82187e-07	up	yes
+GSE87466	B-cell marker	CD79A	yes	1.61016	1.04597e-09	up	yes
+GSE87466	B-cell marker	CD79B	yes	1.29484	1.73746e-07	up	yes
+GSE87466	B-cell marker	CD74	yes	0.581619	6.55541e-08	up	yes
+GSE87466	B-cell marker	BANK1	yes	1.18504	5.55627e-10	up	yes
+GSE87466	B-cell marker	BLK	yes	0.530985	0.000221657	up	yes
+GSE87466	B-cell marker	PAX5	yes	1.33916	7.84913e-06	up	yes
+GSE87466	B-cell marker	BCL6	yes	1.35781	2.3008e-10	up	yes
+GSE87466	B-cell marker	BLNK	yes	0.307195	0.00596046	up	yes
+GSE87466	B-cell marker	SYK	yes	0.384472	0.000215881	up	yes
+GSE87466	B-cell marker	TNFRSF13C	yes	-0.00882118	0.933167	down	no
+GSE87466	Plasma-cell marker	MZB1	yes	1.62974	2.24239e-09	up	yes
+GSE87466	Plasma-cell marker	XBP1	yes	1.02754	4.78366e-05	up	yes
+GSE87466	Plasma-cell marker	JCHAIN	yes	0.0979194	0.319242	up	no
+GSE87466	Plasma-cell marker	SDC1	yes	0.305062	0.00312223	up	yes
+GSE87466	Plasma-cell marker	PRDM1	yes	0.650815	2.41076e-14	up	yes
+GSE87466	Plasma-cell marker	TNFRSF17	yes	0.60344	0.0423506	up	yes
+GSE87466	Plasma-cell marker	IGHG1	yes	0.677037	9.93315e-07	up	yes
+GSE87466	Plasma-cell marker	IGHG3	no				
+GSE87466	Plasma-cell marker	IGHA1	yes	0.675656	0.0085407	up	yes
+GSE87466	Plasma-cell marker	IGKC	yes	1.00147	4.95812e-05	up	yes
+GSE87466	Plasma-cell marker	DERL3	yes	1.12799	2.32546e-10	up	yes

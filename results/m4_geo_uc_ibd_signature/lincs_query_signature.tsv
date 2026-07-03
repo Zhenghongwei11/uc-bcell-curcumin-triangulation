@@ -1,0 +1,301 @@
+query_direction	gene_symbol	gene_title	evidence_groups	mean_log2fc	best_fdr	consensus_score
+up	SLC6A14	solute carrier family 6 member 14	GPL13158_uc_colon;GPL6244_active_uc_colon	5.3627	2.66375e-11	10.7254
+up	MMP3	matrix metallopeptidase 3	GPL13158_uc_colon;GPL6244_active_uc_colon	4.95087	6.10704e-16	9.90174
+up	DUOX2	dual oxidase 2	GPL13158_uc_colon;GPL6244_active_uc_colon	4.62781	4.45328e-10	9.25561
+up	CHI3L1	chitinase 3 like 1	GPL13158_uc_colon;GPL6244_active_uc_colon	4.2248	1.53378e-15	8.4496
+up	REG1A	regenerating family member 1 alpha	GPL13158_uc_colon;GPL6244_active_uc_colon	4.16969	1.72152e-05	8.33939
+up	TNIP3	TNFAIP3 interacting protein 3	GPL13158_uc_colon;GPL6244_active_uc_colon	4.10081	5.60414e-29	8.20162
+up	S100A8	S100 calcium binding protein A8	GPL13158_uc_colon;GPL6244_active_uc_colon	4.09886	7.40018e-20	8.19772
+up	REG3A	regenerating family member 3 alpha	GPL13158_uc_colon;GPL6244_active_uc_colon	3.85329	1.64563e-07	7.70658
+up	REG1B	regenerating family member 1 beta	GPL13158_uc_colon;GPL6244_active_uc_colon	3.82744	2.08635e-06	7.65487
+up	DUOXA2	dual oxidase maturation factor 2	GPL13158_uc_colon;GPL6244_active_uc_colon	3.78093	3.62002e-21	7.56187
+up	VNN1	vanin 1	GPL13158_uc_colon;GPL6244_active_uc_colon	3.72317	1.07812e-10	7.44634
+up	SAA2	serum amyloid A2	GPL13158_uc_colon;GPL6244_active_uc_colon	3.67694	2.59844e-20	7.35389
+up	IDO1	indoleamine 2,3-dioxygenase 1	GPL13158_uc_colon;GPL6244_active_uc_colon	3.64299	7.23709e-18	7.28598
+up	CXCL1	C-X-C motif chemokine ligand 1	GPL13158_uc_colon;GPL6244_active_uc_colon	3.63465	1.88918e-17	7.26931
+up	CXCL8	C-X-C motif chemokine ligand 8	GPL13158_uc_colon;GPL6244_active_uc_colon	3.53596	2.75847e-17	7.07192
+up	MMP1	matrix metallopeptidase 1	GPL13158_uc_colon;GPL6244_active_uc_colon	3.49179	5.59823e-10	6.98359
+up	AQP9	aquaporin 9	GPL13158_uc_colon;GPL6244_active_uc_colon	3.37809	4.33313e-26	6.75618
+up	TCN1	transcobalamin 1	GPL13158_uc_colon;GPL6244_active_uc_colon	3.37597	1.4085e-32	6.75195
+up	IL1B	interleukin 1 beta	GPL13158_uc_colon;GPL6244_active_uc_colon	3.3754	2.21751e-19	6.75081
+up	SERPINB5	serpin family B member 5	GPL13158_uc_colon;GPL6244_active_uc_colon	3.30745	3.38225e-08	6.6149
+up	LCN2	lipocalin 2	GPL13158_uc_colon;GPL6244_active_uc_colon	3.18023	1.67342e-08	6.36046
+up	MMP7	matrix metallopeptidase 7	GPL13158_uc_colon;GPL6244_active_uc_colon	2.98376	3.48075e-25	5.96751
+up	KYNU	kynureninase	GPL13158_uc_colon;GPL6244_active_uc_colon	2.91714	5.58415e-15	5.83428
+up	FCGR3B	Fc fragment of IgG receptor IIIb	GPL13158_uc_colon;GPL6244_active_uc_colon	2.90231	3.00083e-14	5.80462
+up	MMP12	matrix metallopeptidase 12	GPL13158_uc_colon;GPL6244_active_uc_colon	2.89752	6.55105e-08	5.79504
+up	PTGS2	prostaglandin-endoperoxide synthase 2	GPL13158_uc_colon;GPL6244_active_uc_colon	2.89001	6.03791e-11	5.78002
+up	SERPINA3	serpin family A member 3	GPL13158_uc_colon;GPL6244_active_uc_colon	2.86608	7.01185e-28	5.73216
+up	MMP10	matrix metallopeptidase 10	GPL13158_uc_colon;GPL6244_active_uc_colon	2.84809	1.10149e-26	5.69619
+up	CXCL11	C-X-C motif chemokine ligand 11	GPL13158_uc_colon;GPL6244_active_uc_colon	2.83551	3.36755e-20	5.67102
+up	TNC	tenascin C	GPL13158_uc_colon;GPL6244_active_uc_colon	2.82474	1.86364e-19	5.64948
+up	HCAR3	hydroxycarboxylic acid receptor 3	GPL13158_uc_colon;GPL6244_active_uc_colon	2.73939	1.62656e-24	5.47878
+up	VSIG1	V-set and immunoglobulin domain containing 1	GPL13158_uc_colon;GPL6244_active_uc_colon	2.73914	1.44574e-32	5.47827
+up	CDH3	cadherin 3	GPL13158_uc_colon;GPL6244_active_uc_colon	2.71683	6.9475e-19	5.43366
+up	ABCA12	ATP binding cassette subfamily A member 12	GPL13158_uc_colon;GPL6244_active_uc_colon	2.70745	1.0267e-36	5.4149
+up	KLK10	kallikrein related peptidase 10	GPL13158_uc_colon;GPL6244_active_uc_colon	2.6872	1.05401e-22	5.3744
+up	CXCL10	C-X-C motif chemokine ligand 10	GPL13158_uc_colon;GPL6244_active_uc_colon	2.66411	3.16339e-09	5.32821
+up	SERPINB3	serpin family B member 3	GPL13158_uc_colon;GPL6244_active_uc_colon	2.60825	4.66781e-19	5.21651
+up	PI3	peptidase inhibitor 3	GPL13158_uc_colon;GPL6244_active_uc_colon	2.58435	1.01929e-08	5.16871
+up	CXCL9	C-X-C motif chemokine ligand 9	GPL13158_uc_colon;GPL6244_active_uc_colon	2.57349	8.86346e-13	5.14698
+up	TIMP1	TIMP metallopeptidase inhibitor 1	GPL13158_uc_colon;GPL6244_active_uc_colon	2.53568	2.84382e-15	5.07137
+up	S100A12	S100 calcium binding protein A12	GPL13158_uc_colon;GPL6244_active_uc_colon	2.52592	1.12652e-19	5.05184
+up	UBD	ubiquitin D	GPL13158_uc_colon;GPL6244_active_uc_colon	2.51885	4.44162e-18	5.0377
+up	SERPINB7	serpin family B member 7	GPL13158_uc_colon;GPL6244_active_uc_colon	2.49003	2.83093e-20	4.98007
+up	DMBT1	deleted in malignant brain tumors 1	GPL13158_uc_colon;GPL6244_active_uc_colon	2.48838	3.51251e-07	4.97675
+up	CXCL13	C-X-C motif chemokine ligand 13	GPL13158_uc_colon;GPL6244_active_uc_colon	2.47466	2.45661e-05	4.94933
+up	CEMIP	cell migration inducing hyaluronan binding protein	GPL13158_uc_colon;GPL6244_active_uc_colon	2.47236	7.09406e-20	4.94472
+up	DEFA5	defensin alpha 5	GPL13158_uc_colon;GPL6244_active_uc_colon	2.46136	5.16612e-06	4.92273
+up	PROK2	prokineticin 2	GPL13158_uc_colon;GPL6244_active_uc_colon	2.45093	1.53518e-23	4.90186
+up	NOS2	nitric oxide synthase 2	GPL13158_uc_colon;GPL6244_active_uc_colon	2.45003	6.55524e-13	4.90006
+up	TNFAIP6	TNF alpha induced protein 6	GPL13158_uc_colon;GPL6244_active_uc_colon	2.44325	1.00148e-13	4.88651
+up	MMP9	matrix metallopeptidase 9	GPL13158_uc_colon;GPL6244_active_uc_colon	2.44115	8.06227e-16	4.8823
+up	OSMR	oncostatin M receptor	GPL13158_uc_colon;GPL6244_active_uc_colon	2.43289	1.06608e-11	4.86578
+up	SELP	selectin P	GPL13158_uc_colon;GPL6244_active_uc_colon	2.41908	2.58466e-25	4.83816
+up	PRRX1	paired related homeobox 1	GPL13158_uc_colon;GPL6244_active_uc_colon	2.41695	2.79021e-19	4.8339
+up	IL13RA2	interleukin 13 receptor subunit alpha 2	GPL13158_uc_colon;GPL6244_active_uc_colon	2.37602	9.34276e-16	4.75204
+up	STC1	stanniocalcin 1	GPL13158_uc_colon;GPL6244_active_uc_colon	2.37505	2.70812e-13	4.75011
+up	REG4	regenerating family member 4	GPL13158_uc_colon;GPL6244_active_uc_colon	2.37465	2.00433e-10	4.74931
+up	S100A9	S100 calcium binding protein A9	GPL13158_uc_colon;GPL6244_active_uc_colon	2.37143	6.9485e-24	4.74287
+up	C3	complement component 3	GPL13158_uc_colon;GPL6244_active_uc_colon	2.35344	3.05834e-10	4.70687
+up	TGM2	transglutaminase 2	GPL13158_uc_colon;GPL6244_active_uc_colon	2.31993	1.86282e-17	4.63985
+up	STEAP4	STEAP4 metalloreductase	GPL13158_uc_colon;GPL6244_active_uc_colon	2.30763	3.4451e-21	4.61527
+up	SELL	selectin L	GPL13158_uc_colon;GPL6244_active_uc_colon	2.29723	1.03805e-07	4.59445
+up	SPP1	secreted phosphoprotein 1	GPL13158_uc_colon;GPL6244_active_uc_colon	2.28997	1.75366e-14	4.57994
+up	DAPP1	dual adaptor of phosphotyrosine and 3-phosphoinositides 1	GPL13158_uc_colon;GPL6244_active_uc_colon	2.28611	8.99064e-19	4.57223
+up	TDO2	tryptophan 2,3-dioxygenase	GPL13158_uc_colon;GPL6244_active_uc_colon	2.26618	1.53803e-12	4.53235
+up	GREM1	gremlin 1, DAN family BMP antagonist	GPL13158_uc_colon;GPL6244_active_uc_colon	2.24819	7.00301e-09	4.49638
+up	CFB	complement factor B	GPL13158_uc_colon;GPL6244_active_uc_colon	2.24638	9.43465e-12	4.49276
+up	CD274	CD274 molecule	GPL13158_uc_colon;GPL6244_active_uc_colon	2.21744	1.65819e-12	4.43487
+up	C4BPB	complement component 4 binding protein beta	GPL13158_uc_colon;GPL6244_active_uc_colon	2.21533	3.10534e-18	4.43066
+up	CD55	CD55 molecule (Cromer blood group)	GPL13158_uc_colon;GPL6244_active_uc_colon	2.20926	3.08222e-11	4.41852
+up	DEFA6	defensin alpha 6	GPL13158_uc_colon;GPL6244_active_uc_colon	2.19834	1.21638e-06	4.39667
+up	FPR1	formyl peptide receptor 1	GPL13158_uc_colon;GPL6244_active_uc_colon	2.19407	2.25728e-23	4.38813
+up	CCL18	C-C motif chemokine ligand 18	GPL13158_uc_colon;GPL6244_active_uc_colon	2.18586	6.4831e-07	4.37171
+up	IRAK3	interleukin 1 receptor associated kinase 3	GPL13158_uc_colon;GPL6244_active_uc_colon	2.17068	1.10389e-11	4.34137
+up	CFI	complement factor I	GPL13158_uc_colon;GPL6244_active_uc_colon	2.16024	8.97656e-09	4.32049
+up	SLCO1B3	solute carrier organic anion transporter family member 1B3	GPL13158_uc_colon;GPL6244_active_uc_colon	2.13892	2.38367e-21	4.27784
+up	IGFBP5	insulin like growth factor binding protein 5	GPL13158_uc_colon;GPL6244_active_uc_colon	2.13008	4.07573e-15	4.26016
+up	ANXA1	annexin A1	GPL13158_uc_colon;GPL6244_active_uc_colon	2.12051	1.87822e-09	4.24102
+up	PLEK	pleckstrin	GPL13158_uc_colon;GPL6244_active_uc_colon	2.11524	1.13841e-11	4.23047
+up	BCL2A1	BCL2 related protein A1	GPL13158_uc_colon;GPL6244_active_uc_colon	2.11517	1.05908e-10	4.23034
+up	C4BPA	complement component 4 binding protein alpha	GPL13158_uc_colon;GPL6244_active_uc_colon	2.11226	6.55524e-13	4.22452
+up	SELE	selectin E	GPL13158_uc_colon;GPL6244_active_uc_colon	2.09958	2.8917e-22	4.19915
+up	CCL2	C-C motif chemokine ligand 2	GPL13158_uc_colon;GPL6244_active_uc_colon	2.08869	4.37213e-08	4.17738
+up	CCL20	C-C motif chemokine ligand 20	GPL13158_uc_colon;GPL6244_active_uc_colon	2.07517	2.81225e-06	4.15034
+up	FDCSP	follicular dendritic cell secreted protein	GPL13158_uc_colon;GPL6244_active_uc_colon	2.06866	0.000120915	4.13732
+up	CSF3R	colony stimulating factor 3 receptor	GPL13158_uc_colon;GPL6244_active_uc_colon	2.05418	5.53671e-21	4.10837
+up	CXCL5	C-X-C motif chemokine ligand 5	GPL13158_uc_colon;GPL6244_active_uc_colon	2.05391	2.63459e-13	4.10783
+up	PLAU	plasminogen activator, urokinase	GPL13158_uc_colon;GPL6244_active_uc_colon	2.04828	1.36465e-21	4.09657
+up	WARS	tryptophanyl-tRNA synthetase	GPL13158_uc_colon;GPL6244_active_uc_colon	2.04802	7.78303e-26	4.09605
+up	APOL1	apolipoprotein L1	GPL13158_uc_colon;GPL6244_active_uc_colon	2.04182	2.0405e-19	4.08363
+up	VNN2	vanin 2	GPL13158_uc_colon;GPL6244_active_uc_colon	2.0255	1.73483e-20	4.051
+up	IGK	immunoglobulin kappa locus	GPL13158_uc_colon;GPL6244_active_uc_colon	2.00241	1.75202e-07	4.00482
+up	CTLA4	cytotoxic T-lymphocyte associated protein 4	GPL13158_uc_colon;GPL6244_active_uc_colon	1.99545	2.09028e-14	3.99089
+up	PHLDA1	pleckstrin homology like domain family A member 1	GPL13158_uc_colon;GPL6244_active_uc_colon	1.9847	3.13318e-16	3.96941
+up	FCRL5	Fc receptor like 5	GPL13158_uc_colon;GPL6244_active_uc_colon	1.98383	1.34268e-13	3.96766
+up	COL6A3	collagen type VI alpha 3 chain	GPL13158_uc_colon;GPL6244_active_uc_colon	1.98019	4.6428e-18	3.96038
+up	CXCL6	C-X-C motif chemokine ligand 6	GPL13158_uc_colon;GPL6244_active_uc_colon	1.97467	2.41753e-18	3.94934
+up	LAX1	lymphocyte transmembrane adaptor 1	GPL13158_uc_colon;GPL6244_active_uc_colon	1.97131	6.33764e-19	3.94262
+up	ICAM1	intercellular adhesion molecule 1	GPL13158_uc_colon;GPL6244_active_uc_colon	1.96976	3.89511e-20	3.93953
+up	ITGA5	integrin subunit alpha 5	GPL13158_uc_colon;GPL6244_active_uc_colon	1.9642	9.21409e-14	3.92841
+up	C2	complement component 2	GPL13158_uc_colon;GPL6244_active_uc_colon	1.95922	1.08154e-12	3.91845
+up	CXCR2	C-X-C motif chemokine receptor 2	GPL13158_uc_colon;GPL6244_active_uc_colon	1.94883	7.71013e-20	3.89767
+up	ADGRE2	adhesion G protein-coupled receptor E2	GPL13158_uc_colon;GPL6244_active_uc_colon	1.94657	1.84403e-14	3.89313
+up	STRIP2	striatin interacting protein 2	GPL13158_uc_colon;GPL6244_active_uc_colon	1.9378	1.02946e-15	3.87561
+up	CXCL3	C-X-C motif chemokine ligand 3	GPL13158_uc_colon;GPL6244_active_uc_colon	1.93616	6.16229e-28	3.87231
+up	IGHM	immunoglobulin heavy constant mu	GPL13158_uc_colon;GPL6244_active_uc_colon	1.93127	9.21409e-14	3.86254
+up	ADGRL4	adhesion G protein-coupled receptor L4	GPL13158_uc_colon;GPL6244_active_uc_colon	1.92819	1.58254e-15	3.85637
+up	SERPINA1	serpin family A member 1	GPL13158_uc_colon;GPL6244_active_uc_colon	1.92796	2.56464e-13	3.85593
+up	LAMP3	lysosomal associated membrane protein 3	GPL13158_uc_colon;GPL6244_active_uc_colon	1.92685	2.38036e-11	3.85369
+up	GBP5	guanylate binding protein 5	GPL13158_uc_colon;GPL6244_active_uc_colon	1.92673	1.23286e-14	3.85346
+up	SLC7A11	solute carrier family 7 member 11	GPL13158_uc_colon;GPL6244_active_uc_colon	1.9232	4.23326e-14	3.8464
+up	COL1A1	collagen type I alpha 1 chain	GPL13158_uc_colon;GPL6244_active_uc_colon	1.9159	2.13434e-16	3.83181
+up	KRT6B	keratin 6B	GPL13158_uc_colon;GPL6244_active_uc_colon	1.91208	1.33914e-22	3.82417
+up	CD79A	CD79a molecule	GPL13158_uc_colon;GPL6244_active_uc_colon	1.90564	1.04597e-09	3.81128
+up	MS4A1	membrane spanning 4-domains A1	GPL13158_uc_colon;GPL6244_active_uc_colon	1.89807	1.66283e-05	3.79615
+up	TREM1	triggering receptor expressed on myeloid cells 1	GPL13158_uc_colon;GPL6244_active_uc_colon	1.88941	3.20643e-19	3.77882
+up	IL1RN	interleukin 1 receptor antagonist	GPL13158_uc_colon;GPL6244_active_uc_colon	1.88792	1.46173e-13	3.77584
+up	PIM2	Pim-2 proto-oncogene, serine/threonine kinase	GPL13158_uc_colon;GPL6244_active_uc_colon	1.88356	2.59704e-12	3.76712
+up	SERPINB9	serpin family B member 9	GPL13158_uc_colon;GPL6244_active_uc_colon	1.88086	9.32047e-21	3.76172
+up	PDZK1IP1	PDZK1 interacting protein 1	GPL13158_uc_colon;GPL6244_active_uc_colon	1.88071	4.14239e-13	3.76142
+up	RGS5	regulator of G-protein signaling 5	GPL13158_uc_colon;GPL6244_active_uc_colon	1.87848	2.06488e-16	3.75696
+up	NCF2	neutrophil cytosolic factor 2	GPL13158_uc_colon;GPL6244_active_uc_colon	1.87374	1.25538e-09	3.74749
+up	SLC2A3	solute carrier family 2 member 3	GPL13158_uc_colon;GPL6244_active_uc_colon	1.87366	6.52401e-19	3.74732
+up	SLC6A20	solute carrier family 6 member 20	GPL13158_uc_colon;GPL6244_active_uc_colon	1.87007	1.25594e-13	3.74015
+up	GBP4	guanylate binding protein 4	GPL13158_uc_colon;GPL6244_active_uc_colon	1.86974	9.9846e-13	3.73949
+up	CTSK	cathepsin K	GPL13158_uc_colon;GPL6244_active_uc_colon	1.8601	1.49571e-14	3.7202
+up	CLDN1	claudin 1	GPL13158_uc_colon;GPL6244_active_uc_colon	1.85905	3.02349e-12	3.71809
+up	GZMK	granzyme K	GPL13158_uc_colon;GPL6244_active_uc_colon	1.84293	4.53738e-07	3.68586
+up	IL1A	interleukin 1 alpha	GPL13158_uc_colon;GPL6244_active_uc_colon	1.84022	4.44162e-18	3.68045
+up	IL7R	interleukin 7 receptor	GPL13158_uc_colon;GPL6244_active_uc_colon	1.83271	1.08464e-10	3.66541
+up	CR1	complement component 3b/4b receptor 1 (Knops blood group)	GPL13158_uc_colon;GPL6244_active_uc_colon	1.83205	9.99689e-15	3.66411
+up	ITGAX	integrin subunit alpha X	GPL13158_uc_colon;GPL6244_active_uc_colon	1.82979	1.5589e-12	3.65959
+up	CHI3L2	chitinase 3 like 2	GPL13158_uc_colon;GPL6244_active_uc_colon	1.82926	2.78856e-14	3.65852
+up	CXCR1	C-X-C motif chemokine receptor 1	GPL13158_uc_colon;GPL6244_active_uc_colon	1.81801	5.72733e-22	3.63603
+up	COL12A1	collagen type XII alpha 1 chain	GPL13158_uc_colon;GPL6244_active_uc_colon	1.80623	3.5152e-15	3.61246
+up	PCSK1	proprotein convertase subtilisin/kexin type 1	GPL13158_uc_colon;GPL6244_active_uc_colon	1.80498	1.01301e-08	3.60997
+up	OLFM4	olfactomedin 4	GPL13158_uc_colon;GPL6244_active_uc_colon	1.79906	0.00067711	3.59812
+up	MXRA5	matrix remodeling associated 5	GPL13158_uc_colon;GPL6244_active_uc_colon	1.7829	1.34078e-11	3.56581
+up	ENTPD1	ectonucleoside triphosphate diphosphohydrolase 1	GPL13158_uc_colon;GPL6244_active_uc_colon	1.77931	1.51803e-10	3.55863
+up	DSG3	desmoglein 3	GPL13158_uc_colon;GPL6244_active_uc_colon	1.77815	2.79905e-15	3.5563
+up	VWF	von Willebrand factor	GPL13158_uc_colon;GPL6244_active_uc_colon	1.77615	2.51415e-16	3.5523
+up	FOS	Fos proto-oncogene, AP-1 transcription factor subunit	GPL13158_uc_colon;GPL6244_active_uc_colon	1.77322	6.81815e-06	3.54644
+up	TAGAP	T-cell activation RhoGTPase activating protein	GPL13158_uc_colon;GPL6244_active_uc_colon	1.77188	5.25531e-13	3.54375
+up	IL33	interleukin 33	GPL13158_uc_colon;GPL6244_active_uc_colon	1.77082	4.76451e-08	3.54164
+up	MNDA	myeloid cell nuclear differentiation antigen	GPL13158_uc_colon;GPL6244_active_uc_colon	1.76815	4.63489e-10	3.5363
+up	ARNTL2	aryl hydrocarbon receptor nuclear translocator like 2	GPL13158_uc_colon;GPL6244_active_uc_colon	1.76724	2.84382e-15	3.53449
+up	NNMT	nicotinamide N-methyltransferase	GPL13158_uc_colon;GPL6244_active_uc_colon	1.76258	1.30226e-20	3.52516
+up	SOCS3	suppressor of cytokine signaling 3	GPL13158_uc_colon;GPL6244_active_uc_colon	1.76011	3.67487e-15	3.52021
+up	S100P	S100 calcium binding protein P	GPL13158_uc_colon;GPL6244_active_uc_colon	1.75645	2.52148e-07	3.51291
+up	FAP	fibroblast activation protein alpha	GPL13158_uc_colon;GPL6244_active_uc_colon	1.75551	3.39175e-20	3.51102
+down	AQP8	aquaporin 8	GPL13158_uc_colon;GPL6244_active_uc_colon	-5.14408	2.06201e-21	10.2882
+down	HMGCS2	3-hydroxy-3-methylglutaryl-CoA synthase 2	GPL13158_uc_colon;GPL6244_active_uc_colon	-4.0804	1.93918e-26	8.16079
+down	CLDN8	claudin 8	GPL13158_uc_colon;GPL6244_active_uc_colon	-3.76459	4.36887e-08	7.52919
+down	PCK1	phosphoenolpyruvate carboxykinase 1	GPL13158_uc_colon;GPL6244_active_uc_colon	-3.67247	5.68751e-25	7.34494
+down	UGT2A3	UDP glucuronosyltransferase family 2 member A3	GPL13158_uc_colon;GPL6244_active_uc_colon	-3.6035	1.54013e-25	7.20701
+down	ABCG2	ATP binding cassette subfamily G member 2 (Junior blood group)	GPL13158_uc_colon;GPL6244_active_uc_colon	-3.49709	9.3573e-23	6.99417
+down	SLC26A2	solute carrier family 26 member 2	GPL13158_uc_colon;GPL6244_active_uc_colon	-3.48876	5.25172e-42	6.97751
+down	CYP2B6	cytochrome P450 family 2 subfamily B member 6	GPL13158_uc_colon;GPL6244_active_uc_colon	-3.10331	1.02155e-09	6.20663
+down	MEP1B	meprin A subunit beta	GPL13158_uc_colon;GPL6244_active_uc_colon	-3.0949	1.19667e-08	6.18979
+down	CYP2B7P	cytochrome P450 family 2 subfamily B member 7, pseudogene	GPL13158_uc_colon;GPL6244_active_uc_colon	-3.08872	6.20074e-10	6.17744
+down	CWH43	cell wall biogenesis 43 C-terminal homolog	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.9232	5.70623e-23	5.8464
+down	SLC38A4	solute carrier family 38 member 4	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.85467	1.59443e-08	5.70934
+down	SLC30A10	solute carrier family 30 member 10	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.82366	1.03494e-12	5.64731
+down	TRPM6	transient receptor potential cation channel subfamily M member 6	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.78613	2.84382e-15	5.57226
+down	SLC51A	solute carrier family 51 alpha subunit	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.73924	6.5695e-09	5.47848
+down	CHP2	calcineurin like EF-hand protein 2	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.71877	2.46971e-25	5.43753
+down	ADH1C	alcohol dehydrogenase 1C (class I), gamma polypeptide	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.70385	6.3341e-20	5.40771
+down	SLC17A4	solute carrier family 17 member 4	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.68248	2.83552e-23	5.36497
+down	MT1M	metallothionein 1M	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.66641	1.54177e-11	5.33282
+down	GUCA2A	guanylate cyclase activator 2A	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.65782	4.83094e-22	5.31565
+down	CA1	carbonic anhydrase 1	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.63648	5.45216e-21	5.27297
+down	GUCA2B	guanylate cyclase activator 2B	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.62352	2.78856e-14	5.24705
+down	GBA3	glucosylceramidase beta 3 (gene/pseudogene)	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.50709	9.08639e-15	5.01418
+down	APOBEC3B	apolipoprotein B mRNA editing enzyme catalytic subunit 3B	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.50334	1.46173e-13	5.00668
+down	PADI2	peptidyl arginine deiminase 2	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.43624	2.33215e-33	4.87248
+down	ABCB1	ATP binding cassette subfamily B member 1	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.39182	1.38433e-15	4.78365
+down	B4GALNT2	beta-1,4-N-acetyl-galactosaminyltransferase 2	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.34433	4.86169e-07	4.68866
+down	SATB2-AS1	SATB2 antisense RNA 1	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.30537	5.04979e-22	4.61074
+down	HSD3B2	hydroxy-delta-5-steroid dehydrogenase, 3 beta- and steroid delta-isomerase 2	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.29821	3.12446e-05	4.59642
+down	ACSF2	acyl-CoA synthetase family member 2	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.27304	6.75459e-13	4.54608
+down	BEST2	bestrophin 2	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.27157	9.46953e-12	4.54315
+down	MS4A12	membrane spanning 4-domains A12	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.24855	5.59096e-17	4.49709
+down	BRINP3	BMP/retinoic acid inducible neural specific 3	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.24562	8.45886e-12	4.49124
+down	DHRS11	dehydrogenase/reductase 11	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.20953	5.42505e-27	4.41905
+down	SGK2	SGK2, serine/threonine kinase 2	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.13695	6.55277e-26	4.2739
+down	SLC16A9	solute carrier family 16 member 9	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.11025	8.29214e-10	4.22051
+down	PHLPP2	PH domain and leucine rich repeat protein phosphatase 2	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.08291	3.51072e-17	4.16581
+down	PPARGC1A	PPARG coactivator 1 alpha	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.08211	1.65869e-21	4.16423
+down	CAPN13	calpain 13	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.0709	6.37312e-09	4.14179
+down	HEPACAM2	HEPACAM family member 2	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.05096	1.89179e-08	4.10193
+down	ANPEP	alanyl aminopeptidase, membrane	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.03026	1.26158e-06	4.06051
+down	PRKG2	protein kinase, cGMP-dependent, type II	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.01177	1.5069e-06	4.02354
+down	NPY1R	neuropeptide Y receptor Y1	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.00626	1.24593e-10	4.01251
+down	SLC51B	solute carrier family 51 beta subunit	GPL13158_uc_colon;GPL6244_active_uc_colon	-2.00216	1.16636e-11	4.00433
+down	PDE6A	phosphodiesterase 6A	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.98909	1.30769e-08	3.97818
+down	PBLD	phenazine biosynthesis like protein domain containing	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.98773	7.27066e-16	3.97546
+down	BMP3	bone morphogenetic protein 3	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.98402	4.099e-08	3.96803
+down	FGFR2	fibroblast growth factor receptor 2	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.9646	2.29081e-19	3.92919
+down	MEP1A	meprin A subunit alpha	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.95299	2.64305e-21	3.90598
+down	SLC3A1	solute carrier family 3 member 1	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.92843	1.60204e-14	3.85685
+down	TMEM63C	transmembrane protein 63C	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.92324	4.67891e-06	3.84647
+down	EXPH5	exophilin 5	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.90912	3.62952e-16	3.81823
+down	LRRC19	leucine rich repeat containing 19	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.90116	9.11866e-20	3.80231
+down	PKIB	protein kinase (cAMP-dependent, catalytic) inhibitor beta	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.89838	1.62487e-17	3.79676
+down	RPS6KA6	ribosomal protein S6 kinase A6	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.88307	9.32377e-14	3.76614
+down	PAQR5	progestin and adipoQ receptor family member 5	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.88109	1.5614e-26	3.76217
+down	DPP10	dipeptidyl peptidase like 10	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.87138	3.4451e-11	3.74275
+down	RUNDC3B	RUN domain containing 3B	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.86825	3.40696e-20	3.7365
+down	OTOP2	otopetrin 2	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.8632	1.19848e-09	3.72639
+down	CDHR1	cadherin related family member 1	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.85856	8.23694e-07	3.71712
+down	BEST4	bestrophin 4	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.85794	3.1765e-08	3.71587
+down	TUBAL3	tubulin alpha like 3	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.85597	4.17768e-18	3.71194
+down	HSD17B2	hydroxysteroid 17-beta dehydrogenase 2	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.85007	1.20866e-16	3.70013
+down	ENTPD5	ectonucleoside triphosphate diphosphohydrolase 5	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.84954	1.42855e-28	3.69908
+down	SLC22A5	solute carrier family 22 member 5	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.84865	2.69399e-13	3.6973
+down	TRHDE	thyrotropin releasing hormone degrading enzyme	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.84081	6.37225e-10	3.68162
+down	UGT1A3	UDP glucuronosyltransferase family 1 member A3	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.82974	4.77096e-17	3.65948
+down	CD177	CD177 molecule	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.82766	3.67248e-18	3.65531
+down	SLC35G1	solute carrier family 35 member G1	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.79675	6.75219e-13	3.5935
+down	PIGZ	phosphatidylinositol glycan anchor biosynthesis class Z	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.78592	4.79032e-15	3.57185
+down	SCIN	scinderin	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.78591	1.80977e-14	3.57182
+down	PNLIPRP2	pancreatic lipase related protein 2 (gene/pseudogene)	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.77786	1.03518e-09	3.55572
+down	WSCD1	WSC domain containing 1	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.77104	5.67688e-16	3.54208
+down	ENPP1	ectonucleotide pyrophosphatase/phosphodiesterase 1	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.7539	3.58244e-12	3.5078
+down	MT1F	metallothionein 1F	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.7487	6.82172e-14	3.4974
+down	PITX2	paired like homeodomain 2	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.74348	0.000144536	3.48696
+down	SELENBP1	selenium binding protein 1	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.73833	2.41611e-24	3.47666
+down	NXPE4	neurexophilin and PC-esterase domain family member 4	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.73622	4.93913e-16	3.47244
+down	VIPR1	vasoactive intestinal peptide receptor 1	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.73271	1.22116e-22	3.46541
+down	VLDLR	very low density lipoprotein receptor	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.73237	7.67191e-16	3.46474
+down	CDKN2B	cyclin dependent kinase inhibitor 2B	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.73189	2.5347e-15	3.46377
+down	WDR78	WD repeat domain 78	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.72594	3.90134e-11	3.45189
+down	SLC23A1	solute carrier family 23 member 1	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.72435	1.47719e-12	3.44869
+down	RMDN2	regulator of microtubule dynamics 2	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.71989	5.18483e-11	3.43979
+down	PCDH20	protocadherin 20	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.71511	2.33069e-07	3.43021
+down	GXYLT2	glucoside xylosyltransferase 2	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.71453	5.38925e-09	3.42905
+down	CNTN3	contactin 3	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.71415	1.16969e-16	3.42829
+down	CKB	creatine kinase B	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.71022	2.85354e-11	3.42045
+down	DEFB1	defensin beta 1	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.70804	5.04873e-11	3.41607
+down	TMEM37	transmembrane protein 37	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.67692	3.12722e-08	3.35383
+down	NR1H4	nuclear receptor subfamily 1 group H member 4	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.66197	1.94512e-09	3.32394
+down	FMO5	flavin containing monooxygenase 5	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.66067	2.2844e-10	3.32134
+down	CYP4F2	cytochrome P450 family 4 subfamily F member 2	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.65939	2.51438e-06	3.31879
+down	FRMD1	FERM domain containing 1	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.65535	1.42727e-07	3.31071
+down	TMEM72	transmembrane protein 72	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.64532	1.13195e-10	3.29064
+down	PLA2G12B	phospholipase A2 group XIIB	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.64366	6.0855e-06	3.28733
+down	SLC39A5	solute carrier family 39 member 5	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.64079	9.20006e-21	3.28159
+down	CNNM2	cyclin and CBS domain divalent metal cation transport mediator 2	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.64042	3.59667e-11	3.28084
+down	SLC16A1	solute carrier family 16 member 1	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.62407	9.56637e-27	3.24815
+down	MS4A8	membrane spanning 4-domains A8	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.61944	1.60947e-11	3.23887
+down	FMO4	flavin containing monooxygenase 4	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.6033	1.15568e-11	3.20659
+down	CA7	carbonic anhydrase 7	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.59585	3.64237e-08	3.1917
+down	PLCD1	phospholipase C delta 1	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.59439	2.54937e-07	3.18878
+down	METTL7B	methyltransferase like 7B	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.58528	5.68654e-07	3.17056
+down	AQP7	aquaporin 7	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.58375	1.98457e-14	3.16749
+down	LRRC31	leucine rich repeat containing 31	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.58162	1.48535e-11	3.16324
+down	SUGCT	succinyl-CoA:glutarate-CoA transferase	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.58072	9.7285e-09	3.16143
+down	PTPRR	protein tyrosine phosphatase, receptor type R	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.57373	4.12025e-09	3.14745
+down	ADH6	alcohol dehydrogenase 6 (class V)	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.56763	1.21289e-12	3.13525
+down	SLC23A3	solute carrier family 23 member 3	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.56725	7.8023e-09	3.13451
+down	EFNA1	ephrin A1	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.56717	1.68196e-05	3.13434
+down	ZG16	zymogen granule protein 16	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.5661	1.2142e-14	3.13221
+down	SLC25A34	solute carrier family 25 member 34	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.56533	2.79567e-11	3.13067
+down	TMEM171	transmembrane protein 171	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.56467	2.04374e-17	3.12934
+down	ISX	intestine specific homeobox	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.56381	9.94569e-12	3.12763
+down	PPARG	peroxisome proliferator activated receptor gamma	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.56222	1.74777e-12	3.12443
+down	UGT2B17	UDP glucuronosyltransferase family 2 member B17	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.56185	2.73854e-11	3.12371
+down	MT1G	metallothionein 1G	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.56174	1.18847e-13	3.12348
+down	RHOU	ras homolog family member U	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.55983	3.43332e-16	3.11965
+down	MIER3	MIER family member 3	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.55842	1.21634e-12	3.11685
+down	USP2	ubiquitin specific peptidase 2	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.54358	1.87799e-06	3.08715
+down	SCUBE2	signal peptide, CUB domain and EGF like domain containing 2	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.54336	3.20879e-17	3.08672
+down	ACOX1	acyl-CoA oxidase 1	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.53791	1.36582e-12	3.07582
+down	CA2	carbonic anhydrase 2	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.52923	4.53098e-12	3.05846
+down	RAVER2	ribonucleoprotein, PTB binding 2	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.52701	1.01619e-20	3.05402
+down	CNGA1	cyclic nucleotide gated channel alpha 1	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.52346	3.07726e-09	3.04691
+down	PDZD3	PDZ domain containing 3	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.52109	5.06089e-14	3.04219
+down	PTGDR	prostaglandin D2 receptor	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.52002	8.82827e-14	3.04004
+down	PPP2R3A	protein phosphatase 2 regulatory subunit B''alpha	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.50998	2.24429e-12	3.01997
+down	SULT1A2	sulfotransferase family 1A member 2	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.50855	1.06857e-12	3.01709
+down	A1CF	APOBEC1 complementation factor	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.50128	3.11668e-17	3.00257
+down	SLC19A3	solute carrier family 19 member 3	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.50104	6.74853e-09	3.00209
+down	ARHGAP44	Rho GTPase activating protein 44	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.49579	2.14858e-13	2.99158
+down	TSPAN7	tetraspanin 7	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.49504	1.92879e-13	2.99008
+down	NAALADL1	N-acetylated alpha-linked acidic dipeptidase-like 1	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.48642	2.91038e-06	2.97283
+down	PP7080	uncharacterized LOC25845	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.48406	3.82045e-07	2.96811
+down	EPHX2	epoxide hydrolase 2	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.47653	7.13172e-30	2.95305
+down	SLC4A4	solute carrier family 4 member 4	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.47606	8.54349e-22	2.95211
+down	CLCA1	chloride channel accessory 1	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.46547	2.5135e-07	2.93095
+down	HAVCR1	hepatitis A virus cellular receptor 1	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.46252	1.17033e-06	2.92503
+down	CDC14A	cell division cycle 14A	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.46122	4.21532e-10	2.92244
+down	LDHD	lactate dehydrogenase D	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.45973	3.77956e-14	2.91945
+down	SATB2	SATB homeobox 2	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.45778	1.56501e-21	2.91557
+down	EDN3	endothelin 3	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.45753	2.20148e-16	2.91506
+down	EPB41L4B	erythrocyte membrane protein band 4.1 like 4B	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.45137	1.31601e-22	2.90273
+down	SLC26A3	solute carrier family 26 member 3	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.44915	3.33089e-14	2.89831
+down	PDK2	pyruvate dehydrogenase kinase 2	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.44886	2.19977e-08	2.89772
+down	TINAG	tubulointerstitial nephritis antigen	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.44116	1.8201e-13	2.88232
+down	CCNJL	cyclin J like	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.43571	1.05162e-12	2.87141
+down	GCNT2	glucosaminyl (N-acetyl) transferase 2, I-branching enzyme (I blood group)	GPL13158_uc_colon;GPL6244_active_uc_colon	-1.43067	7.10263e-10	2.86135

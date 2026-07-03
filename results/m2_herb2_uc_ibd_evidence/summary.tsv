@@ -1,0 +1,14 @@
+metric	value	notes
+total_evidence_rows	465	reference + clinical trial + meta-analysis + high-throughput rows matching direct UC/IBD terms
+disease_records	114	HERB disease records matching direct UC/IBD terms
+ingredient_candidates	166	Ingredient subjects with direct UC/IBD evidence
+evidence_source:HERB_clinical_trial	34	
+evidence_source:HERB_high_throughput_experiment	34	
+evidence_source:HERB_meta_analysis	176	
+evidence_source:HERB_reference	221	
+subject_type:Disease	34	
+subject_type:Formula	62	
+subject_type:Herb	51	
+subject_type:Ingredient	318	
+ingredient_identifier:missing_core_chemical_id	1	
+ingredient_identifier:pubchem_and_inchikey	165	

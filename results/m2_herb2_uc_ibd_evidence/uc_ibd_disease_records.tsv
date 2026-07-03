@@ -1,0 +1,115 @@
+disease_id	disease_name	matched_terms	match_score	mesh_id	do_id	icd10_id	alias
+HBDIS000615	Colitis	colitis;enteritis	6.0	D003092	60189; 60190; 2326; 60180	NA	Gastroenteritis; Colitis; Ileocolitis; Ileitis
+HBDIS000616	Ulcerative Colitis	colitis;crohn;inflammatory bowel disease;ulcerative colitis	12.0	D003093	8577; 110892	K51.9; K51	Colitis Ulcerosa; Colitis, Ulcerative; Inflammatory Bowel Disease 1; Crohn Disease; Ulcerative Colitis, Unspecified; Inflammatory Bowel Disease (Crohn Disease) 1; Ulcerative Colitis
+HBDIS000686	Crohn Disease	colitis;crohn;enteritis;inflammatory bowel disease;ulcerative colitis	15.0	D003424	60192; 8778; 110892	K50.9; K50	Ileocolitis; Colitis, Granulomatous; Morbus Crohn; Granulomatous Enteritis And Colitis; Crohn'S Disease; Crohn'S Colitis; Inflammatory Bowel Disease 1; Crohn Disease; Crohn'S Disease [Regional Enteritis]; Inflammatory Bowel Disease (Crohn Disease) 1; Ileitis, Regional; Enteritis, Regional; Crohn'S Disease, Unspecified; Ulcerative Colitis
+HBDIS000847	Amebic Colitis	colitis	3.0	D004404	NA	NA	Dysentery, Amebic; Colitis, Amebic
+HBDIS000937	Enteritis	colitis;enteritis	6.0	D004751	60189; 60190; 2326; 60180	NA	Ileocolitis; Colitis; Ileitis; Gastroenteritis; Enteritis
+HBDIS000939	Enterocolitis	colitis	3.0	D004760	NA	NA	Enterocolitis
+HBDIS001136	Gastroenteritis	colitis;enteritis	6.0	D005759	60189; 60190; 2326; 60180	NA	Gastroenteritis; Colitis; Ileocolitis; Ileitis
+HBDIS001137	Gastroenteritis, Transmissible, of Swine	enteritis	3.0	D005761	NA	NA	Gastroenteritis, Transmissible, of Swine
+HBDIS001139	Gastrointestinal Diseases	enteritis	3.0	D005767	2326; 77	NA	Cholera Infantum; Digestive System Disease; Gastrointestinal System Disease; Gastrointestinal Disease; Gastroenteritis; Gastrointestinal Diseases; Abnormality of The Gastrointestinal Tract; Functional Gastrointestinal Disorders
+HBDIS001515	Ileitis	colitis;enteritis	6.0	D007079	60189; 60190; 2326; 60180	NA	Gastroenteritis; Colitis; Ileocolitis; Ileitis
+HBDIS001540	Infectious Enteritis	enteritis	3.0	NA	NA	NA	NA
+HBDIS001548	Inflammatory Bowel Diseases	inflammatory bowel disease	3.0	D015212	50589	NA	Inflammation of The Large Intestine; Inflammatory Bowel Diseases; Inflammatory Bowel Disease
+HBDIS001931	Mesenteric Panniculitis	enteritis	3.0	D015436	NA	NA	Mesenteric Panniculitis; Retractile Mesenteritis
+HBDIS002482	Proctitis	proctitis	3.0	D011349	3127	NA	Proctitis
+HBDIS003567	Hemorrhagic Colitis	colitis	3.0	NA	NA	NA	NA
+HBDIS003739	Bacterial Enteritis	enteritis	3.0	NA	NA	NA	NA
+HBDIS003740	Viral Gastroenteritis	enteritis	3.0	NA	NA	NA	NA
+HBDIS004004	Crohn'S Disease of Large Bowel	colitis;crohn;enteritis	9.0	D003424	60192; 8778	K50.1	Ileocolitis; Colitis, Granulomatous; Crohn'S Disease; Crohn'S Colitis; Crohn Disease; Crohn'S Disease of Large Intestine; Ileitis, Regional; Enteritis, Regional
+HBDIS004124	Colitis, Ischemic	colitis	3.0	D017091	60181	NA	Ischemic Colitis; Colitis, Ischemic
+HBDIS004137	Anisakiasis	enteritis	3.0	D017129	7033; 4031	B81.0	Eosinophilic Gastroenteritis; Anisakiasis
+HBDIS005110	Colitis, Collagenous	colitis	3.0	D046729	60183	NA	Colitis, Collagenous; Collagenous Colitis
+HBDIS005116	Clostridium Difficile Colitis	colitis	3.0	NA	60185	NA	Clostridium Difficile Colitis
+HBDIS006078	Eosinophilic Gastritis	enteritis	3.0	C535952	4030	NA	Eosinophilic Gastroenteritis; Eosinophilic Infiltration In The Stomach Mucosa; Eosinophilic Gastritis
+HBDIS006089	Chronic Colitis	colitis	3.0	NA	NA	NA	Chronic Colitis
+HBDIS006090	Crohn'S Disease of The Ileum	colitis;crohn;enteritis	9.0	D003424	60188; 60191	NA	Ileocolitis; Colitis, Granulomatous; Gastroduodenal Crohn'S Disease; Crohn Disease; Ileitis, Regional; Enteritis, Regional; Jejunoileitis
+HBDIS006091	Ischemic Enteritis	colitis;enteritis	6.0	NA	60181	NA	Ischemic Colitis
+HBDIS006092	Acute Ischemic Colitis	colitis	3.0	NA	NA	NA	NA
+HBDIS006095	Allergic Enteritis	enteritis	3.0	NA	NA	NA	NA
+HBDIS006096	Noninfectious Colitis	colitis	3.0	NA	NA	NA	NA
+HBDIS006098	Acute Gastroenteritis	enteritis	3.0	NA	NA	NA	NA
+HBDIS006099	Eosinophilic Colitis	colitis	3.0	NA	NA	NA	NA
+HBDIS006100	Necrotic Enteritis	enteritis	3.0	NA	NA	NA	NA
+HBDIS006107	Diversion Colitis	colitis	3.0	NA	NA	NA	NA
+HBDIS006109	Typhlocolitis	colitis	3.0	NA	NA	NA	NA
+HBDIS006124	Retractile Mesenteritis	enteritis	3.0	D015436	NA	NA	Mesenteric Panniculitis; Retractile Mesenteritis
+HBDIS006816	Enteric Campylobacteriosis	enteritis	3.0	NA	NA	A04.5	Campylobacter Enteritis
+HBDIS006833	Duck Viral Enteritis	enteritis	3.0	NA	NA	NA	NA
+HBDIS006896	Infectious Colitis	colitis	3.0	NA	NA	NA	NA
+HBDIS006897	Infectious Gastroenteritis	enteritis	3.0	NA	NA	NA	NA
+HBDIS007897	Acute Radiation Enteritis	enteritis	3.0	NA	NA	NA	NA
+HBDIS007903	Indeterminate Colitis	colitis	3.0	NA	NA	NA	NA
+HBDIS007904	Cytomegaloviral Colitis	colitis	3.0	NA	NA	NA	NA
+HBDIS007906	Perianal Crohn'S Disease	crohn	3.0	NA	NA	NA	NA
+HBDIS008143	Infantile Gastroenteritis	enteritis	3.0	NA	NA	NA	NA
+HBDIS008144	Viral Gastroenteritis Due To Rotavirus	enteritis	3.0	NA	NA	A08.0	Rotaviral Enteritis
+HBDIS008150	Enterocolitis, Neutropenic	colitis	3.0	D044504	NA	NA	Enterocolitis, Neutropenic
+HBDIS008542	Chronic Left-Sided Ulcerative Colitis	colitis;ulcerative colitis	6.0	NA	8577	NA	Ulcerative Colitis
+HBDIS008589	Hemorrhagic Enteritis	enteritis	3.0	NA	NA	NA	NA
+HBDIS008854	Colitis, Microscopic	colitis	3.0	D046728	60182	NA	Colitis, Microscopic; Microscopic Colitis
+HBDIS008855	Colitis, Lymphocytic	colitis	3.0	D046730	60184	NA	Colitis, Lymphocytic; Lymphocytic Colitis
+HBDIS009799	Necrotizing Enterocolitis	colitis	3.0	D020345	8677	NA	Enterocolitis, Necrotizing; Necrotizing Enterocolitis; Perinatal Necrotizing Enterocolitis
+HBDIS010326	Inflammation of Large Intestine	inflammatory bowel disease	3.0	NA	NA	NA	Inflammation of The Large Intestine; Inflammatory Bowel Disease
+HBDIS010530	Terminal Ileitis	crohn	3.0	NA	60188; 60191	NA	Gastroduodenal Crohn'S Disease; Jejunoileitis
+HBDIS010531	Regional Enteritis	colitis;crohn;enteritis	9.0	D003424	NA	NA	Ileocolitis; Colitis, Granulomatous; Crohn Disease; Ileitis, Regional; Enteritis, Regional
+HBDIS010909	Gastroenterocolitis	colitis	3.0	NA	NA	NA	NA
+HBDIS011873	Colitis Aggravated	colitis	3.0	NA	NA	NA	NA
+HBDIS012159	Distal Colitis	colitis	3.0	NA	NA	NA	NA
+HBDIS012250	Pancolitis	colitis	3.0	NA	NA	NA	NA
+HBDIS012462	Ulcerative Colitis, Quiescent	colitis;ulcerative colitis	6.0	NA	NA	NA	NA
+HBDIS012554	Iieocolitis	colitis;crohn;enteritis	9.0	D003424	60190	NA	Ileocolitis; Colitis, Granulomatous; Crohn Disease; Ileitis, Regional; Enteritis, Regional
+HBDIS012669	Granulomatous Ileocolitis	colitis	3.0	NA	NA	NA	NA
+HBDIS012724	Infectious Enterocolitis	colitis	3.0	NA	NA	NA	NA
+HBDIS012813	Pseudomembranous Colitis	colitis	3.0	D004761	60185	NA	Colitis, Pseudomembranous; Clostridium Difficile Colitis
+HBDIS012840	Acute Ulcerative Colitis	colitis;ulcerative colitis	6.0	NA	NA	NA	NA
+HBDIS012892	Eosinophilic Gastroenteritis	enteritis	3.0	C535952	7033; 4031	NA	Eosinophilic Gastritis; Eosinophilic Gastroenteritis; Anisakiasis
+HBDIS013340	Acute And Chronic Colitis	colitis	3.0	NA	NA	NA	NA
+HBDIS013347	Gastrointestinal Crohn'S Disease	crohn	3.0	NA	NA	NA	NA
+HBDIS013453	Nonbacterial Gastroenteritis	enteritis	3.0	NA	NA	NA	NA
+HBDIS013505	Non-Specific Colitis	colitis	3.0	NA	NA	NA	NA
+HBDIS014220	Neonatal Necrotizing Enterocolitis	colitis	3.0	NA	60185	NA	Clostridium Difficile Colitis
+HBDIS015053	Inflammatory Bowel Disease 2	inflammatory bowel disease	3.0	C563310	110900	NA	Inflammatory Bowel Disease 2
+HBDIS016954	Inflammatory Bowel Disease 5	inflammatory bowel disease	3.0	C565234	110889	NA	Inflammatory Bowel Disease 5
+HBDIS018657	Lupus Enteritis	enteritis	3.0	NA	NA	NA	NA
+HBDIS018955	Acute Colitis	colitis	3.0	NA	NA	NA	Acute Colitis
+HBDIS019026	Chronic Enterocolitis	colitis	3.0	NA	NA	NA	NA
+HBDIS019349	Crohn Disease-Associated Growth Failure, Susceptibility To (Finding)	crohn;inflammatory bowel disease	6.0	NA	110892	NA	Inflammatory Bowel Disease 1
+HBDIS019381	Inflammatory Bowel Disease 25, Autosomal Recessive	inflammatory bowel disease	3.0	C567251	110909	NA	Inflammatory Bowel Disease 25, Autosomal Recessive; Inflammatory Bowel Disease 25
+HBDIS019448	Inflammatory Bowel Disease 21	inflammatory bowel disease	3.0	C567338	110906	NA	Inflammatory Bowel Disease 21
+HBDIS019472	Inflammatory Bowel Disease 19	crohn;inflammatory bowel disease	6.0	C567372	110890	NA	Inflammatory Bowel Disease 19; Inflammatory Bowel Disease (Crohn Disease) 19
+HBDIS019476	Inflammatory Bowel Disease 16	inflammatory bowel disease	3.0	C567380	110896	NA	Inflammatory Bowel Disease 16
+HBDIS019480	Inflammatory Bowel Disease 14	inflammatory bowel disease	3.0	C567383	110895	NA	Inflammatory Bowel Disease 14
+HBDIS019481	Inflammatory Bowel Disease 13	inflammatory bowel disease	3.0	C567384	110893	NA	Inflammatory Bowel Disease 13
+HBDIS019482	Inflammatory Bowel Disease 12	inflammatory bowel disease	3.0	C567388	110887	NA	Inflammatory Bowel Disease 12
+HBDIS019652	Enteritis Due To Norovirus	enteritis	3.0	NA	NA	NA	NA
+HBDIS019906	Inflammatory Bowel Disease 28, Autosomal Recessive	inflammatory bowel disease	3.0	C567728	110899	NA	Inflammatory Bowel Disease 28, Autosomal Recessive; Inflammatory Bowel Disease 28
+HBDIS020082	Echovirus Enteritis	enteritis	3.0	NA	NA	NA	NA
+HBDIS020092	Left Sided Colitis	colitis	3.0	NA	NA	NA	NA
+HBDIS020124	Left Sided Ulcerative Colitis	colitis;ulcerative colitis	6.0	NA	NA	NA	NA
+HBDIS020129	Chronic Ulcerative Colitis	colitis;ulcerative colitis	6.0	NA	8577	NA	Ulcerative Colitis
+HBDIS020232	Pediatric Crohn'S Disease	crohn	3.0	C536215	NA	NA	Pediatric Crohn'S Disease
+HBDIS020238	Pediatric Ulcerative Colitis	colitis;ulcerative colitis	6.0	C536315	NA	NA	Pediatric Ulcerative Colitis
+HBDIS020456	Chronic Ulcerative Proctitis	proctitis	3.0	NA	NA	K51.2	Ulcerative (Chronic) Proctitis
+HBDIS020964	Acute Enterocolitis	colitis	3.0	NA	NA	NA	NA
+HBDIS021051	Ulcerative Colitis-Associated Colorectal Adenocarcinoma	colitis;ulcerative colitis	6.0	NA	NA	NA	NA
+HBDIS022025	Ulcerative Colitis In Remission	colitis;ulcerative colitis	6.0	NA	NA	NA	NA
+HBDIS022289	Recurrent Gastroenteritis	enteritis	3.0	NA	NA	NA	Recurrent Gastroenteritis
+HBDIS022512	Gastroenteritis In Children	enteritis	3.0	NA	NA	NA	NA
+HBDIS022612	Ulcerative Colitis Or Crohn'S	colitis;crohn;ulcerative colitis	9.0	NA	NA	NA	NA
+HBDIS022674	Epidemic Gastroenteritis	enteritis	3.0	NA	NA	NA	NA
+HBDIS022818	Autoimmune Colitis	colitis	3.0	NA	NA	NA	NA
+HBDIS022830	Fistulising Crohn'S Disease	crohn	3.0	NA	NA	NA	NA
+HBDIS023083	Autoinflammation With Infantile Enterocolitis	colitis	3.0	NA	NA	NA	Autoinflammation With Infantile Enterocolitis
+HBDIS023221	Inflammatory Bowel Disease 28	inflammatory bowel disease	3.0	NA	NA	NA	NA
+HBDIS025533	Necrotizing Enterocolitis In Fetus Or Newborn	colitis	3.0	NA	60185	P77	Clostridium Difficile Colitis; Necrotizing Enterocolitis of Fetus And Newborn
+HBDIS025872	Food-Protein Induced Enterocolitis Syndrome	colitis	3.0	NA	NA	NA	NA
+HBDIS026130	Cryptogenic Multifocal Ulcerous Stenosing Enteritis	enteritis	3.0	NA	NA	NA	NA
+HBDIS027951	Ulcerative Colitis-Associated Low-Grade Dysplasia	colitis;ulcerative colitis	6.0	NA	NA	NA	NA
+HBDIS028091	Inflammatory Bowel Disease, Immunodeficiency, And Encephalopathy	inflammatory bowel disease	3.0	NA	NA	NA	Inflammatory Bowel Disease, Immunodeficiency, And Encephalopathy
+HBDIS028249	Proctocolitis	colitis;ulcerative colitis	6.0	D011350	8577	NA	Ulcerative Colitis; Proctocolitis
+HBDIS028493	Neutropenic Colitis	colitis	3.0	NA	NA	NA	NA
+HBDIS028965	Inflammatory Bowel Disease 3	inflammatory bowel disease	3.0	C565764	110891	NA	Inflammatory Bowel Disease 3
+HBDIS029075	Inflammatory Bowel Disease 10	crohn;inflammatory bowel disease	6.0	C567021	110885	NA	Inflammatory Bowel Disease (Crohn Disease) 10; Inflammatory Bowel Disease 10
+HBDIS029140	Inflammatory Bowel Disease 17	inflammatory bowel disease	3.0	C567378	110883	NA	Inflammatory Bowel Disease 17
+HBDIS030119	Inflammatory Bowel Disease 29	inflammatory bowel disease	3.0	NA	NA	NA	Inflammatory Bowel Disease 29

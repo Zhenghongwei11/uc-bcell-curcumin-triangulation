@@ -1,6 +1,6 @@
 layer	source_layer	key_result	allowed_claim	boundary
 Disease signature	Bulk GEO	2 independent evidence groups	UC/IBD mucosal disease signature	Not a treatment mechanism
 Cell localization	GSE125527 scRNA pseudobulk	B-cell delta=0.538; null P=0.0023	Rectal B-cell disease-axis localization	Association, not compound action
-Candidate bridge	HERB disease-context targets	Curcumin bridge=63.2; targets=22	Curcumin prioritized as B-cell-axis candidate	Prioritization, not efficacy
+Candidate linkage	HERB disease-context targets	Curcumin linkage=63.2; targets=22	Curcumin prioritized as B-cell-axis candidate	Prioritization, not efficacy
 Orthogonal support	Open Targets and PubMed/full text	Open Targets 21/22; PubMed title matches 25/25	Target disease plausibility and evidence traceability	Does not prove compound-target engagement
-Boundary checks	ETCM2 and L1000CDS2	ETCM2 overlap=0; LINCS hits=0/15	Weak or negative layers reported	Non-hits do not prove inactivity
+Resource limits	ETCM2 and L1000CDS2	ETCM2 overlap=0; LINCS hits=0/15	Weak or negative layers reported	Non-hits do not prove inactivity

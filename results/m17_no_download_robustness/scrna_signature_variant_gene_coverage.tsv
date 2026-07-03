@@ -1,0 +1,15 @@
+variant	source	mode	up_query_genes	down_query_genes	up_present_genes	down_present_genes	up_coverage_fraction	down_coverage_fraction
+consensus_top50_logsum_cpm	two_evidence_group_consensus	logsum_cpm	50	50	9	4	0.18	0.08
+consensus_top50_avg_logcpm	two_evidence_group_consensus	avg_logcpm	50	50	9	4	0.18	0.08
+consensus_top100_logsum_cpm	two_evidence_group_consensus	logsum_cpm	100	100	29	12	0.29	0.12
+consensus_top100_avg_logcpm	two_evidence_group_consensus	avg_logcpm	100	100	29	12	0.29	0.12
+consensus_top150_logsum_cpm	two_evidence_group_consensus	logsum_cpm	150	150	52	20	0.346667	0.133333
+consensus_top150_avg_logcpm	two_evidence_group_consensus	avg_logcpm	150	150	52	20	0.346667	0.133333
+consensus_top300_logsum_cpm	two_evidence_group_consensus	logsum_cpm	300	300	122	65	0.406667	0.216667
+consensus_top300_avg_logcpm	two_evidence_group_consensus	avg_logcpm	300	300	122	65	0.406667	0.216667
+consensus_top150_weighted_avg_logcpm	two_evidence_group_consensus	weighted_avg_logcpm	150	150	52	20	0.346667	0.133333
+consensus_top150_weighted_logsum_cpm	two_evidence_group_consensus	weighted_logsum_cpm	150	150	52	20	0.346667	0.133333
+GSE75214_top150_logsum_cpm	GSE75214	logsum_cpm	150	150	60	62	0.4	0.413333
+GSE75214_top150_avg_logcpm	GSE75214	avg_logcpm	150	150	60	62	0.4	0.413333
+GSE87466_top150_logsum_cpm	GSE87466	logsum_cpm	150	150	61	47	0.406667	0.313333
+GSE87466_top150_avg_logcpm	GSE87466	avg_logcpm	150	150	61	47	0.406667	0.313333
