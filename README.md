@@ -10,8 +10,8 @@ The package is designed to support two levels of reproduction: a fast rebuild of
 - `figures/scripts/build_main_figures.py`: rebuilds Figures 1-5.
 - `figures/source_data/`: source-data tables used by figure panels.
 - `figures/output/`: regenerated PNG, PDF, and SVG figure files. TIFF submission files are intentionally omitted because they are large and can be regenerated locally.
-- `tables/source_data/` and `tables/manuscript/`: source and display tables for Tables 1-3.
-- `tables/supplementary/`: supplementary TSV tables, including sensitivity analyses, immune-composition proxy analysis, target-overlap baseline comparison, and the GSE182270 B-lineage replication analysis.
+- `tables/source_data/` and `tables/manuscript/`: source and display tables for Tables 1-4.
+- `tables/supplementary/`: supplementary TSV tables, including sensitivity analyses, immune-composition proxy analysis, target-overlap baseline comparison, therapeutic-direction support, candidate-specificity controls, and the GSE182270 B-lineage replication analysis.
 - `results/`: derived result tables required to rebuild the figures and tables; these are also useful for fast verification without rerunning all public downloads.
 - `docs/DATA_MANIFEST.tsv`: public data-source manifest and acquisition records.
 - `docs/FIGURE_PROVENANCE.tsv`: figure/table to script/source/output map.
@@ -39,6 +39,7 @@ Expected outputs:
 - `tables/manuscript/table1_dataset_and_resource_inventory.tsv`
 - `tables/manuscript/table2_prioritized_tcm_candidates.tsv`
 - `tables/manuscript/table3_curcumin_target_evidence.tsv`
+- `tables/manuscript/table4_therapeutic_direction_consistency.tsv`
 - `tables/supplementary/*.tsv`
 
 ## Full public-data reproduction
@@ -72,7 +73,5 @@ Rebuilding figures and display tables from included result tables should take le
 GitHub repository: https://github.com/Zhenghongwei11/uc-bcell-curcumin-triangulation
 
 This repository is released through GitHub and archived by Zenodo. Cite the Zenodo version DOI associated with the exact GitHub release used for reproduction.
-
-Zenodo version DOI for v1.0.2: https://doi.org/10.5281/zenodo.21149638
 
 Zenodo concept DOI: https://doi.org/10.5281/zenodo.21121528

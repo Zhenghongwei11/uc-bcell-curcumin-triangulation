@@ -1,0 +1,8 @@
+gene	evidence role	disease direction	rectal B delta	curcumin-reported regulation	expected therapeutic direction	directional consistency	PMID
+BCL6	B-cell mechanism candidate	Increased in diseased rectal B cells	0.07212	down	Suppression of a disease-increased target or cytokine-context signal	Directionally consistent	36353208
+BLNK	B-cell mechanism candidate	Increased in diseased rectal B cells	0.2816	up	Context modulation rather than simple normalization	Contextual, not normalizing	36353208
+SYK	B-cell mechanism candidate	Increased in diseased rectal B cells	0.2135	down	Suppression of a disease-increased target or cytokine-context signal	Directionally consistent	36353208
+CCL2	Cytokine-context target	Increased in replicated bulk UC/IBD signature	Not resolved	down	Suppression of a disease-increased target or cytokine-context signal	Directionally consistent	36196887
+IL33	Cytokine-context target	Increased in replicated bulk UC/IBD signature	Not resolved	down	Suppression of a disease-increased target or cytokine-context signal	Directionally consistent	36196887
+IL1B	Cytokine-context target	Increased in diseased rectal B cells	0.001133	down	Suppression of a disease-increased target or cytokine-context signal	Directionally consistent	36196887;36353208
+TNF	Cytokine-context target	Increased in diseased rectal B cells	0.2476	down	Suppression of a disease-increased target or cytokine-context signal	Directionally consistent	36196887;36353208

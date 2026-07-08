@@ -1,0 +1,5 @@
+analysis	result	interpretation
+Real-candidate ranking	Curcumin ranked first among 25 HERB disease-context candidates by B-cell-axis specificity score.	Supports lead-candidate status within the real candidate landscape.
+Standard target-overlap baseline	Curcumin ranked second by simple bulk-module overlap, whereas Archin ranked first.	The disease-cell-aware framework changes the ranking away from generic inflammatory overlap.
+Matched random target-set null	Observed score 54.25; null mean 84.0908; empirical P>=1.	Does not eliminate target-count or literature-density bias; this limit should remain explicit.
+Target-count association	Spearman rho 0.937; P=5.08e-12.	Candidate scores remain strongly coupled to disease-context target count.

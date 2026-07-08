@@ -16,6 +16,7 @@ fi
 
 PYTHON_BIN="${PYTHON_BIN:-python}"
 PUBLIC_REPRO_BUILD=1 "$PYTHON_BIN" scripts/build_manuscript_tables_and_legends.py
+PUBLIC_REPRO_BUILD=1 "$PYTHON_BIN" scripts/build_cjnm_strengthening_tables.py
 "$PYTHON_BIN" figures/scripts/build_main_figures.py
 "$PYTHON_BIN" figures/scripts/build_supplementary_figures.py
 
@@ -31,7 +32,10 @@ expected = [
     'tables/manuscript/table1_dataset_and_resource_inventory.tsv',
     'tables/manuscript/table2_prioritized_tcm_candidates.tsv',
     'tables/manuscript/table3_curcumin_target_evidence.tsv',
+    'tables/manuscript/table4_therapeutic_direction_consistency.tsv',
     'tables/supplementary/Table_S1_full_curcumin_target_evidence.tsv',
+    'tables/supplementary/cjnm_candidate_specificity_controls.tsv',
+    'tables/supplementary/cjnm_therapeutic_direction_consistency_full.tsv',
     'tables/supplementary/gse182270_bcell_group_comparison.tsv',
     'tables/supplementary/standard_overlap_baseline_candidate_ranking.tsv',
     'tables/supplementary/scrna_signature_sensitivity_bcell_summary.tsv',
