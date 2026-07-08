@@ -396,7 +396,7 @@ def build_figure_1() -> None:
 
     ax = axes["C"]
     panel_label(ax, "c")
-    ax.set_title("Claim map", loc="left", fontsize=8, pad=16)
+    ax.set_title("Evidence boundaries", loc="left", fontsize=8, pad=16)
     ax.set_axis_off()
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
