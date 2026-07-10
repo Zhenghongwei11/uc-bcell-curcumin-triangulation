@@ -1,0 +1,6 @@
+up_query_genes_original	down_query_genes_original	up_query_genes_after_ig_removal	down_query_genes_after_ig_removal	removed_up_genes	removed_down_genes	up_present_after_ig_removal	down_present_after_ig_removal	marker_set	query_genes	present_genes	present_gene_symbols
+150.0	150.0	148.0	150.0	IGK;IGHM		51.0	20.0				
+								naive_B_marker	7.0	7.0	MS4A1;TCL1A;IGHD;CD19;CD79B;FCER2;CD79A
+								memory_activated_B_marker	8.0	8.0	BCL6;BANK1;BLK;SYK;BLNK;CD27;CD69;TNFRSF13B
+								plasmablast_plasma_marker	7.0	7.0	SDC1;JCHAIN;MZB1;PRDM1;TNFRSF17;DERL3;XBP1
+								immunoglobulin_program	8.0	8.0	IGKC;JCHAIN;IGHA1;IGHG1;IGHG3;IGHD;IGHM;IGLC2

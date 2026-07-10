@@ -1,5 +1,5 @@
 item	output	script	source_data
-Table 1	tables/manuscript/table1_chinese_medicine_resources.tsv	scripts/build_chinese_medicine_rebuild_tables.py	data/derived/bulk_evidence_groups.tsv
-Table 2	tables/manuscript/table2_chinese_medicine_compound_mapping.tsv	scripts/build_chinese_medicine_rebuild_tables.py	data/derived/compound_cell_context_summary.tsv
-Table 3	tables/manuscript/table3_curcumin_gene_followup.tsv	scripts/build_chinese_medicine_rebuild_tables.py	data/derived/target_gene_pseudobulk_scores.tsv
+Table 1	tables/main/table1_chinese_medicine_resources.tsv	scripts/build_chinese_medicine_rebuild_tables.py	data/derived/bulk_evidence_groups.tsv
+Table 2	tables/main/table2_chinese_medicine_compound_mapping.tsv	scripts/build_chinese_medicine_rebuild_tables.py	data/derived/compound_cell_context_summary.tsv
+Table 3	tables/main/table3_curcumin_gene_followup.tsv	scripts/build_chinese_medicine_rebuild_tables.py	data/derived/target_gene_pseudobulk_scores.tsv
 Supplementary tables	tables/supplementary/*.tsv	scripts/build_chinese_medicine_rebuild_tables.py	data/derived/*.tsv

@@ -1,7 +1,5 @@
 accession	marker_group	markers_present	markers_up	markers_up_fdr_lt_0_05	median_log2fc
-GSE59071	B-cell marker	12	12	12	0.706795
-GSE59071	Plasma-cell marker	9	9	8	1.40132
-GSE75214	B-cell marker	12	12	12	0.706795
-GSE75214	Plasma-cell marker	9	9	8	1.40132
+GPL6244 shared	B-cell marker	12	12	12	0.706795
+GPL6244 shared	Plasma-cell marker	9	9	8	1.40132
 GSE87466	B-cell marker	12	11	11	1.23994
 GSE87466	Plasma-cell marker	10	10	9	0.676346

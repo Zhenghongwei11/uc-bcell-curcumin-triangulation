@@ -12,6 +12,30 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 
+PUBCHEM_IDENTITY_OVERRIDES = {
+    "969516": {
+        "cas": "458-37-7",
+        "note": "CAS corrected from HERB CAS field using PubChem CID 969516 synonyms.",
+    },
+    "3220": {
+        "cas": "518-82-1",
+        "note": "CAS added from PubChem.",
+    },
+    "479503": {
+        "display_name": "Shikonin / Isoarnebin 4",
+        "cas": "517-89-5",
+        "note": "HERB name 'Isoarnebin 4' maps to PubChem CID 479503, whose primary synonym is shikonin; alkannin is the stereochemical counterpart with a different PubChem CID/InChIKey.",
+    },
+    "1548910": {
+        "cas": "61434-67-1",
+        "note": "CAS corrected for cis-resveratrol using PubChem CID 1548910; 501-36-0 corresponds to trans-resveratrol/resveratrol.",
+    },
+    "445154": {
+        "cas": "501-36-0",
+        "note": "CAS added/verified for trans-resveratrol using PubChem CID 445154.",
+    },
+}
+
 
 def read_tsv(path: str) -> pd.DataFrame:
     return pd.read_csv(ROOT / path, sep="\t")
@@ -52,9 +76,14 @@ def fmt_int(value) -> int:
 
 def display_compound_name(source_name: str, pubchem_id) -> str:
     name = str(source_name).strip()
+    pubchem_key = ""
+    if not pd.isna(pubchem_id):
+        pubchem_key = str(int(float(pubchem_id)))
+    if pubchem_key in PUBCHEM_IDENTITY_OVERRIDES and "display_name" in PUBCHEM_IDENTITY_OVERRIDES[pubchem_key]:
+        return PUBCHEM_IDENTITY_OVERRIDES[pubchem_key]["display_name"]
     if name == "Berberime":
         return "Berberine"
-    if name == "Archin" and not pd.isna(pubchem_id) and str(int(float(pubchem_id))) == "3220":
+    if name == "Archin" and pubchem_key == "3220":
         return "Emodin"
     return name
 
@@ -166,21 +195,29 @@ def build_compound_tables() -> None:
             display_name = "Emodin"
 
         source_names = clean_join(group["ingredient_name"])
+        pubchem_ids = [
+            str(int(float(x))) for x in group["pubchem_id"] if not pd.isna(x)
+        ]
+        primary_pubchem = sorted(set(pubchem_ids))[0] if pubchem_ids else ""
         source_note = ""
         if "Berberime" in set(group["ingredient_name"]):
             source_note = "HERB source spelling 'Berberime' standardized to Berberine."
         if "Archin" in set(group["ingredient_name"]):
-            source_note = "HERB source name 'Archin' standardized to Emodin using PubChem CID 3220/InChIKey."
+            source_note = "HERB source name 'Archin' standardized to Emodin using PubChem CID 3220/InChIKey"
+        cas_value = clean_join(group["cas_id"])
+        if primary_pubchem in PUBCHEM_IDENTITY_OVERRIDES:
+            override = PUBCHEM_IDENTITY_OVERRIDES[primary_pubchem]
+            cas_value = override.get("cas", cas_value)
+            note = override.get("note", "")
+            source_note = "; ".join(x for x in [source_note, note] if x)
 
         row = {
             "Compound": display_name,
             "HERB source names": source_names,
             "HERB IDs": clean_join(group["ingredient_id"]),
-            "PubChem CID": clean_join(
-                str(int(float(x))) for x in group["pubchem_id"] if not pd.isna(x)
-            ),
+            "PubChem CID": clean_join(pubchem_ids),
             "InChIKey": clean_join(group["inchikey"]),
-            "CAS": clean_join(group["cas_id"]),
+            "CAS": cas_value,
             "Disease-context targets": len(disease_targets),
             "Bulk up-module targets": len(bulk_up),
             "Rectal B-lineage expressed targets": len(b_expr),
@@ -206,11 +243,28 @@ def build_compound_tables() -> None:
         ["Rectal B-lineage increased targets", "Disease-context targets", "HERB evidence records"],
         ascending=[False, False, False],
     ).reset_index(drop=True)
-    full.insert(0, "Display rank", range(1, len(full) + 1))
+    full.insert(0, "Table order", range(1, len(full) + 1))
+    herb_source_path = ROOT / "tables/supplementary/chinese_medicine_compound_to_herb_sources.tsv"
+    if herb_source_path.exists():
+        herb_source = pd.read_csv(herb_source_path, sep="\t")
+        herb_source["Representative HERB source"] = herb_source.apply(
+            lambda row: f"{row['Representative herb Chinese']} ({row['Representative herb pinyin']}; {row['Representative herb Latin']})"
+            if not pd.isna(row.get("Representative herb Chinese")) and str(row.get("Representative herb Chinese")).strip()
+            else "",
+            axis=1,
+        )
+        full = full.merge(
+            herb_source[["Compound", "Representative HERB source"]],
+            on="Compound",
+            how="left",
+        )
+    if "Representative HERB source" not in full.columns:
+        full["Representative HERB source"] = ""
 
     main_cols = [
-        "Display rank",
+        "Table order",
         "Compound",
+        "Representative HERB source",
         "PubChem CID",
         "Disease-context targets",
         "Rectal B-lineage expressed targets",
@@ -223,7 +277,7 @@ def build_compound_tables() -> None:
     ledger = full.loc[
         :,
         [
-            "Display rank",
+            "Table order",
             "Compound",
             "HERB source names",
             "HERB IDs",
@@ -243,7 +297,7 @@ def build_compound_tables() -> None:
         }
     )
 
-    write_tsv(main, "tables/manuscript/table2_chinese_medicine_compound_mapping.tsv")
+    write_tsv(main, "tables/main/table2_chinese_medicine_compound_mapping.tsv")
     write_tsv(full, "tables/supplementary/chinese_medicine_compound_mapping_full.tsv")
     write_tsv(ledger, "tables/supplementary/chinese_medicine_compound_ledger.tsv")
     write_tsv(null_summary, "tables/supplementary/chinese_medicine_candidate_specificity_context.tsv")
@@ -252,89 +306,104 @@ def build_compound_tables() -> None:
 def build_dataset_table() -> None:
     rows = [
         {
-            "Accession/resource": "GSE75214",
+            "Accession/resource": "GSE75214/GSE59071",
             "Tissue/data type": "Colonic mucosal bulk transcriptomics",
             "Platform": "GPL6244 microarray",
-            "Clinical groups or records": "Active UC/IBD and control mucosa",
-            "Total available": "194 samples",
+            "Age/tissue context": "Adult or mixed-age mucosal biopsies; colon",
+            "Clinical groups or records": "Active UC colon and normal control colon mucosa",
+            "Source total": "194 samples in GSE75214; 116-sample GSE59071 colon subset",
             "Included in primary contrast": "74 active disease vs 11 controls",
-            "Analytical role": "Discovery evidence group",
-        },
-        {
-            "Accession/resource": "GSE59071",
-            "Tissue/data type": "Colonic mucosal bulk transcriptomics",
-            "Platform": "GPL6244 microarray",
-            "Clinical groups or records": "Active UC/IBD and control mucosa",
-            "Total available": "116 samples",
-            "Included in primary contrast": "74 active disease vs 11 controls",
-            "Analytical role": "Same-platform sensitivity evidence",
+            "Analytical role": "Shared bulk evidence group",
+            "Query/access date": "2026-06-29",
+            "Source note": "GSE59071 selected contrast samples are contained in GSE75214 and are counted once.",
         },
         {
             "Accession/resource": "GSE87466",
             "Tissue/data type": "Colonic mucosal bulk transcriptomics",
             "Platform": "GPL13158 microarray",
+            "Age/tissue context": "Colonic mucosal biopsies; colon",
             "Clinical groups or records": "Active UC and normal control mucosa",
-            "Total available": "108 samples",
+            "Source total": "108 samples",
             "Included in primary contrast": "87 active UC vs 21 controls",
             "Analytical role": "Independent bulk evidence group",
+            "Query/access date": "2026-06-29",
+            "Source note": "Independent platform bulk evidence group.",
         },
         {
             "Accession/resource": "GSE125527",
             "Tissue/data type": "Rectal single-cell RNA-seq",
             "Platform": "10x Genomics scRNA-seq",
+            "Age/tissue context": "Pediatric rectal biopsies",
             "Clinical groups or records": "Pediatric UC and healthy controls",
-            "Total available": "103 samples/captures in source record",
+            "Source total": "103 samples/captures in source record",
             "Included in primary contrast": "Rectal B-lineage pseudobulk: 7 diseased vs 4 healthy patients",
             "Analytical role": "Primary cell-state localization",
+            "Query/access date": "2026-06-29",
+            "Source note": "Used for patient-level rectal cell-state localization.",
         },
         {
             "Accession/resource": "GSE182270",
             "Tissue/data type": "B-lineage-focused single-cell RNA-seq",
             "Platform": "scRNA-seq",
+            "Age/tissue context": "Colonic or mucosal single-cell samples",
             "Clinical groups or records": "UC inflamed mucosa and healthy/noninflamed controls",
-            "Total available": "9 samples",
+            "Source total": "9 samples",
             "Included in primary contrast": "5 UC inflamed vs 4 controls",
             "Analytical role": "Exploratory external directional comparison",
+            "Query/access date": "2026-07-02",
+            "Source note": "Directionally contextual only; not treated as validation.",
         },
         {
             "Accession/resource": "HERB 2.0",
             "Tissue/data type": "Chinese medicine compound-target knowledge base",
             "Platform": "Curated and literature-mined database",
+            "Age/tissue context": "Not applicable",
             "Clinical groups or records": "TCM-related ingredient, target, disease, and reference records",
-            "Total available": "Queried for UC/IBD-related disease-context compounds",
+            "Source total": "Queried for UC/IBD-related disease-context compounds",
             "Included in primary contrast": "Deduplicated disease-context compound and target records",
             "Analytical role": "Compound and target annotation",
+            "Query/access date": "2026-06-27 to 2026-07-02",
+            "Source note": "Knowledge-base annotations; not experimental validation.",
         },
         {
             "Accession/resource": "ETCM2",
             "Tissue/data type": "Chinese medicine compound-target knowledge base",
             "Platform": "Web database",
+            "Age/tissue context": "Not applicable",
             "Clinical groups or records": "Ingredient-target annotations",
-            "Total available": "Queried for selected candidate compounds",
+            "Source total": "Queried for selected candidate compounds",
             "Included in primary contrast": "Mapped human gene symbols after target-name standardization",
             "Analytical role": "External database context check",
+            "Query/access date": "2026-06-27 to 2026-07-02",
+            "Source note": "Target names require mapping; unmapped or ambiguous records are not over-interpreted.",
         },
         {
             "Accession/resource": "Open Targets Platform",
             "Tissue/data type": "Target-disease evidence platform",
             "Platform": "Public target-disease database",
+            "Age/tissue context": "Not applicable",
             "Clinical groups or records": "UC, Crohn's disease, and IBD target-disease evidence",
-            "Total available": "Queried for disease-context target genes",
+            "Source total": "Queried for disease-context target genes",
             "Included in primary contrast": "Curcumin-associated disease-context targets",
             "Analytical role": "Target-disease plausibility check",
+            "Query/access date": "2026-07-01",
+            "Source note": "Supports target-disease plausibility, not compound action.",
         },
         {
             "Accession/resource": "L1000CDS2/LINCS",
             "Tissue/data type": "Perturbational transcriptomic signatures",
             "Platform": "L1000CDS2 query against LINCS signatures",
+            "Age/tissue context": "Not applicable",
             "Clinical groups or records": "Compound perturbation signatures",
-            "Total available": "Exact-identifier query for covered candidates",
+            "Source total": "Exact-identifier query for covered candidates",
             "Included in primary contrast": "Top-result reversal query status",
             "Analytical role": "Perturbational context check",
+            "Query/access date": "2026-06-30",
+            "Source note": "Exact-identifier top-result screen; non-hit does not rule out broader LINCS activity.",
         },
     ]
     df = pd.DataFrame(rows)
-    write_tsv(df, "tables/manuscript/table1_chinese_medicine_resources.tsv")
+    write_tsv(df, "tables/main/table1_chinese_medicine_resources.tsv")
 
 
 def build_curcumin_gene_tables() -> None:
@@ -380,18 +449,19 @@ def build_curcumin_gene_tables() -> None:
             "Reference context": cur["reference_titles"],
         }
     )
+    out.loc[out["Gene"] == "SH3KBP1", "Evidence context"] = "Additional literature-context gene"
 
-    main = out[out["Tested in rectal B-lineage"] == "yes"].copy()
+    main = out[out["Gene"].isin(["BCL6", "BLNK", "SYK"])].copy()
     main = main.sort_values(
         ["Rectal B-lineage delta", "Gene"], ascending=[False, True]
     ).reset_index(drop=True)
 
-    write_tsv(main, "tables/manuscript/table3_curcumin_gene_followup.tsv")
+    write_tsv(main, "tables/main/table3_curcumin_gene_followup.tsv")
     write_tsv(out, "tables/supplementary/curcumin_gene_followup_full.tsv")
 
 
 def build_cross_context_direction_table() -> None:
-    src = ROOT / "tables/manuscript/table4_therapeutic_direction_consistency.tsv"
+    src = ROOT / "tables/main/table4_therapeutic_direction_consistency.tsv"
     if not src.exists():
         return
     df = pd.read_csv(src, sep="\t")

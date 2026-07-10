@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build Chinese Medicine-specific manuscript figures."""
+"""Build Chinese Medicine-specific figures."""
 
 from __future__ import annotations
 
@@ -142,12 +142,59 @@ def display_variant_name(value: str) -> str:
     return mapping.get(value, value.replace("_", " "))
 
 
+def collapsed_bulk_evidence_groups(group: pd.DataFrame) -> pd.DataFrame:
+    """Return reported bulk evidence groups with GSE59071 counted once."""
+    gpl6244 = group[group["evidence_group"] == "GPL6244_active_uc_colon"]
+    gse87466 = group[group["accession"] == "GSE87466"]
+    rows = []
+    if not gpl6244.empty:
+        ref = gpl6244[gpl6244["accession"] == "GSE75214"].iloc[0] if (gpl6244["accession"] == "GSE75214").any() else gpl6244.iloc[0]
+        rows.append(
+            {
+                "display_group": "GPL6244 shared colon cohort",
+                "source_accessions": "GSE75214; GSE59071",
+                "platform": "GPL6244",
+                "case_samples": int(ref["case_samples"]),
+                "control_samples": int(ref["control_samples"]),
+                "other_or_excluded_samples": int(ref["excluded_samples"]),
+                "role": "Shared bulk evidence group",
+                "note": "GSE59071 selected samples are contained in GSE75214 and are counted once.",
+            }
+        )
+    if not gse87466.empty:
+        ref = gse87466.iloc[0]
+        rows.append(
+            {
+                "display_group": "GSE87466/GPL13158 colon cohort",
+                "source_accessions": "GSE87466",
+                "platform": "GPL13158",
+                "case_samples": int(ref["case_samples"]),
+                "control_samples": int(ref["control_samples"]),
+                "other_or_excluded_samples": int(ref["excluded_samples"]),
+                "role": "Independent bulk evidence group",
+                "note": "Independent platform bulk evidence group.",
+            }
+        )
+    return pd.DataFrame(rows)
+
+
+def collapse_gpl6244_rows_for_display(df: pd.DataFrame, accession_col: str = "accession") -> pd.DataFrame:
+    """Drop duplicated GSE59071 rows and relabel GSE75214 as the shared GPL6244 cohort."""
+    out = df.copy()
+    if accession_col not in out.columns:
+        return out
+    out = out[out[accession_col] != "GSE59071"].copy()
+    out[accession_col] = out[accession_col].replace({"GSE75214": "GPL6244 shared"})
+    return out
+
+
 def build_figure_1() -> None:
     group = read_tsv("data/derived/bulk_evidence_groups.tsv")
+    collapsed_group = collapsed_bulk_evidence_groups(group)
     scrna = read_tsv("data/derived/rectal_celltype_disease_contrasts.tsv")
     null = read_tsv("data/derived/rectal_patient_label_null.tsv")
-    compound = read_tsv("tables/manuscript/table2_chinese_medicine_compound_mapping.tsv")
-    gene = read_tsv("tables/manuscript/table3_curcumin_gene_followup.tsv")
+    compound = read_tsv("tables/main/table2_chinese_medicine_compound_mapping.tsv")
+    gene = read_tsv("tables/main/table3_curcumin_gene_followup.tsv")
 
     b = scrna[scrna["celltype"] == "B"].iloc[0]
     b_null = null[null["celltype"] == "B"].iloc[0]
@@ -157,7 +204,7 @@ def build_figure_1() -> None:
         [
             {
                 "step": "Mucosal program",
-                "result": f"{group['evidence_group'].nunique()} GEO evidence groups; active UC/IBD vs control",
+                "result": f"{len(collapsed_group)} bulk evidence groups; active UC vs control",
             },
             {
                 "step": "Cell-state localization",
@@ -175,15 +222,15 @@ def build_figure_1() -> None:
     )
     save_source(flow, "figure1_study_design.tsv")
 
-    fig, ax = plt.subplots(figsize=(7.4, 2.7))
+    fig, ax = plt.subplots(figsize=(7.4, 2.8))
     ax.set_axis_off()
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
-    ax.text(0.01, 0.94, "Study design", fontsize=9, fontweight="bold", ha="left", va="top")
+    ax.text(0.02, 0.93, "Disease-first evidence synthesis", fontsize=9, fontweight="bold", ha="left", va="top")
     ax.text(
-        0.01,
+        0.02,
         0.83,
-        "Disease biology was defined before Chinese medicine-related compound mapping.",
+        "UC mucosal biology is established before Chinese medicine-related compound annotation is interpreted.",
         fontsize=6.5,
         color=PALETTE["muted"],
         ha="left",
@@ -191,54 +238,42 @@ def build_figure_1() -> None:
     )
 
     colors = [PALETTE["disease"], PALETTE["bcell"], PALETTE["green"], PALETTE["gold"]]
-    x_positions = [0.04, 0.29, 0.54, 0.79]
-    width = 0.18
+    x_positions = [0.11, 0.36, 0.61, 0.86]
+    ax.annotate(
+        "",
+        xy=(0.93, 0.47),
+        xytext=(0.08, 0.47),
+        arrowprops={"arrowstyle": "->", "lw": 1.0, "color": "#B8C1C9"},
+    )
     for i, (_, row) in enumerate(flow.iterrows()):
         x = x_positions[i]
-        ax.add_patch(
-            mpl.patches.FancyBboxPatch(
-                (x, 0.31),
-                width,
-                0.35,
-                boxstyle="round,pad=0.012,rounding_size=0.012",
-                linewidth=0.9,
-                edgecolor=colors[i],
-                facecolor="white",
-            )
-        )
-        ax.add_patch(
-            mpl.patches.Rectangle((x, 0.58), width, 0.08, linewidth=0, facecolor=colors[i])
-        )
-        ax.text(x + 0.012, 0.62, row["step"], fontsize=5.9, color="white", va="center", ha="left")
+        ax.scatter([x], [0.47], s=290, color=colors[i], edgecolor="white", linewidth=0.8, zorder=3)
+        ax.text(x, 0.47, str(i + 1), fontsize=7.5, color="white", fontweight="bold", ha="center", va="center", zorder=4)
+        ax.plot([x, x], [0.52, 0.64], color=colors[i], lw=1.1, alpha=0.9)
+        ax.text(x, 0.68, row["step"], fontsize=6.2, color=PALETTE["text"], va="bottom", ha="center")
         ax.text(
-            x + 0.012,
-            0.53,
-            "\n".join(wrap(row["result"], width=28, break_long_words=False)),
-            fontsize=5.7,
-            color=PALETTE["text"],
+            x,
+            0.39,
+            "\n".join(wrap(row["result"], width=24, break_long_words=False)),
+            fontsize=5.6,
+            color=PALETTE["muted"],
             va="top",
-            ha="left",
+            ha="center",
             linespacing=1.15,
         )
-        if i < len(x_positions) - 1:
-            ax.annotate(
-                "",
-                xy=(x_positions[i + 1] - 0.025, 0.485),
-                xytext=(x + width + 0.018, 0.485),
-                arrowprops={"arrowstyle": "->", "lw": 0.9, "color": PALETTE["muted"]},
-            )
 
+    ax.add_patch(mpl.patches.Rectangle((0.02, 0.08), 0.96, 0.13, facecolor="#F5F7F8", edgecolor="none"))
     ax.text(
         0.04,
         0.16,
-        "Primary interpretation: replicated UC/IBD mucosal program with rectal B-lineage localization.",
+        "Primary interpretation: replicated UC mucosal program with rectal B-lineage localization.",
         fontsize=6.3,
         color=PALETTE["text"],
         ha="left",
     )
     ax.text(
         0.04,
-        0.07,
+        0.10,
         "Compound interpretation: annotation-based context for prioritizing future pharmacological experiments.",
         fontsize=6.0,
         color=PALETTE["muted"],
@@ -249,6 +284,7 @@ def build_figure_1() -> None:
 
 def build_figure_2() -> None:
     group = read_tsv("data/derived/bulk_evidence_groups.tsv")
+    collapsed_group = collapsed_bulk_evidence_groups(group)
     gse75214 = read_tsv("data/derived/gse75214_gene_signature.tsv")
     gse87466 = read_tsv("data/derived/gse87466_gene_signature.tsv")
     consensus = read_tsv("data/derived/consensus_gene_signature.tsv")
@@ -274,29 +310,29 @@ def build_figure_2() -> None:
     ).copy()
     top = top.sort_values("mean_log2fc")
     save_source(top[["gene_symbol", "direction", "mean_log2fc", "best_fdr", "consensus_score"]], "figure2_consensus_genes.tsv")
-    save_source(group, "figure2_geo_evidence_groups.tsv")
+    save_source(collapsed_group, "figure2_geo_evidence_groups.tsv")
 
     fig = plt.figure(figsize=(7.1, 5.4), constrained_layout=True)
     axes = fig.subplot_mosaic([["A", "B", "C"], ["D", "D", "D"]], height_ratios=[1.0, 1.0], width_ratios=[0.95, 1.2, 1.2])
 
     ax = axes["A"]
     panel_label(ax, "A")
-    group_plot = group.copy()
+    group_plot = collapsed_group.copy()
     y = np.arange(len(group_plot))
     left = np.zeros(len(group_plot))
     for col, label, color in [
         ("control_samples", "Control", PALETTE["healthy"]),
         ("case_samples", "Active disease", PALETTE["disease"]),
-        ("excluded_samples", "Other/excluded", "#C9D0D6"),
+        ("other_or_excluded_samples", "Other/excluded", "#C9D0D6"),
     ]:
         ax.barh(y, group_plot[col], left=left, height=0.62, color=color, label=label)
         left += group_plot[col].to_numpy()
     ax.set_yticks(y)
-    ax.set_yticklabels(group_plot["accession"])
+    ax.set_yticklabels(group_plot["display_group"])
     ax.invert_yaxis()
     ax.set_xlabel("Samples")
-    ax.set_title("Bulk evidence groups", loc="left", fontsize=8)
-    ax.legend(fontsize=5.8, loc="lower right")
+    ax.set_title("Bulk UC evidence groups", loc="left", fontsize=8)
+    ax.legend(fontsize=5.8, loc="upper center", bbox_to_anchor=(0.54, -0.16), ncol=1)
     ax.grid(axis="x", color=PALETTE["grid"], lw=0.5)
 
     for key, label, title in [("B", "GPL6244 evidence group", "GPL6244 evidence group"), ("C", "GPL13158 evidence group", "GPL13158 evidence group")]:
@@ -334,17 +370,27 @@ def build_figure_3() -> None:
     null = read_tsv("data/derived/rectal_patient_label_null.tsv")
 
     keep = ["B", "M/DC", "T", "NK"]
+    q_family = ["B", "M/DC", "NK", "T", "unknown"]
+    q_family_label = ";".join(q_family)
     pseudo = pseudo[(pseudo["tissue_assignment"] == "R") & (pseudo["celltype"].isin(keep))].copy()
     contrast_all = contrast.copy()
     contrast_all["q_axis_bh_fdr"] = bh_fdr(contrast_all["p_axis_mannwhitney"])
+    contrast_all["q_family_celltypes"] = q_family_label
+    contrast_all["q_family_size"] = len(q_family)
+    contrast_all["displayed_in_main_panel"] = np.where(contrast_all["celltype"].isin(keep), "yes", "no")
     contrast = contrast_all[contrast_all["celltype"].isin(keep)].copy()
     null_all = null.copy()
     null_all["q_empirical_bh_fdr"] = bh_fdr(null_all["empirical_p_two_sided"])
+    null_all["q_family_celltypes"] = q_family_label
+    null_all["q_family_size"] = len(q_family)
+    null_all["displayed_in_main_panel"] = np.where(null_all["celltype"].isin(keep), "yes", "no")
     null = null_all[null_all["celltype"].isin(keep)].copy()
 
     order = ["B", "M/DC", "T", "NK"]
     save_source(pseudo, "figure3_patient_level_scores.tsv")
+    save_source(contrast_all, "figure3_celltype_effects_full_q_family.tsv")
     save_source(contrast, "figure3_celltype_effects.tsv")
+    save_source(null_all, "figure3_patient_label_null_full_q_family.tsv")
     save_source(null, "figure3_patient_label_null.tsv")
 
     fig = plt.figure(figsize=(7.0, 4.8), constrained_layout=True)
@@ -426,13 +472,16 @@ def build_figure_3() -> None:
 
 
 def build_figure_4() -> None:
-    compounds = read_tsv("tables/manuscript/table2_chinese_medicine_compound_mapping.tsv")
+    compounds = read_tsv("tables/main/table2_chinese_medicine_compound_mapping.tsv")
     null_summary = read_tsv("data/derived/curcumin_matched_target_null.tsv").iloc[0]
+    bias = read_tsv("data/derived/candidate_annotation_covariate_correlations.tsv")
+    disease_target_bias = bias[bias["covariate"] == "Disease-context targets"].iloc[0]
     full = read_tsv("tables/supplementary/chinese_medicine_compound_mapping_full.tsv")
 
     plot = compounds.head(10).copy().sort_values("Rectal B-lineage increased targets")
     save_source(compounds, "figure4_compound_mapping.tsv")
     save_source(pd.DataFrame([null_summary]), "figure4_candidate_specificity_context.tsv")
+    save_source(bias, "figure4_annotation_bias_correlations.tsv")
 
     fig = plt.figure(figsize=(7.0, 5.3), constrained_layout=True)
     axes = fig.subplot_mosaic([["A", "B"], ["A", "C"]], width_ratios=[1.25, 1.0], height_ratios=[1.0, 1.0])
@@ -484,7 +533,7 @@ def build_figure_4() -> None:
     ax.text(
         0.02,
         0.80,
-        f"Empirical P = {float(null_summary['empirical_p_ge_observed']):.1f}\nscore-target count rho = {float(null_summary['target_count_score_spearman_rho_among_candidates']):.3f}",
+        f"Empirical P = {float(null_summary['empirical_p_ge_observed']):.1f}\nscore-target count rho = {float(disease_target_bias['spearman_rho']):.3f}",
         transform=ax.transAxes,
         ha="left",
         va="top",
@@ -497,7 +546,7 @@ def build_figure_4() -> None:
 
 
 def build_figure_5() -> None:
-    main = read_tsv("tables/manuscript/table3_curcumin_gene_followup.tsv")
+    main = read_tsv("tables/main/table3_curcumin_gene_followup.tsv")
     pseudo = read_tsv("data/derived/target_gene_pseudobulk_scores.tsv")
     genes = main["Gene"].tolist()
     rows = []
@@ -516,7 +565,7 @@ def build_figure_5() -> None:
     save_source(eff, "figure5_curcumin_gene_effects.tsv")
 
     order = main.sort_values("Rectal B-lineage delta", ascending=True)["Gene"].tolist()
-    fig = plt.figure(figsize=(7.0, 5.2), constrained_layout=True)
+    fig = plt.figure(figsize=(7.0, 2.55), constrained_layout=True)
     axes = fig.subplot_mosaic([["A", "B"]], width_ratios=[1.15, 1.0])
 
     ax = axes["A"]
@@ -532,7 +581,7 @@ def build_figure_5() -> None:
     ax.set_xlabel("Diseased minus healthy log1p CPM")
     ax.set_title("Rectal B-lineage expression effects", loc="left", fontsize=8)
     for i, row in b_eff.iterrows():
-        ax.text(0.36, i, f"q = {row['Rectal B-lineage FDR across 22 genes']:.3g}", va="center", fontsize=5.5, color=PALETTE["muted"])
+        ax.text(0.36, i, f"q = {row['Rectal B-lineage FDR across 22 genes']:.3g}", va="center", fontsize=5.8, color=PALETTE["muted"])
     ax.set_xlim(min(b_eff["CI lower"].min(), -0.08), max(b_eff["CI upper"].max(), 0.42))
     ax.grid(axis="x", color=PALETTE["grid"], lw=0.5)
 
@@ -556,6 +605,10 @@ def build_supplementary_figures() -> None:
     sens = read_tsv("data/derived/signature_sensitivity_blineage.tsv")
     marker = read_tsv("data/derived/bulk_blineage_marker_summary.tsv")
     proxy = read_tsv("data/derived/bulk_composition_proxy_summary.tsv")
+    marker = collapse_gpl6244_rows_for_display(marker)
+    proxy = collapse_gpl6244_rows_for_display(proxy)
+    ig_removed = read_tsv("data/derived/ig_removed_axis_contrast.tsv")
+    b_marker_proxy = read_tsv("data/derived/blineage_marker_contrast.tsv")
     gse182 = read_tsv("data/derived/external_blineage_sample_scores.tsv")
     gse182_cmp = read_tsv("data/derived/external_blineage_group_comparison.tsv")
     ot = read_tsv("data/derived/open_targets_candidate_summary.tsv")
@@ -585,6 +638,8 @@ def build_supplementary_figures() -> None:
     # S2
     save_source(marker, "supplementary_figure_s2_marker_summary.tsv")
     save_source(proxy, "supplementary_figure_s2_composition_proxy.tsv")
+    save_source(ig_removed, "supplementary_figure_s2_ig_removed_axis.tsv")
+    save_source(b_marker_proxy, "supplementary_figure_s2_blineage_marker_proxy.tsv")
     fig = plt.figure(figsize=(7.0, 4.4), constrained_layout=True)
     axes = fig.subplot_mosaic([["A", "B"]], width_ratios=[1.0, 1.2])
     ax = axes["A"]
@@ -674,7 +729,7 @@ def build_graphical_abstract() -> None:
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
     steps = [
-        ("UC/IBD mucosa", "replicated\ntranscriptomic program", PALETTE["disease"]),
+        ("UC mucosa", "replicated\ntranscriptomic program", PALETTE["disease"]),
         ("Rectal B-lineage", "patient-level\npseudobulk localization", PALETTE["bcell"]),
         ("TCM compounds", "deduplicated\nannotation mapping", PALETTE["green"]),
         ("Curcumin case", "exploratory\nB-cell-context genes", PALETTE["gold"]),

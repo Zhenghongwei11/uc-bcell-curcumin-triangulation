@@ -1,12 +1,12 @@
-Display rank	Compound	HERB source names	HERB IDs	PubChem CID	InChIKey	CAS	Duplicate status	Source note
-1	Curcumin	Curcumin	HBIN021985	969516	VFLDPWHFBUODDF-FCXRPNKRSA-N	485-37-7	single_source_record	
+Table order	Compound	HERB source names	HERB IDs	PubChem CID	InChIKey	CAS	Duplicate status	Source note
+1	Curcumin	Curcumin	HBIN021985	969516	VFLDPWHFBUODDF-FCXRPNKRSA-N	458-37-7	single_source_record	CAS corrected from HERB CAS field using PubChem CID 969516 synonyms.
 2	Berberine	Berberime; Berberine	HBIN017892; HBIN017893	2353	YBHILYKTIRIUTE-UHFFFAOYSA-N	2086-83-1	merged_2_source_records	HERB source spelling 'Berberime' standardized to Berberine.
 3	Bilobalide	Bilobalide	HBIN018512	73581	MOLPUWBMSBJXER-YDGSQGCISA-N	33570-04-6	single_source_record	
 4	Geniposide	Geniposide	HBIN027450	107848	IBFYXTRXDNAPMM-BVTMAQQCSA-N	24512-63-8	single_source_record	
-5	Emodin	Archin	HBIN016606	3220	RHMXXJGYXNZAPX-UHFFFAOYSA-N		single_source_record	HERB source name 'Archin' standardized to Emodin using PubChem CID 3220/InChIKey.
-6	Isoarnebin 4	Isoarnebin 4	HBIN030442	479503	NEZONWMXZKDMKF-SNVBAGLBSA-N	517-88-4; 517-89-5	single_source_record	
+5	Emodin	Archin	HBIN016606	3220	RHMXXJGYXNZAPX-UHFFFAOYSA-N	518-82-1	single_source_record	HERB source name 'Archin' standardized to Emodin using PubChem CID 3220/InChIKey; CAS added from PubChem.
+6	Shikonin / Isoarnebin 4	Isoarnebin 4	HBIN030442	479503	NEZONWMXZKDMKF-SNVBAGLBSA-N	517-89-5	single_source_record	HERB name 'Isoarnebin 4' maps to PubChem CID 479503, whose primary synonym is shikonin; alkannin is the stereochemical counterpart with a different PubChem CID/InChIKey.
 7	Alpinetin	Alpinetin	HBIN015751	154279	QQQCWVDPMPFUGF-ZDUSSCGKSA-N	36052-37-6	single_source_record	
-8	Trans-resveratrol	Trans-resveratrol	HBIN046831	445154	LUKBXSAWLPMMSZ-OWOJBTEDSA-N		single_source_record	
+8	Trans-resveratrol	Trans-resveratrol	HBIN046831	445154	LUKBXSAWLPMMSZ-OWOJBTEDSA-N	501-36-0	single_source_record	CAS added/verified for trans-resveratrol using PubChem CID 445154.
 9	Taxifolin	Taxifolin	HBIN045672	439533	CXQWRCVTCMQVQX-LSDHHAIUSA-N	480-18-2	single_source_record	
 10	Asperuloside	Asperuloside	HBIN017136	84298	IBIPGYWNOBGEMH-DILZHRMZSA-N	14259-45-1	single_source_record	
 11	Polydatin	Polydatin	HBIN040403	5281718	HSTZMXCBWJGKHG-CUYWLFDKSA-N	65914-17-2	single_source_record	
@@ -15,7 +15,7 @@ Display rank	Compound	HERB source names	HERB IDs	PubChem CID	InChIKey	CAS	Duplic
 14	Rhein	Rhein	HBIN042199	10168	FCDLCPWAQCPTKC-UHFFFAOYSA-N	478-43-3	single_source_record	
 15	Honokiol	Honokiol	HBIN029531	72303	FVYXIJYOAGAUQK-UHFFFAOYSA-N	35354-74-6	single_source_record	
 16	Wogonin	Wogonin	HBIN048372	5281703	XLTFNNCXVBYBSX-UHFFFAOYSA-N	632-85-9	single_source_record	
-17	Cis-resveratrol	Cis-resveratrol	HBIN020921	1548910	LUKBXSAWLPMMSZ-UPHRSURJSA-N	501-36-0	single_source_record	
+17	Cis-resveratrol	Cis-resveratrol	HBIN020921	1548910	LUKBXSAWLPMMSZ-UPHRSURJSA-N	61434-67-1	single_source_record	CAS corrected for cis-resveratrol using PubChem CID 1548910; 501-36-0 corresponds to trans-resveratrol/resveratrol.
 18	Brahmic acid	Brahmic acid	HBIN018800	73412	PRAUVHZJPXOEIF-AOLYGAPISA-N	18449-41-7	single_source_record	
 19	Spermidine	Spermidine	HBIN044493	1102	ATHGHQPFGPMSJY-UHFFFAOYSA-N		single_source_record	
 20	Melatonin	Melatonin	HBIN034657	896	DRLFMBDRBRZALE-UHFFFAOYSA-N	73-31-4	single_source_record	

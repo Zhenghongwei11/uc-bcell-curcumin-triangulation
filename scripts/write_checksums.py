@@ -5,7 +5,7 @@ import hashlib
 root = Path(__file__).resolve().parents[1]
 patterns = [
     "data/derived/*.tsv",
-    "tables/manuscript/*.tsv",
+    "tables/main/*.tsv",
     "tables/supplementary/*.tsv",
     "figures/source_data/chinese_medicine/*.tsv",
     "plots/*.pdf",

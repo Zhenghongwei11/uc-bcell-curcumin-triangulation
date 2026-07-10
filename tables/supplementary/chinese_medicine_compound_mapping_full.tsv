@@ -1,25 +1,25 @@
-Display rank	Compound	HERB source names	HERB IDs	PubChem CID	InChIKey	CAS	Disease-context targets	Bulk up-module targets	Rectal B-lineage expressed targets	Rectal B-lineage increased targets	M/DC increased targets	HERB evidence records	HERB references	Clinical trial records	Meta-analysis records	Target-set score	Target-set rank	Overlap baseline rank	Overlap baseline genes	Duplicate status	Source note
-1	Curcumin	Curcumin	HBIN021985	969516	VFLDPWHFBUODDF-FCXRPNKRSA-N	485-37-7	22	3	12	11	8	13	4	5	4	54.25	1	2	CCL2;IL1B;IL33	single_source_record	
-2	Berberine	Berberime; Berberine	HBIN017892; HBIN017893	2353	YBHILYKTIRIUTE-UHFFFAOYSA-N	2086-83-1	16	3	9	8	5	10	6	1	3	27.5	5	7	IL1B;OSMR;PTGS2	merged_2_source_records	HERB source spelling 'Berberime' standardized to Berberine.
-3	Bilobalide	Bilobalide	HBIN018512	73581	MOLPUWBMSBJXER-YDGSQGCISA-N	33570-04-6	12	2	7	6	6	2	2	0	0	31.75	3	4	IL1B;ITGAX	single_source_record	
-4	Geniposide	Geniposide	HBIN027450	107848	IBFYXTRXDNAPMM-BVTMAQQCSA-N	24512-63-8	11	2	6	6	4	2	2	0	0	28.75	4	6	CCL2;IL1B	single_source_record	
-5	Emodin	Archin	HBIN016606	3220	RHMXXJGYXNZAPX-UHFFFAOYSA-N		18	6	7	5	4	4	4	0	0	37.0	2	1	CCL2;CXCL5;IL1A;IL1B;NOS2;PPARG;PTGS2	single_source_record	HERB source name 'Archin' standardized to Emodin using PubChem CID 3220/InChIKey.
-6	Isoarnebin 4	Isoarnebin 4	HBIN030442	479503	NEZONWMXZKDMKF-SNVBAGLBSA-N	517-88-4; 517-89-5	9	2	6	5	3	2	2	0	0	26.75	6	8	IL1B;NOS2	single_source_record	
-7	Alpinetin	Alpinetin	HBIN015751	154279	QQQCWVDPMPFUGF-ZDUSSCGKSA-N	36052-37-6	6	0	5	5	3	2	2	0	0	21.25	8	19		single_source_record	
-8	Trans-resveratrol	Trans-resveratrol	HBIN046831	445154	LUKBXSAWLPMMSZ-OWOJBTEDSA-N		7	1	4	4	4	6	2	1	3	19.0	13	13	IL1B	single_source_record	
-9	Taxifolin	Taxifolin	HBIN045672	439533	CXQWRCVTCMQVQX-LSDHHAIUSA-N	480-18-2	7	1	4	4	3	3	3	0	0	19.0	12	12	IL1B	single_source_record	
-10	Asperuloside	Asperuloside	HBIN017136	84298	IBIPGYWNOBGEMH-DILZHRMZSA-N	14259-45-1	7	0	5	4	2	2	2	0	0	19.25	10	18		single_source_record	
-11	Polydatin	Polydatin	HBIN040403	5281718	HSTZMXCBWJGKHG-CUYWLFDKSA-N	65914-17-2	5	2	4	4	2	2	2	0	0	21.0	9	9	ICAM1;SELP	single_source_record	
-12	Cryptotanshinone	Cryptotanshinone	HBIN021795	160254	GVKKJJOMQCNPGB-JTQLQIEISA-N	35825-57-1	11	2	6	3	4	3	3	0	0	23.5	7	5	NOS2;PTGS2	single_source_record	
-13	Capsaicin	Capsaicin	HBIN019690	1548943	YKPUWZUDDOIDPM-SOFGYWHQSA-N	404-86-4	8	0	3	3	1	2	2	0	0	12.75	15	17		single_source_record	
-14	Rhein	Rhein	HBIN042199	10168	FCDLCPWAQCPTKC-UHFFFAOYSA-N	478-43-3	4	1	3	3	3	3	3	0	0	14.75	14	15	IL1B	single_source_record	
-15	Honokiol	Honokiol	HBIN029531	72303	FVYXIJYOAGAUQK-UHFFFAOYSA-N	35354-74-6	6	2	2	2	2	2	2	0	0	12.5	16	3	IL1B;NOS2;PPARG	single_source_record	
-16	Wogonin	Wogonin	HBIN048372	5281703	XLTFNNCXVBYBSX-UHFFFAOYSA-N	632-85-9	4	1	1	1	1	3	3	0	0	6.25	18	10	NOS2;PPARG	single_source_record	
-17	Cis-resveratrol	Cis-resveratrol	HBIN020921	1548910	LUKBXSAWLPMMSZ-UPHRSURJSA-N	501-36-0	4	1	1	1	1	2	1	1	0	6.25	17	14	CXCL10	single_source_record	
-18	Brahmic acid	Brahmic acid	HBIN018800	73412	PRAUVHZJPXOEIF-AOLYGAPISA-N	18449-41-7	3	0	1	1	0	2	2	0	0	4.25	20	16	PPARG	single_source_record	
-19	Spermidine	Spermidine	HBIN044493	1102	ATHGHQPFGPMSJY-UHFFFAOYSA-N		2	0	2	1	1	2	2	0	0	5.75	19	20		single_source_record	
-20	Melatonin	Melatonin	HBIN034657	896	DRLFMBDRBRZALE-UHFFFAOYSA-N	73-31-4	1	0	1	1	0	5	2	1	2	4.25	21	22		single_source_record	
-21	Paeoniflorin	Paeoniflorin	HBIN038606	442534	YKRGDOXKVOZESV-WRJNSLSBSA-N	23180-57-6	1	0	0	0	0	3	3	0	0	0.0	24	23		single_source_record	
-22	Pterostilbene	Pterostilbene	HBIN041217	5281727	VLEUZFDZJKSGMX-ONEGZZNKSA-N	537-42-8	1	0	1	0	1	2	2	0	0	2.25	22	24		single_source_record	
-23	Matrine	Matrine	HBIN034558	91466	ZSBXGIUJOOQZMP-JLNYLFASSA-N	519-02-8	1	0	0	0	0	2	2	0	0	0.0	23	21		single_source_record	
-24	Quercetin	Quercetin	HBIN041495	5280343	REFJWTPEDVJJIY-UHFFFAOYSA-N	117-39-5	1	0	0	0	0	2	2	0	0	0.0	25	25		single_source_record	
+Table order	Compound	HERB source names	HERB IDs	PubChem CID	InChIKey	CAS	Disease-context targets	Bulk up-module targets	Rectal B-lineage expressed targets	Rectal B-lineage increased targets	M/DC increased targets	HERB evidence records	HERB references	Clinical trial records	Meta-analysis records	Target-set score	Target-set rank	Overlap baseline rank	Overlap baseline genes	Duplicate status	Source note	Representative HERB source
+1	Curcumin	Curcumin	HBIN021985	969516	VFLDPWHFBUODDF-FCXRPNKRSA-N	458-37-7	22	3	12	11	8	13	4	5	4	54.25	1	2	CCL2;IL1B;IL33	single_source_record	CAS corrected from HERB CAS field using PubChem CID 969516 synonyms.	姜黄 (Jiang Huang; Rhizoma Curcumae Longae; Curcumae Longae Rhizoma)
+2	Berberine	Berberime; Berberine	HBIN017892; HBIN017893	2353	YBHILYKTIRIUTE-UHFFFAOYSA-N	2086-83-1	16	3	9	8	5	10	6	1	3	27.5	5	7	IL1B;OSMR;PTGS2	merged_2_source_records	HERB source spelling 'Berberime' standardized to Berberine.	黄连 (Huang Lian; Coptidis Rhizoma; Rhizoma Coptidis)
+3	Bilobalide	Bilobalide	HBIN018512	73581	MOLPUWBMSBJXER-YDGSQGCISA-N	33570-04-6	12	2	7	6	6	2	2	0	0	31.75	3	4	IL1B;ITGAX	single_source_record		银杏叶 (Yin Xing Ye; Folium Ginkgo; Ginkgo Folium)
+4	Geniposide	Geniposide	HBIN027450	107848	IBFYXTRXDNAPMM-BVTMAQQCSA-N	24512-63-8	11	2	6	6	4	2	2	0	0	28.75	4	6	CCL2;IL1B	single_source_record		栀子 (Zhi Zi; Gardeniae Fructus; Fructus Gardeniae)
+5	Emodin	Archin	HBIN016606	3220	RHMXXJGYXNZAPX-UHFFFAOYSA-N	518-82-1	18	6	7	5	4	4	4	0	0	37.0	2	1	CCL2;CXCL5;IL1A;IL1B;NOS2;PPARG;PTGS2	single_source_record	HERB source name 'Archin' standardized to Emodin using PubChem CID 3220/InChIKey; CAS added from PubChem.	显齿蛇葡萄 (Xian Chi She Pu Tao; Ampelopsis Grossedentata)
+6	Shikonin / Isoarnebin 4	Isoarnebin 4	HBIN030442	479503	NEZONWMXZKDMKF-SNVBAGLBSA-N	517-89-5	9	2	6	5	3	2	2	0	0	26.75	6	8	IL1B;NOS2	single_source_record	HERB name 'Isoarnebin 4' maps to PubChem CID 479503, whose primary synonym is shikonin; alkannin is the stereochemical counterpart with a different PubChem CID/InChIKey.	白果紫草 (Bai Guo Zi Cao; Lithospermum Officinale)
+7	Alpinetin	Alpinetin	HBIN015751	154279	QQQCWVDPMPFUGF-ZDUSSCGKSA-N	36052-37-6	6	0	5	5	3	2	2	0	0	21.25	8	19		single_source_record		半枝莲 (Ban Zhi Lian; Scutellariae Barbatae Herba; Herba Scutellariae Barbatae)
+8	Trans-resveratrol	Trans-resveratrol	HBIN046831	445154	LUKBXSAWLPMMSZ-OWOJBTEDSA-N	501-36-0	7	1	4	4	4	6	2	1	3	19.0	13	13	IL1B	single_source_record	CAS added/verified for trans-resveratrol using PubChem CID 445154.	枸骨叶 (Gou Gu Ye; Ilicis Cornutae Folium; Folium Ilicis Cornutae)
+9	Taxifolin	Taxifolin	HBIN045672	439533	CXQWRCVTCMQVQX-LSDHHAIUSA-N	480-18-2	7	1	4	4	3	3	3	0	0	19.0	12	12	IL1B	single_source_record		巴旦杏仁 (Ba Dan Xing Ren; Semen Amygdalus Persicae; Semen Amygdalus Davidianae)
+10	Asperuloside	Asperuloside	HBIN017136	84298	IBIPGYWNOBGEMH-DILZHRMZSA-N	14259-45-1	7	0	5	4	2	2	2	0	0	19.25	10	18		single_source_record		巴戟天 (Ba Ji Tian; Radix Morindae Officinalis; Morindae Officinalis Radix)
+11	Polydatin	Polydatin	HBIN040403	5281718	HSTZMXCBWJGKHG-CUYWLFDKSA-N	65914-17-2	5	2	4	4	2	2	2	0	0	21.0	9	9	ICAM1;SELP	single_source_record		甘遂 (Gan Sui; Kansui Radix; Radix Kansui)
+12	Cryptotanshinone	Cryptotanshinone	HBIN021795	160254	GVKKJJOMQCNPGB-JTQLQIEISA-N	35825-57-1	11	2	6	3	4	3	3	0	0	23.5	7	5	NOS2;PTGS2	single_source_record		白花甘西鼠尾草 (Bai Hua Gan Xi Shu Wei Cao; Salvia Przewalskii Var. Alba)
+13	Capsaicin	Capsaicin	HBIN019690	1548943	YKPUWZUDDOIDPM-SOFGYWHQSA-N	404-86-4	8	0	3	3	1	2	2	0	0	12.75	15	17		single_source_record		白果 (Bai Guo; Ginkgo Semen; Semen Ginkgo)
+14	Rhein	Rhein	HBIN042199	10168	FCDLCPWAQCPTKC-UHFFFAOYSA-N	478-43-3	4	1	3	3	3	3	3	0	0	14.75	14	15	IL1B	single_source_record		沉香 (Chen Xiang; Aquilariae Lignum Resinatum; Lignum Aquilariae Resinatum)
+15	Honokiol	Honokiol	HBIN029531	72303	FVYXIJYOAGAUQK-UHFFFAOYSA-N	35354-74-6	6	2	2	2	2	2	2	0	0	12.5	16	3	IL1B;NOS2;PPARG	single_source_record		凹叶厚朴 (Ao Ye Hou Po; Magnolia Officinalis Subsp. Biloba)
+16	Wogonin	Wogonin	HBIN048372	5281703	XLTFNNCXVBYBSX-UHFFFAOYSA-N	632-85-9	4	1	1	1	1	3	3	0	0	6.25	18	10	NOS2;PPARG	single_source_record		百合 (Bai He; Bulbus Lilii; Lilii Bulbus)
+17	Cis-resveratrol	Cis-resveratrol	HBIN020921	1548910	LUKBXSAWLPMMSZ-UPHRSURJSA-N	61434-67-1	4	1	1	1	1	2	1	1	0	6.25	17	14	CXCL10	single_source_record	CAS corrected for cis-resveratrol using PubChem CID 1548910; 501-36-0 corresponds to trans-resveratrol/resveratrol.	白藜芦 (Bai Li Lu; Veratrum Album)
+18	Brahmic acid	Brahmic acid	HBIN018800	73412	PRAUVHZJPXOEIF-AOLYGAPISA-N	18449-41-7	3	0	1	1	0	2	2	0	0	4.25	20	16	PPARG	single_source_record		海藻 (Hai Zao; Sargassum)
+19	Spermidine	Spermidine	HBIN044493	1102	ATHGHQPFGPMSJY-UHFFFAOYSA-N		2	0	2	1	1	2	2	0	0	5.75	19	20		single_source_record		吊裙草 (Diao Qun Cao; Crotalaria Retusa)
+20	Melatonin	Melatonin	HBIN034657	896	DRLFMBDRBRZALE-UHFFFAOYSA-N	73-31-4	1	0	1	1	0	5	2	1	2	4.25	21	22		single_source_record		益母草 (Yi Mu Cao; Herba Leonuri; Leonuri Herba)
+21	Paeoniflorin	Paeoniflorin	HBIN038606	442534	YKRGDOXKVOZESV-WRJNSLSBSA-N	23180-57-6	1	0	0	0	0	3	3	0	0	0.0	24	23		single_source_record		白及 (Bai Ji; Rhizoma Bletillae; Bletillae Rhizoma)
+22	Pterostilbene	Pterostilbene	HBIN041217	5281727	VLEUZFDZJKSGMX-ONEGZZNKSA-N	537-42-8	1	0	1	0	1	2	2	0	0	2.25	22	24		single_source_record		
+23	Matrine	Matrine	HBIN034558	91466	ZSBXGIUJOOQZMP-JLNYLFASSA-N	519-02-8	1	0	0	0	0	2	2	0	0	0.0	23	21		single_source_record		白刺花 (Bai Ci Hua; Sophora Davidii)
+24	Quercetin	Quercetin	HBIN041495	5280343	REFJWTPEDVJJIY-UHFFFAOYSA-N	117-39-5	1	0	0	0	0	2	2	0	0	0.0	25	25		single_source_record		阿拉伯金合欢 (A La Bo Jin He Huan; Acacia Nilotica)

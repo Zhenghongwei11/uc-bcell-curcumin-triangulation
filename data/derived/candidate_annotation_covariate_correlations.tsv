@@ -1,0 +1,9 @@
+candidate_score	covariate	n_compounds	spearman_rho	spearman_p	interpretation
+Target-set score	Disease-context targets	24	0.9450043345837634	3.714987931629395e-12	Higher candidate scores are tightly coupled to target-count features.
+Target-set score	Rectal B-lineage expressed targets	24	0.9791727791727072	1.0009823470168763e-16	Higher candidate scores are tightly coupled to target-count features.
+Target-set score	Rectal B-lineage increased targets	24	0.9617488295481778	7.403653595701762e-14	Higher candidate scores are tightly coupled to target-count features.
+Target-set score	M/DC increased targets	24	0.9296386539755533	5.1950623458861084e-11	Annotation-volume covariate; descriptive bias check only.
+Target-set score	HERB evidence records	24	0.2703283972593168	0.20139718364538983	Annotation-volume covariate; descriptive bias check only.
+Target-set score	HERB references	24	0.35912824577801494	0.08480261207512697	Annotation-volume covariate; descriptive bias check only.
+Target-set score	Clinical trial records	24	0.1628826133997379	0.4469792267891506	Annotation-volume covariate; descriptive bias check only.
+Target-set score	Meta-analysis records	24	0.24654342647058547	0.2454914012107725	Annotation-volume covariate; descriptive bias check only.
