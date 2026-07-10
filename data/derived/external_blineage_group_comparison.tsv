@@ -1,0 +1,9 @@
+metric	n_uc	n_healthy	mean_uc	mean_healthy	delta_uc_minus_healthy	median_uc	median_healthy	mannwhitney_p	direction
+fraction_plasma_skewed_cells	5	4	0.905525	0.899877	0.00564795	0.964686	0.92143	0.904762	higher_in_uc
+mean_plasma_cell_marker	5	4	2.13358	1.86485	0.268725	2.15808	2.09164	0.555556	higher_in_uc
+mean_igg_plasma_marker	5	4	1.86693	1.27711	0.589816	2.02742	1.47437	0.412698	higher_in_uc
+mean_naive_b_marker	5	4	0.572774	0.554182	0.0185925	0.614172	0.585098	0.730159	higher_in_uc
+mean_plasma_minus_naive_b_score	5	4	1.56081	1.31067	0.250133	1.5158	1.50655	0.730159	higher_in_uc
+mean_bcl6_blnk_syk_axis	5	4	0.103558	0.0908094	0.0127484	0.115361	0.0885626	0.555556	higher_in_uc
+mean_curcumin_bcell_context_targets	5	4	0.1167	0.109087	0.00761303	0.0950275	0.101856	0.730159	higher_in_uc
+mean_consensus_uc_ibd_axis	5	4	0.0804522	0.0611274	0.0193248	0.0722148	0.0726729	0.730159	higher_in_uc

@@ -1,0 +1,2 @@
+analysis	observed_candidate	target_count	observed_target_set_score_without_direction_alignment	observed_bulk_up_hits	observed_b_cell_expressed	observed_b_cell_increased	observed_mdc_expressed	null_iterations	null_mean	null_sd	null_q95	null_q99	empirical_p_ge_observed	target_count_score_spearman_rho_among_candidates	target_count_score_spearman_p
+matched_target_count_random_target_set_null	Curcumin	22	54.25	3	12	11	11	20000	84.0908	4.0566	90.75	93.25	1	0.937399	5.07913e-12

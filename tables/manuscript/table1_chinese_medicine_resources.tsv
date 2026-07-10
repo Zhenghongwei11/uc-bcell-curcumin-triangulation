@@ -1,0 +1,10 @@
+Accession/resource	Tissue/data type	Platform	Clinical groups or records	Total available	Included in primary contrast	Analytical role
+GSE75214	Colonic mucosal bulk transcriptomics	GPL6244 microarray	Active UC/IBD and control mucosa	194 samples	74 active disease vs 11 controls	Discovery evidence group
+GSE59071	Colonic mucosal bulk transcriptomics	GPL6244 microarray	Active UC/IBD and control mucosa	116 samples	74 active disease vs 11 controls	Same-platform sensitivity evidence
+GSE87466	Colonic mucosal bulk transcriptomics	GPL13158 microarray	Active UC and normal control mucosa	108 samples	87 active UC vs 21 controls	Independent bulk evidence group
+GSE125527	Rectal single-cell RNA-seq	10x Genomics scRNA-seq	Pediatric UC and healthy controls	103 samples/captures in source record	Rectal B-lineage pseudobulk: 7 diseased vs 4 healthy patients	Primary cell-state localization
+GSE182270	B-lineage-focused single-cell RNA-seq	scRNA-seq	UC inflamed mucosa and healthy/noninflamed controls	9 samples	5 UC inflamed vs 4 controls	Exploratory external directional comparison
+HERB 2.0	Chinese medicine compound-target knowledge base	Curated and literature-mined database	TCM-related ingredient, target, disease, and reference records	Queried for UC/IBD-related disease-context compounds	Deduplicated disease-context compound and target records	Compound and target annotation
+ETCM2	Chinese medicine compound-target knowledge base	Web database	Ingredient-target annotations	Queried for selected candidate compounds	Mapped human gene symbols after target-name standardization	External database context check
+Open Targets Platform	Target-disease evidence platform	Public target-disease database	UC, Crohn's disease, and IBD target-disease evidence	Queried for disease-context target genes	Curcumin-associated disease-context targets	Target-disease plausibility check
+L1000CDS2/LINCS	Perturbational transcriptomic signatures	L1000CDS2 query against LINCS signatures	Compound perturbation signatures	Exact-identifier query for covered candidates	Top-result reversal query status	Perturbational context check

@@ -1,0 +1,5 @@
+step	result
+Mucosal program	2 GEO evidence groups; active UC/IBD vs control
+Cell-state localization	B-lineage delta 0.538; P = 0.00606; null P = 0.0023
+Compound mapping	Deduplicated compound table; curcumin: 22 disease-context targets
+Gene follow-up	12 curcumin-associated genes with rectal B-lineage contrast; BH-FDR across 22 screened genes

@@ -1,0 +1,11 @@
+resource_id	source	public_identifier_or_url	role
+GSE75214	NCBI GEO	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE75214	Bulk mucosal transcriptomic evidence group
+GSE59071	NCBI GEO	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE59071	Same-platform bulk transcriptomic evidence
+GSE87466	NCBI GEO	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE87466	Independent bulk mucosal transcriptomic evidence group
+GSE125527	NCBI GEO	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE125527	Rectal single-cell patient-level pseudobulk localization
+GSE182270	NCBI GEO	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE182270	Exploratory external B-lineage directional comparison
+HERB 2.0	HERB	http://herb.ac.cn/	Chinese medicine compound-target annotation
+ETCM2	ETCM2	https://www.tcmip.cn/ETCM2/front/	Chinese medicine compound and target-name context
+Open Targets	Open Targets Platform	https://platform.opentargets.org/	Target-disease plausibility context
+LINCS/L1000CDS2	L1000CDS2	https://maayanlab.cloud/L1000CDS2/	Perturbational signature context
+PubMed/PMC	NCBI	https://pubmed.ncbi.nlm.nih.gov/	Bibliographic target-edge verification
