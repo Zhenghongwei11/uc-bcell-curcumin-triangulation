@@ -1,6 +1,6 @@
 Resource	Metric	Count	Denominator
 Open Targets	Supported disease-context genes	21	22
 Open Targets	Genetic evidence genes	6	22
-PubMed	Verified curcumin-target edges	25	25
+PubMed	Bibliographic curcumin-gene records	25	25
 ETCM2	Overlap with HERB disease-context genes	0	5
 L1000CDS2	Top-result exact-ID hits	0	15

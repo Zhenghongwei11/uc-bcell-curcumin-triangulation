@@ -10,8 +10,11 @@ patterns = [
     "figures/source_data/chinese_medicine/*.tsv",
     "plots/*.pdf",
     "plots/*.png",
-    "docs/*.tsv",
-    "docs/*.md",
+        "docs/*.tsv",
+        "docs/*.md",
+        "config/*.yml",
+        "scripts/*.py",
+        "scripts/*.sh",
 ]
 rows = []
 for pattern in patterns:

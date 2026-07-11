@@ -1,0 +1,8 @@
+gene	evidence role	disease direction	rectal B delta	curcumin-reported regulation	hypothesized pharmacological direction	cross-context compatibility	PMID
+BCL6	Selected B-cell-context gene	Increased in diseased rectal B cells	0.07212	down	Hypothesized suppression of a disease-increased target or cytokine-context signal	Directionally compatible across heterogeneous contexts	36353208
+BLNK	Selected B-cell-context gene	Increased in diseased rectal B cells	0.2816	up	Hypothesized context modulation rather than simple normalization	Contextual, not normalizing	36353208
+SYK	Selected B-cell-context gene	Increased in diseased rectal B cells	0.2135	down	Hypothesized suppression of a disease-increased target or cytokine-context signal	Directionally compatible across heterogeneous contexts	36353208
+CCL2	Cytokine-context target	Increased in replicated bulk UC/IBD signature	Not resolved	down	Hypothesized suppression of a disease-increased target or cytokine-context signal	Directionally compatible across heterogeneous contexts	36196887
+IL33	Cytokine-context target	Increased in replicated bulk UC/IBD signature	Not resolved	down	Hypothesized suppression of a disease-increased target or cytokine-context signal	Directionally compatible across heterogeneous contexts	36196887
+IL1B	Cytokine-context target	Increased in diseased rectal B cells	0.001133	down	Hypothesized suppression of a disease-increased target or cytokine-context signal	Directionally compatible across heterogeneous contexts	36196887;36353208
+TNF	Cytokine-context target	Increased in diseased rectal B cells	0.2476	down	Hypothesized suppression of a disease-increased target or cytokine-context signal	Directionally compatible across heterogeneous contexts	36196887;36353208

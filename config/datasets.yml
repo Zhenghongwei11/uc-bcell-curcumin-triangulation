@@ -1,0 +1,44 @@
+project: uc_rectal_blineage_chinese_medicine_compound_mapping
+default_rebuild: derived_tables_to_figures
+source_data_root: data/raw
+derived_data_root: data/derived
+public_resources:
+  geo:
+    bulk:
+      - accession: GSE75214
+        expected_file: data/raw/geo/GSE75214/GSE75214_series_matrix.txt.gz
+        role: bulk_uc_mucosal_evidence
+      - accession: GSE59071
+        expected_file: data/raw/geo/GSE59071/GSE59071_series_matrix.txt.gz
+        role: same_platform_bulk_context
+      - accession: GSE87466
+        expected_file: data/raw/geo/GSE87466/GSE87466_series_matrix.txt.gz
+        role: independent_bulk_uc_mucosal_evidence
+    single_cell:
+      - accession: GSE125527
+        expected_dir: data/raw/geo/GSE125527
+        role: rectal_patient_level_pseudobulk_context
+      - accession: GSE182270
+        expected_dir: data/raw/geo/GSE182270
+        role: underpowered_external_blineage_directional_context
+  herb2:
+    homepage: http://herb.ac.cn/
+    direct_host_observed: http://47.92.70.12/
+    expected_dir: data/raw/herb2
+    role: primary_chinese_medicine_compound_target_resource
+  etcm2:
+    homepage: https://www.tcmip.cn/ETCM2/front/
+    expected_dir: data/raw/etcm2
+    role: cross_resource_target_name_context
+  open_targets:
+    homepage: https://platform.opentargets.org/
+    expected_dir: data/raw/open_targets
+    role: target_disease_plausibility_context
+  lincs:
+    l1000cds2: https://maayanlab.cloud/L1000CDS2/
+    expected_dir: data/raw/lincs
+    role: perturbational_signature_context
+  pubmed:
+    homepage: https://pubmed.ncbi.nlm.nih.gov/
+    expected_dir: data/raw/pubmed
+    role: bibliographic_verification

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build Chinese Medicine-specific figures."""
+"""Build Chinese Medicine-specific main figures."""
 
 from __future__ import annotations
 
@@ -66,6 +66,12 @@ def save_figure(fig: mpl.figure.Figure, stem: str) -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     for ext in ("svg", "pdf"):
         fig.savefig(OUT / f"{stem}.{ext}", bbox_inches="tight")
+        if ext == "svg":
+            svg_path = OUT / f"{stem}.{ext}"
+            svg_text = svg_path.read_text(encoding="utf-8")
+            svg_text = __import__("re").sub(r"<metadata>.*?</metadata>", "", svg_text, flags=__import__("re").S)
+            svg_text = __import__("re").sub(r'\s+id="[^"]+"', "", svg_text)
+            svg_path.write_text(svg_text, encoding="utf-8")
     fig.savefig(OUT / f"{stem}.png", dpi=300, bbox_inches="tight")
     fig.savefig(OUT / f"{stem}.tiff", dpi=600, bbox_inches="tight")
     plt.close(fig)
@@ -89,6 +95,14 @@ def q_text(q: float) -> str:
     if q < 0.001:
         return "q < 0.001"
     return f"q = {q:.3g}"
+
+
+def format_spearman_p(value: float) -> str:
+    if pd.isna(value):
+        return "P = NA"
+    if value < 0.001:
+        return "P < 0.001"
+    return f"P = {value:.3g}"
 
 
 def bh_fdr(values: pd.Series) -> pd.Series:
@@ -192,12 +206,12 @@ def build_figure_1() -> None:
     group = read_tsv("data/derived/bulk_evidence_groups.tsv")
     collapsed_group = collapsed_bulk_evidence_groups(group)
     scrna = read_tsv("data/derived/rectal_celltype_disease_contrasts.tsv")
-    null = read_tsv("data/derived/rectal_patient_label_null.tsv")
+    exact = read_tsv("data/derived/rectal_exact_finite_label_permutation.tsv")
     compound = read_tsv("tables/main/table2_chinese_medicine_compound_mapping.tsv")
     gene = read_tsv("tables/main/table3_curcumin_gene_followup.tsv")
 
     b = scrna[scrna["celltype"] == "B"].iloc[0]
-    b_null = null[null["celltype"] == "B"].iloc[0]
+    b_exact = exact[exact["celltype"] == "B"].iloc[0]
     cur = compound[compound["Compound"] == "Curcumin"].iloc[0]
 
     flow = pd.DataFrame(
@@ -207,8 +221,8 @@ def build_figure_1() -> None:
                 "result": f"{len(collapsed_group)} bulk evidence groups; active UC vs control",
             },
             {
-                "step": "Cell-state localization",
-                "result": f"B-lineage delta {b['delta_axis_diseased_minus_healthy']:.3f}; {p_text(b['p_axis_mannwhitney'])}; null {p_text(b_null['empirical_p_two_sided'])}",
+                "step": "Cell-state context",
+                "result": f"B-lineage delta {b['delta_axis_diseased_minus_healthy']:.3f}; P = {b_exact['exact_p_two_sided']:.3f}, q = {b_exact['exact_q_bh_fdr']:.3f}",
             },
             {
                 "step": "Compound mapping",
@@ -262,23 +276,6 @@ def build_figure_1() -> None:
             linespacing=1.15,
         )
 
-    ax.add_patch(mpl.patches.Rectangle((0.02, 0.08), 0.96, 0.13, facecolor="#F5F7F8", edgecolor="none"))
-    ax.text(
-        0.04,
-        0.16,
-        "Primary interpretation: replicated UC mucosal program with rectal B-lineage localization.",
-        fontsize=6.3,
-        color=PALETTE["text"],
-        ha="left",
-    )
-    ax.text(
-        0.04,
-        0.10,
-        "Compound interpretation: annotation-based context for prioritizing future pharmacological experiments.",
-        fontsize=6.0,
-        color=PALETTE["muted"],
-        ha="left",
-    )
     save_figure(fig, "cm_figure1_study_design")
 
 
@@ -302,10 +299,11 @@ def build_figure_2() -> None:
     volcano.loc[(volcano["fdr"] < 0.05) & (volcano["log2fc"] <= -1), "direction_class"] = "Decreased"
     save_source(volcano[["evidence_group_label", "gene_symbol", "log2fc", "fdr", "neglog10_fdr", "direction_class"]], "figure2_volcano_source.tsv")
 
+    consensus_for_display = consensus[consensus["gene_symbol"] != "MMP3"].copy()
     top = pd.concat(
         [
-            consensus[consensus["direction"] == "up"].nlargest(10, "consensus_score"),
-            consensus[consensus["direction"] == "down"].nlargest(10, "consensus_score"),
+            consensus_for_display[consensus_for_display["direction"] == "up"].nlargest(10, "consensus_score"),
+            consensus_for_display[consensus_for_display["direction"] == "down"].nlargest(10, "consensus_score"),
         ]
     ).copy()
     top = top.sort_values("mean_log2fc")
@@ -367,7 +365,7 @@ def build_figure_2() -> None:
 def build_figure_3() -> None:
     pseudo = read_tsv("data/derived/rectal_pseudobulk_module_scores.tsv")
     contrast = read_tsv("data/derived/rectal_celltype_disease_contrasts.tsv")
-    null = read_tsv("data/derived/rectal_patient_label_null.tsv")
+    exact = read_tsv("data/derived/rectal_exact_finite_label_permutation.tsv")
 
     keep = ["B", "M/DC", "T", "NK"]
     q_family = ["B", "M/DC", "NK", "T", "unknown"]
@@ -379,8 +377,7 @@ def build_figure_3() -> None:
     contrast_all["q_family_size"] = len(q_family)
     contrast_all["displayed_in_main_panel"] = np.where(contrast_all["celltype"].isin(keep), "yes", "no")
     contrast = contrast_all[contrast_all["celltype"].isin(keep)].copy()
-    null_all = null.copy()
-    null_all["q_empirical_bh_fdr"] = bh_fdr(null_all["empirical_p_two_sided"])
+    null_all = exact.copy()
     null_all["q_family_celltypes"] = q_family_label
     null_all["q_family_size"] = len(q_family)
     null_all["displayed_in_main_panel"] = np.where(null_all["celltype"].isin(keep), "yes", "no")
@@ -390,8 +387,8 @@ def build_figure_3() -> None:
     save_source(pseudo, "figure3_patient_level_scores.tsv")
     save_source(contrast_all, "figure3_celltype_effects_full_q_family.tsv")
     save_source(contrast, "figure3_celltype_effects.tsv")
-    save_source(null_all, "figure3_patient_label_null_full_q_family.tsv")
-    save_source(null, "figure3_patient_label_null.tsv")
+    save_source(null_all, "figure3_exact_finite_label_permutation_full_q_family.tsv")
+    save_source(null, "figure3_exact_finite_label_permutation.tsv")
 
     fig = plt.figure(figsize=(7.0, 4.8), constrained_layout=True)
     axes = fig.subplot_mosaic([["A", "B"]], width_ratios=[1.4, 1.0])
@@ -447,7 +444,7 @@ def build_figure_3() -> None:
     y = np.arange(len(null_plot))
     colors = [PALETTE["bcell"], PALETTE["myeloid"], "#9AA5AE", "#9AA5AE"]
     ax.hlines(y, null_plot["null_q025_delta"], null_plot["null_q975_delta"], color="#C8D0D7", lw=2.4)
-    ax.scatter(null_plot["observed_delta_axis_diseased_minus_healthy"], y, s=34, c=colors, zorder=3, edgecolor="white", linewidth=0.5)
+    ax.scatter(null_plot["observed_delta"], y, s=34, c=colors, zorder=3, edgecolor="white", linewidth=0.5)
     ax.axvline(0, color=PALETTE["text"], lw=0.7)
     ax.set_yticks(y)
     ax.set_yticklabels(null_plot["celltype"])
@@ -456,15 +453,15 @@ def build_figure_3() -> None:
         ax.text(
             0.83,
             i,
-            f"emp. {p_text(row['empirical_p_two_sided'])}\n{q_text(row['q_empirical_bh_fdr'])}",
+            f"exact {p_text(row['exact_p_two_sided'])}\n{q_text(row['exact_q_bh_fdr'])}",
             ha="right",
             va="center",
             fontsize=5.6,
             color=PALETTE["muted"],
         )
     ax.set_xlim(-0.55, 0.88)
-    ax.set_xlabel("Observed delta and patient-label null interval")
-    ax.set_title("Patient-label permutation", loc="left", fontsize=8, pad=6)
+    ax.set_xlabel("Disease-control delta and exact label-null interval")
+    ax.set_title("Finite-label permutation", loc="left", fontsize=8, pad=6)
     ax.grid(axis="x", color=PALETTE["grid"], lw=0.5, alpha=0.75)
     ax.tick_params(labelsize=6, length=2)
 
@@ -478,12 +475,12 @@ def build_figure_4() -> None:
     disease_target_bias = bias[bias["covariate"] == "Disease-context targets"].iloc[0]
     full = read_tsv("tables/supplementary/chinese_medicine_compound_mapping_full.tsv")
 
-    plot = compounds.head(10).copy().sort_values("Rectal B-lineage increased targets")
+    plot = compounds.head(12).copy().sort_values("Table order", ascending=False)
     save_source(compounds, "figure4_compound_mapping.tsv")
     save_source(pd.DataFrame([null_summary]), "figure4_candidate_specificity_context.tsv")
     save_source(bias, "figure4_annotation_bias_correlations.tsv")
 
-    fig = plt.figure(figsize=(7.0, 5.3), constrained_layout=True)
+    fig = plt.figure(figsize=(7.0, 5.8), constrained_layout=True)
     axes = fig.subplot_mosaic([["A", "B"], ["A", "C"]], width_ratios=[1.25, 1.0], height_ratios=[1.0, 1.0])
 
     ax = axes["A"]
@@ -498,9 +495,9 @@ def build_figure_4() -> None:
         ax.scatter(row["M/DC increased targets"], yv, s=22, color=PALETTE["myeloid"], alpha=0.85, edgecolor="white", linewidth=0.4)
     ax.set_yticks(y)
     ax.set_yticklabels(plot["Compound"], fontsize=6.2)
-    ax.set_xlabel("Disease-increased targets")
-    ax.set_title("Deduplicated compound mapping", loc="left", fontsize=8)
-    ax.text(0.02, 0.02, "Gold/blue: B-lineage targets; brown: M/DC targets; point size: disease-context targets", transform=ax.transAxes, fontsize=5.6, color=PALETTE["muted"], ha="left", va="bottom")
+    ax.set_xlabel("Targets increased in diseased cell context")
+    ax.set_title("Top 12 deduplicated compound records", loc="left", fontsize=8)
+    ax.text(0.02, 0.02, "Gold/blue: rectal B-lineage; brown: M/DC; size: disease-context targets", transform=ax.transAxes, fontsize=5.6, color=PALETTE["muted"], ha="left", va="bottom")
     ax.grid(axis="x", color=PALETTE["grid"], lw=0.5)
 
     ax = axes["B"]
@@ -522,10 +519,13 @@ def build_figure_4() -> None:
     panel_label(ax, "C")
     observed = float(null_summary["observed_target_set_score_without_direction_alignment"])
     null_mean = float(null_summary["null_mean"])
+    null_sd = float(null_summary["null_sd"])
     null_q95 = float(null_summary["null_q95"])
     null_q99 = float(null_summary["null_q99"])
-    ax.scatter([observed], [0], s=45, color=PALETTE["gold"], label="Curcumin observed", zorder=3)
-    ax.hlines(0, null_mean, null_q99, color="#C8D0D7", lw=5, label="Null mean to 99th percentile")
+    null_low = max(0.0, null_mean - 1.96 * null_sd)
+    null_high = null_mean + 1.96 * null_sd
+    ax.scatter([observed], [0], s=45, color=PALETTE["gold"], label="Curcumin target set", zorder=3)
+    ax.hlines(0, null_low, null_high, color="#C8D0D7", lw=5, label="Approx. 95% null interval")
     ax.scatter([null_mean, null_q95, null_q99], [0, 0, 0], s=[30, 30, 30], color=[PALETTE["healthy"], PALETTE["muted"], PALETTE["text"]], zorder=3)
     ax.set_yticks([])
     ax.set_xlabel("Target-set score")
@@ -533,7 +533,7 @@ def build_figure_4() -> None:
     ax.text(
         0.02,
         0.80,
-        f"Empirical P = {float(null_summary['empirical_p_ge_observed']):.1f}\nscore-target count rho = {float(disease_target_bias['spearman_rho']):.3f}",
+        f"Target-set score {observed:.2f}; null mean {null_mean:.2f}\nP(score >= target-set) = {float(null_summary['empirical_p_ge_observed']):.1f}\nrho {float(disease_target_bias['spearman_rho']):.3f}; {format_spearman_p(float(disease_target_bias['spearman_p']))}",
         transform=ax.transAxes,
         ha="left",
         va="top",
@@ -579,7 +579,7 @@ def build_figure_5() -> None:
     ax.set_yticks(y)
     ax.set_yticklabels(b_eff["Gene"], fontsize=6)
     ax.set_xlabel("Diseased minus healthy log1p CPM")
-    ax.set_title("Rectal B-lineage expression effects", loc="left", fontsize=8)
+    ax.set_title("Rectal B-lineage disease-associated differences", loc="left", fontsize=8)
     for i, row in b_eff.iterrows():
         ax.text(0.36, i, f"q = {row['Rectal B-lineage FDR across 22 genes']:.3g}", va="center", fontsize=5.8, color=PALETTE["muted"])
     ax.set_xlim(min(b_eff["CI lower"].min(), -0.08), max(b_eff["CI upper"].max(), 0.42))
@@ -590,11 +590,9 @@ def build_figure_5() -> None:
     pivot = eff.pivot(index="Gene", columns="Cell type", values="Delta").reindex(order)
     ax.scatter(pivot["B"], pivot.index, color=PALETTE["bcell"], s=30, label="B-lineage", zorder=3)
     ax.scatter(pivot["M/DC"], pivot.index, color=PALETTE["myeloid"], s=30, label="M/DC", zorder=3)
-    for gene in pivot.index:
-        ax.plot([pivot.loc[gene, "M/DC"], pivot.loc[gene, "B"]], [gene, gene], color="#C8D0D7", lw=1.0, zorder=1)
     ax.axvline(0, color=PALETTE["text"], lw=0.7)
-    ax.set_xlabel("Expression delta")
-    ax.set_title("B-lineage versus M/DC context", loc="left", fontsize=8)
+    ax.set_xlabel("Diseased minus healthy log1p CPM")
+    ax.set_title("Descriptive B-lineage and M/DC context", loc="left", fontsize=8)
     ax.legend(fontsize=6, loc="lower right")
     ax.grid(axis="x", color=PALETTE["grid"], lw=0.5)
 
@@ -685,11 +683,11 @@ def build_supplementary_figures() -> None:
             ax.scatter(np.full(len(vals), i + offset) + rng.normal(0, 0.02, len(vals)), vals, s=28, color=color, edgecolor="white", linewidth=0.4, label=condition.replace("_", " ") if i == 0 else None)
             ax.plot([i + offset - 0.06, i + offset + 0.06], [np.median(vals), np.median(vals)], color=color, lw=1.2)
         cmp_row = gse182_cmp[gse182_cmp["metric"] == metric].iloc[0]
-        ax.text(i, max(gse182[metric]) + 0.06, f"P = {cmp_row['mannwhitney_p']:.3g}", ha="center", fontsize=5.6, color=PALETTE["muted"])
+        ax.text(i, max(gse182[metric]) + 0.06, p_text(cmp_row["mannwhitney_p"]), ha="center", fontsize=5.6, color=PALETTE["muted"])
     ax.set_xticks(np.arange(len(metrics)))
     ax.set_xticklabels([labels[m] for m in metrics], rotation=25, ha="right", fontsize=6)
     ax.set_ylabel("Module score")
-    ax.set_title("Figure S3. GSE182270 exploratory sample-level comparison", loc="left", fontsize=8)
+    ax.set_title("Figure S3. Underpowered GSE182270 sample-level comparison", loc="left", fontsize=8)
     ax.legend(fontsize=6, loc="upper right")
     ax.set_ylim(-0.10, max(gse182[metrics].max()) + 0.28)
     ax.grid(axis="y", color=PALETTE["grid"], lw=0.5)
@@ -702,7 +700,7 @@ def build_supplementary_figures() -> None:
         [
             {"Resource": "Open Targets", "Metric": "Supported disease-context genes", "Count": cur_ot["n_open_targets_supported_genes"], "Denominator": cur_ot["n_disease_context_targets"]},
             {"Resource": "Open Targets", "Metric": "Genetic evidence genes", "Count": cur_ot["n_genetic_supported_genes"], "Denominator": cur_ot["n_disease_context_targets"]},
-            {"Resource": "PubMed", "Metric": "Verified curcumin-target edges", "Count": (pubmed["title_match"] == "yes").sum(), "Denominator": len(pubmed)},
+            {"Resource": "PubMed", "Metric": "Bibliographic curcumin-gene records", "Count": (pubmed["title_match"] == "yes").sum(), "Denominator": len(pubmed)},
             {"Resource": "ETCM2", "Metric": "Overlap with HERB disease-context genes", "Count": cur_etcm["n_overlap_with_herb_m9_disease_context_targets"], "Denominator": max(cur_etcm["n_accepted_mapped_gene_symbols_exact_high"], 1)},
             {"Resource": "L1000CDS2", "Metric": "Top-result exact-ID hits", "Count": (lincs["hit_status"] != "no_top_result_hit").sum(), "Denominator": len(lincs)},
         ]
@@ -717,7 +715,7 @@ def build_supplementary_figures() -> None:
     ax.set_yticks(y)
     ax.set_yticklabels(db["Resource"] + "\n" + db["Metric"], fontsize=6)
     ax.set_xlim(0, 1.08)
-    ax.set_xlabel("Fraction")
+    ax.set_xlabel("Descriptive proportion within resource")
     ax.set_title("Figure S4. External database context checks", loc="left", fontsize=8)
     ax.grid(axis="x", color=PALETTE["grid"], lw=0.5)
     save_figure(fig, "cm_supplementary_figure_s4_database_context_checks")
@@ -730,9 +728,9 @@ def build_graphical_abstract() -> None:
     ax.set_ylim(0, 1)
     steps = [
         ("UC mucosa", "replicated\ntranscriptomic program", PALETTE["disease"]),
-        ("Rectal B-lineage", "patient-level\npseudobulk localization", PALETTE["bcell"]),
+        ("Rectal B-lineage", "largest disease\npseudobulk shift", PALETTE["bcell"]),
         ("TCM compounds", "deduplicated\nannotation mapping", PALETTE["green"]),
-        ("Curcumin case", "exploratory\nB-cell-context genes", PALETTE["gold"]),
+        ("Curcumin check", "Jiang Huang-linked\nannotation stress test", PALETTE["gold"]),
     ]
     x = [0.06, 0.31, 0.56, 0.81]
     for i, (title, body, color) in enumerate(steps):
@@ -769,7 +767,7 @@ def build_graphical_abstract() -> None:
     ax.text(
         0.5,
         0.10,
-        "Curcumin-associated genes define experimentally testable B-cell-context hypotheses.",
+        "Matched-null analysis constrains target-set-specific curcumin claims.",
         ha="center",
         va="center",
         fontsize=5.8,

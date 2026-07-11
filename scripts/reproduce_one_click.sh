@@ -7,4 +7,5 @@ python3 figures/scripts/build_chinese_medicine_figures.py
 mkdir -p plots
 cp figures/output/chinese_medicine/*.pdf plots/
 cp figures/output/chinese_medicine/*.png plots/
+rm -rf figures/output
 python3 scripts/write_checksums.py

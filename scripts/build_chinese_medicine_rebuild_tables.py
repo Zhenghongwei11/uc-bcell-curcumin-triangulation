@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build Chinese Medicine manuscript tables from existing reproducible outputs."""
+"""Build Chinese Medicine main tables from existing reproducible outputs."""
 
 from __future__ import annotations
 
@@ -260,11 +260,12 @@ def build_compound_tables() -> None:
         )
     if "Representative HERB source" not in full.columns:
         full["Representative HERB source"] = ""
+    full = full.rename(columns={"Representative HERB source": "HERB-linked herbal record"})
 
     main_cols = [
         "Table order",
         "Compound",
-        "Representative HERB source",
+        "HERB-linked herbal record",
         "PubChem CID",
         "Disease-context targets",
         "Rectal B-lineage expressed targets",
@@ -337,9 +338,9 @@ def build_dataset_table() -> None:
             "Clinical groups or records": "Pediatric UC and healthy controls",
             "Source total": "103 samples/captures in source record",
             "Included in primary contrast": "Rectal B-lineage pseudobulk: 7 diseased vs 4 healthy patients",
-            "Analytical role": "Primary cell-state localization",
+            "Analytical role": "Primary cell-state context analysis",
             "Query/access date": "2026-06-29",
-            "Source note": "Used for patient-level rectal cell-state localization.",
+            "Source note": "Used for patient-level rectal cell-state context analysis.",
         },
         {
             "Accession/resource": "GSE182270",
@@ -484,7 +485,7 @@ def build_cross_context_direction_table() -> None:
     if "Cross-context observation" in df.columns:
         df["Cross-context observation"] = df["Cross-context observation"].replace(
             {
-                "Directionally consistent": "Reported regulation opposes the observed disease-associated direction",
+                "Directionally consistent": "Directionally compatible across heterogeneous contexts",
                 "Contextual, not normalizing": "Reported regulation does not indicate simple transcriptional normalization",
             }
         )

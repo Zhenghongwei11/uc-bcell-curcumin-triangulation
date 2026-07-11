@@ -7,3 +7,5 @@ figures/output/
 *.docx
 *.xlsx
 *.zip
+data/raw/
+docs/RAW_INPUT_STATUS.tsv

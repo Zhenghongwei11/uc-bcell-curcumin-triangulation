@@ -9,7 +9,8 @@ This repository contains the reproducibility package for a public-data computati
 - `tables/`: regenerated main and supplementary tables.
 - `figures/source_data/`: source data written during figure generation.
 - `plots/`: publication-ready PDF and PNG figure exports.
-- `docs/`: data manifest, provenance files, statistical decision rules, and compute notes.
+- `docs/`: data manifest, raw-data acquisition notes, provenance files, statistical decision rules, and compute notes.
+- `config/`: public accession and resource configuration.
 
 ## Quick Reproduction
 
@@ -20,7 +21,17 @@ pip install -r requirements.txt
 bash scripts/reproduce_one_click.sh
 ```
 
-The one-click script rebuilds the Chinese medicine-focused main tables and figures from the derived tables in `data/derived/`.
+The one-click script rebuilds the Chinese medicine-focused main tables and figures from documented public-data-derived tables in `data/derived/`.
+
+## Optional Source-Data Reconstruction Layer
+
+The default path above is the review-friendly path. A second layer documents how to obtain the public source files used to build the derived tables:
+
+```bash
+python3 scripts/00_prepare_raw_inputs.py
+```
+
+This command checks whether locally acquired public source files have been placed under the expected `data/raw/` layout and writes a missing-file report. Detailed source acquisition instructions are provided in `docs/DATA_ACQUISITION.md`, `docs/RAW_INPUT_MANIFEST.tsv`, and `docs/HERB_ETCM_ACCESS_NOTES.md`.
 
 ## Expected Runtime
 
@@ -28,4 +39,4 @@ On a current laptop, the table rebuild usually finishes in under one minute and 
 
 ## Data Availability
 
-All raw sources are public resources. The default reproduction path uses derived tables to keep the repository lightweight. Public accession IDs and resource URLs are listed in `docs/DATA_MANIFEST.tsv`.
+All raw sources are public resources. The default reproduction path uses analysis-ready public-data-derived tables to keep the repository lightweight. Public accession IDs and resource URLs are listed in `docs/DATA_MANIFEST.tsv`.

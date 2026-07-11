@@ -1,4 +1,4 @@
-target_set_specificity_rank	ingredient_id	ingredient_name	disease_context_targets	manuscript_bridge_score	target_set_specificity_score_without_direction_alignment	bulk_up_hits	b_cell_expressed	b_cell_increased	mdc_expressed
+target_set_specificity_rank	ingredient_id	ingredient_name	disease_context_targets	reported_context_score	target_set_specificity_score_without_direction_alignment	bulk_up_hits	b_cell_expressed	b_cell_increased	mdc_expressed
 1	HBIN021985	Curcumin	22	63.2	54.25	3	12	11	11
 2	HBIN016606	Archin	18	46.0	37	6	7	5	6
 3	HBIN018512	Bilobalide	12	34.8	31.75	2	7	6	7

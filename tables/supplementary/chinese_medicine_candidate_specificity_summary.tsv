@@ -1,0 +1,5 @@
+analysis	result	interpretation
+Real-candidate ranking	Curcumin ranked first among 25 HERB disease-context candidates by the B-lineage-context score.	Source-record analysis before canonical deduplication; supports retaining curcumin only as an exploratory pharmacological case.
+Standard target-overlap baseline	Curcumin ranked second by simple bulk-module overlap, whereas the standardized emodin source record ranked first.	The context-aware ranking descriptively reorders candidates, but the resulting values remain strongly target-count dependent.
+Matched random target-set null	Observed score 54.25; null mean 84.0908; empirical P>=1.	Does not eliminate target-count or literature-density bias; this limit should remain explicit.
+Target-count association among 25 source records	Spearman rho 0.937; P value 5.08e-12.	Source-record values remain strongly coupled to disease-context target count; deduplicated-compound values are reported separately in the annotation-bias sheet.
