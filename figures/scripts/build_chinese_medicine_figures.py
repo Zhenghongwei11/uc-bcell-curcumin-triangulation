@@ -698,26 +698,71 @@ def build_supplementary_figures() -> None:
     cur_etcm = etcm[etcm["ingredient_name"] == "Curcumin"].iloc[0]
     db = pd.DataFrame(
         [
-            {"Resource": "Open Targets", "Metric": "Supported disease-context genes", "Count": cur_ot["n_open_targets_supported_genes"], "Denominator": cur_ot["n_disease_context_targets"]},
-            {"Resource": "Open Targets", "Metric": "Genetic evidence genes", "Count": cur_ot["n_genetic_supported_genes"], "Denominator": cur_ot["n_disease_context_targets"]},
-            {"Resource": "PubMed", "Metric": "Bibliographic curcumin-gene records", "Count": (pubmed["title_match"] == "yes").sum(), "Denominator": len(pubmed)},
-            {"Resource": "ETCM2", "Metric": "Overlap with HERB disease-context genes", "Count": cur_etcm["n_overlap_with_herb_m9_disease_context_targets"], "Denominator": max(cur_etcm["n_accepted_mapped_gene_symbols_exact_high"], 1)},
-            {"Resource": "L1000CDS2", "Metric": "Top-result exact-ID hits", "Count": (lincs["hit_status"] != "no_top_result_hit").sum(), "Denominator": len(lincs)},
+            {
+                "Resource": "Open Targets",
+                "Evidence question": "Disease-context targets with UC/IBD support",
+                "Result": f"{int(cur_ot['n_open_targets_supported_genes'])}/{int(cur_ot['n_disease_context_targets'])}",
+                "Interpretation": "Target-disease context",
+            },
+            {
+                "Resource": "Open Targets",
+                "Evidence question": "Disease-context targets with genetic evidence",
+                "Result": f"{int(cur_ot['n_genetic_supported_genes'])}/{int(cur_ot['n_disease_context_targets'])}",
+                "Interpretation": "Limited genetic support",
+            },
+            {
+                "Resource": "PubMed/full text",
+                "Evidence question": "Curcumin-gene records with bibliographic trace",
+                "Result": f"{int((pubmed['title_match'] == 'yes').sum())}/{int(len(pubmed))}",
+                "Interpretation": "Literature traceability",
+            },
+            {
+                "Resource": "ETCM2",
+                "Evidence question": "Mapped ETCM2 genes overlapping HERB context",
+                "Result": f"{int(cur_etcm['n_overlap_with_herb_m9_disease_context_targets'])}/{int(max(cur_etcm['n_accepted_mapped_gene_symbols_exact_high'], 1))}",
+                "Interpretation": "Partial target-name overlap",
+            },
+            {
+                "Resource": "L1000CDS2",
+                "Evidence question": "Exact-identifier top-result hits",
+                "Result": f"{int((lincs['hit_status'] != 'no_top_result_hit').sum())}/{int(len(lincs))}",
+                "Interpretation": "No top-result recovery",
+            },
         ]
     )
     save_source(db, "supplementary_figure_s4_database_context_checks.tsv")
-    fig, ax = plt.subplots(figsize=(6.4, 3.6), constrained_layout=True)
-    db["Fraction"] = db["Count"] / db["Denominator"]
-    y = np.arange(len(db))
-    ax.barh(y, db["Fraction"], color=[PALETTE["green"], PALETTE["green"], PALETTE["gold"], PALETTE["myeloid"], PALETTE["healthy"]], height=0.62)
+    fig, ax = plt.subplots(figsize=(7.2, 3.55), constrained_layout=True)
+    ax.set_axis_off()
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
+    ax.text(0.0, 0.98, "Figure S4. External resource evidence matrix", fontsize=8, fontweight="bold", ha="left", va="top", color=PALETTE["text"])
+    ax.text(
+        0.0,
+        0.91,
+        "Counts are shown within each resource-specific denominator; rows are not plotted on a shared quantitative axis.",
+        fontsize=6.2,
+        ha="left",
+        va="top",
+        color=PALETTE["muted"],
+    )
+    columns = ["Resource", "Evidence question", "Result", "Interpretation"]
+    widths = [0.18, 0.42, 0.12, 0.28]
+    x0 = np.cumsum([0] + widths[:-1])
+    header_y = 0.70
+    row_h = 0.115
+    header_color = "#DDEBF7"
+    stripe = ["#FFFFFF", "#F6FAFD"]
+    for j, col in enumerate(columns):
+        ax.add_patch(mpl.patches.Rectangle((x0[j], header_y), widths[j], row_h, facecolor=header_color, edgecolor="white", linewidth=0.8))
+        ax.text(x0[j] + 0.01, header_y + row_h / 2, col, fontsize=6.4, fontweight="bold", ha="left", va="center", color=PALETTE["text"])
     for i, row in db.iterrows():
-        ax.text(min(row["Fraction"] + 0.03, 0.98), i, f"{int(row['Count'])}/{int(row['Denominator'])}", va="center", fontsize=6)
-    ax.set_yticks(y)
-    ax.set_yticklabels(db["Resource"] + "\n" + db["Metric"], fontsize=6)
-    ax.set_xlim(0, 1.08)
-    ax.set_xlabel("Descriptive proportion within resource")
-    ax.set_title("Figure S4. External database context checks", loc="left", fontsize=8)
-    ax.grid(axis="x", color=PALETTE["grid"], lw=0.5)
+        y0 = header_y - (i + 1) * row_h
+        for j, col in enumerate(columns):
+            ax.add_patch(mpl.patches.Rectangle((x0[j], y0), widths[j], row_h, facecolor=stripe[i % 2], edgecolor="#D8E1E8", linewidth=0.5))
+            color = PALETTE["text"]
+            weight = "bold" if col == "Result" else "normal"
+            ax.text(x0[j] + 0.01, y0 + row_h / 2, str(row[col]), fontsize=6.0, ha="left", va="center", color=color, fontweight=weight, wrap=True)
+    ax.add_patch(mpl.patches.Rectangle((0, header_y - len(db) * row_h), 1.0, row_h * (len(db) + 1), fill=False, edgecolor="#B7C6D2", linewidth=0.7))
     save_figure(fig, "cm_supplementary_figure_s4_database_context_checks")
 
 
