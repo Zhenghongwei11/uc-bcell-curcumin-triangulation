@@ -720,7 +720,7 @@ def build_supplementary_figures() -> None:
                 "Resource": "ETCM2",
                 "Evidence question": "Mapped ETCM2 genes overlapping HERB context",
                 "Result": f"{int(cur_etcm['n_overlap_with_herb_m9_disease_context_targets'])}/{int(max(cur_etcm['n_accepted_mapped_gene_symbols_exact_high'], 1))}",
-                "Interpretation": "Partial target-name overlap",
+                "Interpretation": "No exact high-confidence overlap",
             },
             {
                 "Resource": "L1000CDS2",

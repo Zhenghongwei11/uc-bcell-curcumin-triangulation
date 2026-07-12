@@ -2,5 +2,5 @@ Resource	Evidence question	Result	Interpretation
 Open Targets	Disease-context targets with UC/IBD support	21/22	Target-disease context
 Open Targets	Disease-context targets with genetic evidence	6/22	Limited genetic support
 PubMed/full text	Curcumin-gene records with bibliographic trace	25/25	Literature traceability
-ETCM2	Mapped ETCM2 genes overlapping HERB context	0/5	Partial target-name overlap
+ETCM2	Mapped ETCM2 genes overlapping HERB context	0/5	No exact high-confidence overlap
 L1000CDS2	Exact-identifier top-result hits	0/15	No top-result recovery
