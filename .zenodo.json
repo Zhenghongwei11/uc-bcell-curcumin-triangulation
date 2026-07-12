@@ -4,9 +4,9 @@
   "description": "Reproducibility package for a public-data computational pharmacology analysis of ulcerative colitis, rectal B-lineage disease programs, and Chinese medicine-related compound mapping.",
   "creators": [
     {"name": "Zheng, Hongwei"},
+    {"name": "Chen, Youfang"},
     {"name": "Zhuang, Xin"},
-    {"name": "Jia, Dongfang"},
-    {"name": "Chen, Youfang"}
+    {"name": "Jia, Dongfang"}
   ],
   "license": "MIT",
   "keywords": ["ulcerative colitis", "Chinese medicine", "transcriptomics", "single-cell RNA-seq", "B-lineage cells", "curcumin"]

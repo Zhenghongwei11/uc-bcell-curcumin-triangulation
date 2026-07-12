@@ -5,11 +5,11 @@ type: software
 authors:
   - family-names: Zheng
     given-names: Hongwei
+  - family-names: Chen
+    given-names: Youfang
   - family-names: Zhuang
     given-names: Xin
   - family-names: Jia
     given-names: Dongfang
-  - family-names: Chen
-    given-names: Youfang
 repository-code: https://github.com/Zhenghongwei11/uc-bcell-curcumin-triangulation
 license: MIT
